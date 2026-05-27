@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Совместный импорт из Китая | Денис Пьянков — denchik.online</title>
+  <meta name="description" content="Совместный импорт и выкуп товаров из Китая под ключ для МСП и селлеров. Цены фабрик без контейнера, белая таможня, юридическая защита." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" />
+
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Manrope', 'sans-serif'] },
+          colors: { neon: { blue: '#38bdf8', green: '#10b981' } },
+          animation: {
+            ticker: 'ticker 40s linear infinite',
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          },
+          keyframes: {
+            ticker: {
+              '0%':   { transform: 'translateX(0)' },
+              '100%': { transform: 'translateX(-50%)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Manrope', sans-serif; }
+
+    /* Ticker */
+    .ticker-wrap { overflow: hidden; white-space: nowrap; }
+    .ticker-track { display: inline-flex; animation: ticker 40s linear infinite; }
+    .ticker-wrap:hover .ticker-track { animation-play-state: paused; }
+
+    /* Neon glow effects */
+    .glow-blue  { box-shadow: 0 0 20px rgba(56,189,248,.25), 0 0 40px rgba(56,189,248,.1); }
+    .glow-green { box-shadow: 0 0 20px rgba(16,185,129,.25), 0 0 40px rgba(16,185,129,.1); }
+    .glow-btn   { box-shadow: 0 0 24px rgba(56,189,248,.45); }
+    .glow-btn:hover { box-shadow: 0 0 40px rgba(56,189,248,.7); }
+
+    /* Card hover */
+    .card-hover {
+      transition: all 0.3s ease-in-out;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(56,189,248,.18);
+    }
+
+    /* Progress bar shimmer */
+    @keyframes shimmer {
+      0%   { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+    .progress-shimmer {
+      background: linear-gradient(90deg, #38bdf8 0%, #7dd3fc 40%, #38bdf8 60%, #0284c7 100%);
+      background-size: 200% auto;
+      animation: shimmer 2.5s linear infinite;
+    }
+    .progress-shimmer-green {
+      background: linear-gradient(90deg, #10b981 0%, #34d399 40%, #10b981 60%, #059669 100%);
+      background-size: 200% auto;
+      animation: shimmer 2.5s linear infinite;
+    }
+    .progress-shimmer-amber {
+      background: linear-gradient(90deg, #f59e0b 0%, #fcd34d 40%, #f59e0b 60%, #d97706 100%);
+      background-size: 200% auto;
+      animation: shimmer 2.5s linear infinite;
+    }
+
+    /* Gradient text */
+    .gradient-text {
+      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #10b981 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Step number glow */
+    .step-num {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      border: 1.5px solid rgba(56,189,248,.4);
+      box-shadow: 0 0 16px rgba(56,189,248,.2);
+    }
+
+    /* Section divider */
+    .section-line {
+      background: linear-gradient(90deg, transparent, #38bdf8, transparent);
+      height: 1px;
+    }
+
+    /* Floating badge */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-8px); }
+    }
+    .float { animation: float 4s ease-in-out infinite; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0f172a; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #38bdf8; }
+  </style>
+</head>
+
+<body class="bg-zinc-950 text-slate-200 antialiased">
+
+  <!-- ═══════════════════════════════════════════════════
+       BLOCK 0 — TICKER
+  ═══════════════════════════════════════════════════ -->
+  <a href="#pools-section" class="block bg-slate-900 border-b border-slate-800 cursor-pointer">
+    <div class="ticker-wrap py-2">
+      <div class="ticker-track">
+        <!-- Repeated twice for seamless loop -->
+        <span class="inline-flex items-center gap-6 px-8 text-sm font-medium text-slate-300">
+          <span class="text-sky-400 font-semibold">🔥 Текущие пулы поставок:</span>
+          <span>Контейнер №104 (Гуанчжоу → Екб):
+            <span class="text-emerald-400 font-bold">собрано 74%</span>
+          </span>
+          <span class="text-slate-600">•</span>
+          <span>Авто-сборник №89 (Иу → Москва):
+            <span class="text-sky-400 font-bold">собрано 42%</span>
+          </span>
+          <span class="text-slate-600">•</span>
+          <span>Контейнер №105 (Нинбо → Новосибирск):
+            <span class="text-amber-400 font-bold">собрано 91% — Скоро закрытие! 🔔</span>
+          </span>
+          <span class="text-slate-600">•</span>
+          <span class="text-slate-400">Нажмите, чтобы зафиксировать минимальный тариф →</span>
+          <span class="mx-16"></span>
+        </span>
+        <span class="inline-flex items-center gap-6 px-8 text-sm font-medium text-slate-300">
+          <span class="text-sky-400 font-semibold">🔥 Текущие пулы поставок:</span>
+          <span>Контейнер №104 (Гуанчжоу → Екб):
+            <span class="text-emerald-400 font-bold">собрано 74%</span>
+          </span>
+          <span class="text-slate-600">•</span>
+          <span>Авто-сборник №89 (Иу → Москва):
+            <span class="text-sky-400 font-bold">собрано 42%</span>
+          </span>
+          <span class="text-slate-600">•</span>
+          <span>Контейнер №105 (Нинбо → Новосибирск):
+            <span class="text-amber-400 font-bold">собрано 91% — Скоро закрытие! 🔔</span>
+          </span>
+          <span class="text-slate-600">•</span>
+          <span class="text-slate-400">Нажмите, чтобы зафиксировать минимальный тариф →</span>
+          <span class="mx-16"></span>
+        </span>
+      </div>
+    </div>
+  </a>
+
+  <!-- ═══════════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════════ -->
+  <header class="sticky top-0 z-50 bg-zinc-950/90 backdrop-blur-md border-b border-slate-800/60">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <span class="text-sky-400 font-bold text-xl tracking-tight">denchik<span class="text-slate-400">.online</span></span>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
+        <a href="#how-it-works" class="hover:text-sky-400 transition-colors">Как работаем</a>
+        <a href="#advantages" class="hover:text-sky-400 transition-colors">Преимущества</a>
+        <a href="#pools-section" class="hover:text-sky-400 transition-colors">Активные пулы</a>
+        <a href="#contact-form" class="ml-2 px-4 py-2 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-400 hover:bg-sky-500/20 transition-all duration-300">
+          Связаться
+        </a>
+      </div>
+      <!-- Mobile burger -->
+      <button id="menu-btn" class="md:hidden p-2 text-slate-400 hover:text-sky-400 transition-colors" aria-label="Меню">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </nav>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800 bg-zinc-950">
+      <div class="px-4 py-4 flex flex-col gap-4 text-sm font-medium">
+        <a href="#how-it-works"   class="text-slate-400 hover:text-sky-400 transition-colors" onclick="closeMobileMenu()">Как работаем</a>
+        <a href="#advantages"     class="text-slate-400 hover:text-sky-400 transition-colors" onclick="closeMobileMenu()">Преимущества</a>
+        <a href="#pools-section"  class="text-slate-400 hover:text-sky-400 transition-colors" onclick="closeMobileMenu()">Активные пулы</a>
+        <a href="#contact-form"   class="text-sky-400 font-semibold" onclick="closeMobileMenu()">Связаться →</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════
+       BLOCK 1 — HERO
+  ═══════════════════════════════════════════════════ -->
+  <section class="relative min-h-screen flex items-center overflow-hidden">
+    <!-- Background mesh -->
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(56,189,248,0.07)_0%,_transparent_60%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(16,185,129,0.06)_0%,_transparent_60%)]"></div>
+    <!-- Grid pattern -->
+    <div class="absolute inset-0 opacity-[0.03]"
+         style="background-image: linear-gradient(rgba(148,163,184,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(148,163,184,.5) 1px,transparent 1px);background-size:48px 48px"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 w-full">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <!-- Left: Text -->
+        <div class="space-y-8">
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold uppercase tracking-widest">
+            <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse-slow"></span>
+            Платформа совместного импорта
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+            <span class="text-slate-100">Совместный импорт</span><br />
+            <span class="gradient-text">из Китая под ключ</span><br />
+            <span class="text-slate-300 text-3xl sm:text-4xl lg:text-5xl font-bold">для малого бизнеса</span>
+          </h1>
+
+          <p class="text-lg text-slate-400 leading-relaxed max-w-xl">
+            Выкупаем товары на фабриках КНР по ценам крупного опта и доставляем в сборных контейнерах. Без переплат за «воздух», без языкового барьера, с белой таможней и юридической защитой.
+            <span class="text-slate-300 font-medium">Лично гарантирует Денис Пьянков.</span>
+          </p>
+
+          <!-- Stats -->
+          <div class="flex flex-wrap gap-6">
+            <div class="flex flex-col">
+              <span class="text-2xl font-extrabold text-sky-400">120+</span>
+              <span class="text-xs text-slate-500 mt-0.5">закрытых контейнеров</span>
+            </div>
+            <div class="w-px bg-slate-700/60 hidden sm:block"></div>
+            <div class="flex flex-col">
+              <span class="text-2xl font-extrabold text-emerald-400">₽ 0</span>
+              <span class="text-xs text-slate-500 mt-0.5">штрафов на таможне</span>
+            </div>
+            <div class="w-px bg-slate-700/60 hidden sm:block"></div>
+            <div class="flex flex-col">
+              <span class="text-2xl font-extrabold text-sky-400">от 1 кг</span>
+              <span class="text-xs text-slate-500 mt-0.5">минимальный объём</span>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#contact-form"
+               class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-bold text-base transition-all duration-300 glow-btn">
+              <i data-lucide="send" class="w-5 h-5"></i>
+              Оставить запрос на расчёт
+            </a>
+            <a href="#pools-section"
+               class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-sky-500/50 text-slate-300 font-semibold text-base transition-all duration-300">
+              <i data-lucide="box" class="w-5 h-5"></i>
+              Активные контейнеры
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Photo + floating badges -->
+        <div class="relative flex items-center justify-center">
+          <!-- Photo -->
+          <div class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden border border-slate-700/60 glow-blue card-hover group"
+               style="min-width:288px;min-height:288px;overflow:hidden;border-radius:1.5rem;position:relative">
+            <picture><source srcset="myphoto.webp" type="image/webp"><img src="myphoto.png"
+                 alt="Денис Пьянков — эксперт по импорту из Китая"
+                 onerror="this.onerror=null;this.src='myphoto.png'"
+                 style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block"
+                 class="transition-transform duration-500 group-hover:scale-105" /></picture>
+            <div class="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-zinc-950/90 to-transparent"></div>
+            <div class="absolute bottom-4 left-0 right-0 text-center">
+              <p class="text-slate-100 font-bold text-base drop-shadow">Денис Пьянков</p>
+              <p class="text-sky-400 text-xs font-medium drop-shadow">Эксперт по импорту из Китая</p>
+            </div>
+          </div>
+
+          <!-- Floating badges -->
+          <div class="float absolute -top-4 -right-4 sm:right-0 lg:-right-8 bg-slate-900 border border-emerald-500/30 rounded-2xl px-4 py-3 glow-green shadow-xl">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span class="text-emerald-400 font-bold text-sm">Белая таможня</span>
+            </div>
+            <p class="text-slate-500 text-xs mt-0.5">100% официально</p>
+          </div>
+
+          <div class="float absolute -bottom-4 -left-4 sm:left-0 lg:-left-8 bg-slate-900 border border-sky-500/30 rounded-2xl px-4 py-3 glow-blue shadow-xl" style="animation-delay:.8s">
+            <div class="flex items-center gap-2">
+              <i data-lucide="shield-check" class="w-4 h-4 text-sky-400"></i>
+              <span class="text-sky-400 font-bold text-sm">Договор</span>
+            </div>
+            <p class="text-slate-500 text-xs mt-0.5">Официальный договор КП</p>
+          </div>
+
+          <div class="float absolute top-1/2 -translate-y-1/2 -right-2 sm:-right-4 lg:-right-12 bg-slate-900 border border-amber-500/30 rounded-2xl px-4 py-3 shadow-xl" style="animation-delay:1.6s">
+            <div class="flex items-center gap-2">
+              <i data-lucide="trending-down" class="w-4 h-4 text-amber-400"></i>
+              <span class="text-amber-400 font-bold text-sm">-40% к цене</span>
+            </div>
+            <p class="text-slate-500 text-xs mt-0.5">vs розничный импорт</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-line max-w-5xl mx-auto"></div>
+
+  <!-- ═══════════════════════════════════════════════════
+       BLOCK 2 — HOW IT WORKS (6 steps)
+  ═══════════════════════════════════════════════════ -->
+  <section id="how-it-works" class="py-24 relative">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(56,189,248,0.04)_0%,_transparent_70%)]"></div>
+    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Heading -->
+      <div class="text-center mb-16 space-y-4">
+        <p class="text-sky-400 text-sm font-semibold uppercase tracking-widest">Как это работает</p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-100">6 шагов от запроса до получения</h2>
+        <p class="text-slate-400 max-w-xl mx-auto">Прозрачный процесс без скрытых платежей — вы знаете точную стоимость ещё до оплаты.</p>
+      </div>
+
+      <!-- Timeline -->
+      <div class="relative">
+        <!-- Vertical line (desktop) -->
+        <div class="hidden lg:block absolute left-1/2 -translate-x-1/2 top-8 bottom-8 w-px bg-gradient-to-b from-sky-500/50 via-slate-700/60 to-emerald-500/50"></div>
+
+        <div class="space-y-8 lg:space-y-0">
+
+          <!-- Step 1 -->
+          <div class="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center lg:mb-12">
+            <div class="lg:text-right space-y-3 card-hover bg-slate-900/60 border border-slate-800 hover:border-sky-500/30 rounded-2xl p-6 lg:rounded-r-none lg:border-r-0">
+              <div class="flex items-center gap-3 lg:justify-end">
+                <div class="p-2 rounded-lg bg-sky-500/10 border border-sky-500/20">
+                  <i data-lucide="search" class="w-5 h-5 text-sky-400"></i>
+                </div>
+                <h3 class="text-slate-100 font-bold text-lg">Запрос на товар</h3>
+              </div>
+              <p class="text-slate-400 text-sm leading-relaxed">Отправляете нам запрос на нужный товар из Китая — ссылку с маркетплейса, фото или описание.</p>
+            </div>
+            <div class="hidden lg:flex items-center justify-start">
+              <div class="step-num w-12 h-12 rounded-full flex items-center justify-center text-sky-400 font-extrabold text-lg -ml-6 z-10 bg-zinc-950">1</div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center lg:mb-12">
+            <div class="hidden lg:flex items-center justify-end">
+              <div class="step-num w-12 h-12 rounded-full flex items-center justify-center text-sky-400 font-extrabold text-lg -mr-6 z-10 bg-zinc-950">2</div>
+            </div>
+            <div class="space-y-3 card-hover bg-slate-900/60 border border-slate-800 hover:border-sky-500/30 rounded-2xl p-6 lg:rounded-l-none lg:border-l-0">
+              <div class="flex items-center gap-3">
+                <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
+                  <i data-lucide="users" class="w-5 h-5 text-emerald-400"></i>
+                </div>
+                <h3 class="text-slate-100 font-bold text-lg">Группировка и подбор</h3>
+              </div>
+              <p class="text-slate-400 text-sm leading-relaxed">Объединяем ваш заказ с аналогичными у проверенного поставщика в Китае. Запрашиваем стоимость и сроки производства.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center lg:mb-12">
+            <div class="lg:text-right space-y-3 card-hover bg-slate-900/60 border border-slate-800 hover:border-sky-500/30 rounded-2xl p-6 lg:rounded-r-none lg:border-r-0">
+              <div class="flex items-center gap-3 lg:justify-end">
+                <div class="p-2 rounded-lg bg-sky-500/10 border border-sky-500/20">
+                  <i data-lucide="calculator" class="w-5 h-5 text-sky-400"></i>
+                </div>
+                <h3 class="text-slate-100 font-bold text-lg">Полный расчёт</h3>
+              </div>
+              <p class="text-slate-400 text-sm leading-relaxed">Сообщаем итоговую стоимость с учётом товара, доставки, таможенных платежей и всех расходов. Без скрытых наценок.</p>
+            </div>
+            <div class="hidden lg:flex items-center justify-start">
+              <div class="step-num w-12 h-12 rounded-full flex items-center justify-center text-sky-400 font-extrabold text-lg -ml-6 z-10 bg-zinc-950">3</div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center lg:mb-12">
+            <div class="hidden lg:flex items-center justify-end">
+              <div class="step-num w-12 h-12 rounded-full flex items-center justify-center text-sky-400 font-extrabold text-lg -mr-6 z-10 bg-zinc-950">4</div>
+            </div>
+            <div class="space-y-3 card-hover bg-slate-900/60 border border-slate-800 hover:border-sky-500/30 rounded-2xl p-6 lg:rounded-l-none lg:border-l-0">
+              <div class="flex items-center gap-3">
+                <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
+                  <i data-lucide="file-signature" class="w-5 h-5 text-emerald-400"></i>
+                </div>
+                <h3 class="text-slate-100 font-bold text-lg">Договор и предоплата</h3>
+              </div>
+              <p class="text-slate-400 text-sm leading-relaxed">Заключается официальный договор купли-продажи. Вносите предоплату — только после этого размещаем заказ на фабрике.</p>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center lg:mb-12">
+            <div class="lg:text-right space-y-3 card-hover bg-slate-900/60 border border-slate-800 hover:border-sky-500/30 rounded-2xl p-6 lg:rounded-r-none lg:border-r-0">
+              <div class="flex items-center gap-3 lg:justify-end">
+                <div class="p-2 rounded-lg bg-sky-500/10 border border-sky-500/20">
+                  <i data-lucide="package-check" class="w-5 h-5 text-sky-400"></i>
+                </div>
+                <h3 class="text-slate-100 font-bold text-lg">Контроль и отправка</h3>
+              </div>
+              <p class="text-slate-400 text-sm leading-relaxed">Наш представитель проверяет товар на фабрике, консолидируем грузы на складе в Китае и отправляем сборным контейнером.</p>
+            </div>
+            <div class="hidden lg:flex items-center justify-start">
+              <div class="step-num w-12 h-12 rounded-full flex items-center justify-center text-sky-400 font-extrabold text-lg -ml-6 z-10 bg-zinc-950">5</div>
+            </div>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
+            <div class="hidden lg:flex items-center justify-end">
+              <div class="step-num w-12 h-12 rounded-full flex items-center justify-center text-emerald-400 font-extrabold text-lg -mr-6 z-10 bg-zinc-950 border-emerald-500/40" style="border-color:rgba(16,185,129,.4)">6</div>
+            </div>
+            <div class="space-y-3 card-hover bg-slate-900/60 border border-slate-800 hover:border-emerald-500/30 rounded-2xl p-6 lg:rounded-l-none lg:border-l-0">
+              <div class="flex items-center gap-3">
+                <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
+                  <i data-lucide="truck" class="w-5 h-5 text-emerald-400"></i>
+                </div>
+                <h3 class="text-slate-100 font-bold text-lg">Таможня и выдача</h3>
+              </div>
+              <p class="text-slate-400 text-sm leading-relaxed">После прохождения таможенного оформления получаете товар и оплачиваете остаток. Всё чисто, официально, с документами.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-line max-w-5xl mx-auto"></div>
+
+  <!-- ═══════════════════════════════════════════════════
+       BLOCK 3 — ADVANTAGES (4 cards)
+  ═══════════════════════════════════════════════════ -->
+  <section id="advantages" class="py-24 relative">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(16,185,129,0.05)_0%,_transparent_60%)]"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-16 space-y-4">
+        <p class="text-emerald-400 text-sm font-semibold uppercase tracking-widest">Почему выгодно</p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-100">Сила коллективного объёма</h2>
+        <p class="text-slate-400 max-w-xl mx-auto">Объединяя десятки клиентов, мы формируем для фабрик крупный постоянный заказ — и передаём эти условия вам.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Card 1 -->
+        <div class="card-hover bg-slate-900/70 border border-slate-800 hover:border-sky-500/40 rounded-2xl p-6 space-y-4 relative overflow-hidden group">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-sky-500/0 via-sky-500/60 to-sky-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center">
+            <i data-lucide="layers" class="w-6 h-6 text-sky-400"></i>
+          </div>
+          <h3 class="text-slate-100 font-bold text-base leading-snug">Крупный опт при любом объёме</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Для поставщика в Китае ваша партия — часть большого постоянного заказа от нашей компании. Вы получаете оптовые условия даже при минимальном объёме.</p>
+          <div class="pt-2 border-t border-slate-800">
+            <span class="text-sky-400 text-xs font-semibold">От 1 кг / от 1 единицы товара</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card-hover bg-slate-900/70 border border-slate-800 hover:border-emerald-500/40 rounded-2xl p-6 space-y-4 relative overflow-hidden group">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500/0 via-emerald-500/60 to-emerald-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
+            <i data-lucide="trending-down" class="w-6 h-6 text-emerald-400"></i>
+          </div>
+          <h3 class="text-slate-100 font-bold text-base leading-snug">Преимущество по цене и качеству</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Объединение заказов даёт минимальную цену от фабрик и особое внимание к производству вашей партии — как у крупного корпоративного клиента.</p>
+          <div class="pt-2 border-t border-slate-800">
+            <span class="text-emerald-400 text-xs font-semibold">Экономия до 40% vs прямой импорт</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card-hover bg-slate-900/70 border border-slate-800 hover:border-sky-500/40 rounded-2xl p-6 space-y-4 relative overflow-hidden group">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-sky-500/0 via-sky-500/60 to-sky-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center">
+            <i data-lucide="shield" class="w-6 h-6 text-sky-400"></i>
+          </div>
+          <h3 class="text-slate-100 font-bold text-base leading-snug">Защита интересов</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Мы жёстко отстаиваем ваши интересы непосредственно на фабрике, стирая языковой барьер. Переговоры, контроль качества, приёмка — всё на нас.</p>
+          <div class="pt-2 border-t border-slate-800">
+            <span class="text-sky-400 text-xs font-semibold">Наш представитель в Китае</span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card-hover bg-slate-900/70 border border-slate-800 hover:border-emerald-500/40 rounded-2xl p-6 space-y-4 relative overflow-hidden group">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500/0 via-emerald-500/60 to-emerald-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
+            <i data-lucide="badge-check" class="w-6 h-6 text-emerald-400"></i>
+          </div>
+          <h3 class="text-slate-100 font-bold text-base leading-snug">Гарантия и компенсации</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">При браке или просрочке производства мы берём урегулирование на себя, добиваемся денежных компенсаций и поддерживаем полноценную гарантию.</p>
+          <div class="pt-2 border-t border-slate-800">
+            <span class="text-emerald-400 text-xs font-semibold">Юридическая ответственность</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-line max-w-5xl mx-auto"></div>
+
+  <!-- ═══════════════════════════════════════════════════
+       BLOCK 4 — ACTIVE POOLS DASHBOARD
+  ═══════════════════════════════════════════════════ -->
+  <section id="pools-section" class="py-24 relative">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(56,189,248,0.06)_0%,_transparent_60%)]"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Heading -->
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
+        <div class="space-y-3">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <p class="text-emerald-400 text-sm font-semibold uppercase tracking-widest">Live</p>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-100">Активные контейнеры</h2>
+          <p class="text-slate-400">Присоединяйтесь к открытым пулам — чем быстрее закроем, тем раньше отправим.</p>
+        </div>
+        <a href="#contact-form"
+           class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-sky-500/10 border border-sky-500/30 text-sky-400 font-semibold text-sm hover:bg-sky-500/20 transition-all duration-300 whitespace-nowrap">
+          <i data-lucide="plus-circle" class="w-4 h-4"></i>
+          Войти в пул
+        </a>
+      </div>
+
+      <!-- Dashboard grid -->
+      <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+        <!-- Container Card 1 — 74% -->
+        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-sky-500/40 rounded-2xl overflow-hidden relative">
+          <!-- Top accent line -->
+          <div class="h-1 w-full bg-gradient-to-r from-sky-600 via-sky-400 to-sky-600"></div>
+          <div class="p-6 space-y-5">
+            <!-- Header -->
+            <div class="flex items-start justify-between">
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <i data-lucide="container" class="w-4 h-4 text-sky-400"></i>
+                  <span class="text-slate-500 text-xs font-medium uppercase tracking-wider">Контейнер №104</span>
+                </div>
+                <h3 class="text-slate-100 font-bold text-lg">Гуанчжоу → Екатеринбург</h3>
+                <p class="text-slate-500 text-xs mt-0.5">40HC • LCL сборный</p>
+              </div>
+              <span class="px-2.5 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-bold">Набор</span>
+            </div>
+
+            <!-- Progress -->
+            <div class="space-y-2">
+              <div class="flex justify-between text-xs font-medium">
+                <span class="text-slate-400">Заполненность контейнера</span>
+                <span class="text-sky-400 font-bold text-sm">74%</span>
+              </div>
+              <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full rounded-full progress-shimmer" style="width:74%"></div>
+              </div>
+              <div class="flex justify-between text-xs text-slate-500">
+                <span>14.8 м³ занято</span>
+                <span>20 м³ макс.</span>
+              </div>
+            </div>
+
+            <!-- Metrics -->
+            <div class="grid grid-cols-3 gap-3">
+              <div class="bg-slate-800/60 rounded-xl p-3 text-center">
+                <p class="text-sky-400 font-bold text-base">12</p>
+                <p class="text-slate-500 text-xs mt-0.5">участников</p>
+              </div>
+              <div class="bg-slate-800/60 rounded-xl p-3 text-center">
+                <p class="text-slate-100 font-bold text-base">18 д.</p>
+                <p class="text-slate-500 text-xs mt-0.5">до закрытия</p>
+              </div>
+              <div class="bg-slate-800/60 rounded-xl p-3 text-center">
+                <p class="text-emerald-400 font-bold text-base">45 д.</p>
+                <p class="text-slate-500 text-xs mt-0.5">в пути</p>
+              </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="pt-2 border-t border-slate-800 flex items-center justify-between">
+              <div>
+                <p class="text-slate-500 text-xs">Тариф от</p>
+                <p class="text-slate-100 font-bold">$2.40 <span class="text-slate-500 font-normal text-xs">/ кг</span></p>
+              </div>
+              <a href="#contact-form" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-400 text-sm font-semibold hover:bg-sky-500/20 transition-all duration-300">
+                Зайти в пул
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Container Card 2 — 42% -->
+        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-emerald-500/40 rounded-2xl overflow-hidden relative">
+          <div class="h-1 w-full bg-gradient-to-r from-emerald-600 via-emerald-400 to-emerald-600"></div>
+          <div class="p-6 space-y-5">
+            <div class="flex items-start justify-between">
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <i data-lucide="truck" class="w-4 h-4 text-emerald-400"></i>
+                  <span class="text-slate-500 text-xs font-medium uppercase tracking-wider">Авто-сборник №89</span>
+                </div>
+                <h3 class="text-slate-100 font-bold text-lg">Иу → Москва</h3>
+                <p class="text-slate-500 text-xs mt-0.5">Авто + ж/д • LCL сборный</p>
+              </div>
+              <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold">Открыт</span>
+            </div>
+
+            <div class="space-y-2">
+              <div class="flex justify-between text-xs font-medium">
+                <span class="text-slate-400">Заполненность контейнера</span>
+                <span class="text-emerald-400 font-bold text-sm">42%</span>
+              </div>
+              <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full rounded-full progress-shimmer-green" style="width:42%"></div>
+              </div>
+              <div class="flex justify-between text-xs text-slate-500">
+                <span>8.4 м³ занято</span>
+                <span>20 м³ макс.</span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-3">
+              <div class="bg-slate-800/60 rounded-xl p-3 text-center">
+                <p class="text-emerald-400 font-bold text-base">7</p>
+                <p class="text-slate-500 text-xs mt-0.5">участников</p>
+              </div>
+              <div class="bg-slate-800/60 rounded-xl p-3 text-center">
+                <p class="text-slate-100 font-bold text-base">31 д.</p>
+                <p class="text-slate-500 text-xs mt-0.5">до закрытия</p>
+              </div>
+              <div class="bg-slate-800/60 rounded-xl p-3 text-center">
+                <p class="text-emerald-400 font-bold text-base">25 д.</p>
+                <p class="text-slate-500 text-xs mt-0.5">в пути</p>
+              </div>
+            </div>
+
+            <div class="pt-2 border-t border-slate-800 flex items-center justify-between">
+              <div>
+                <p class="text-slate-500 text-xs">Тариф от</p>
+                <p class="text-slate-100 font-bold">$1.80 <span class="text-slate-500 font-normal text-xs">/ кг</span></p>
+              </div>
+              <a href="#contact-form" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-semibold hover:bg-emerald-500/20 transition-all duration-300">
+                Зайти в пул
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Container Card 3 — 91% URGENT -->
+        <div class="card-hover bg-slate-900/80 border border-amber-700/40 hover:border-amber-500/60 rounded-2xl overflow-hidden relative">
+          <!-- Urgent glow -->
+          <div class="absolute inset-0 bg-amber-500/3 pointer-events-none"></div>
+          <div class="h-1 w-full bg-gradient-to-r from-amber-600 via-amber-400 to-amber-600"></div>
+          <div class="p-6 space-y-5 relative">
+            <div class="flex items-start justify-between">
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <i data-lucide="zap" class="w-4 h-4 text-amber-400"></i>
+                  <span class="text-slate-500 text-xs font-medium uppercase tracking-wider">Контейнер №105</span>
+                </div>
+                <h3 class="text-slate-100 font-bold text-lg">Нинбо → Новосибирск</h3>
+                <p class="text-slate-500 text-xs mt-0.5">40HC • LCL сборный</p>
+              </div>
+              <span class="px-2.5 py-1 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-400 text-xs font-bold animate-pulse">🔔 Срочно</span>
+            </div>
+
+            <div class="space-y-2">
+              <div class="flex justify-between text-xs font-medium">
+                <span class="text-slate-400">Заполненность контейнера</span>
+                <span class="text-amber-400 font-bold text-sm">91%</span>
+              </div>
+              <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full rounded-full progress-shimmer-amber" style="width:91%"></div>
+              </div>
+              <div class="flex justify-between text-xs text-slate-500">
+                <span>18.2 м³ занято</span>
+                <span>20 м³ макс.</span>
+              </div>
+            </div>
+
+            <!-- Urgency banner -->
+            <div class="flex items-center gap-3 bg-amber-500/10 border border-amber-500/25 rounded-xl p-3">
+              <i data-lucide="clock" class="w-4 h-4 text-amber-400 shrink-0"></i>
+              <div>
+                <p class="text-amber-300 text-xs font-bold">Осталось ~1.8 м³</p>
+                <p class="text-slate-400 text-xs">Закрытие пула через <span class="text-amber-400 font-semibold">5 дней</span></p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-3">
+              <div class="bg-slate-800/60 rounded-xl p-3 text-center">
+                <p class="text-amber-400 font-bold text-base">18</p>
+                <p class="text-slate-500 text-xs mt-0.5">участников</p>
+              </div>
+              <div class="bg-slate-800/60 rounded-xl p-3 text-center">
+                <p class="text-amber-400 font-bold text-base">5 д.</p>
+                <p class="text-slate-500 text-xs mt-0.5">до закрытия</p>
+              </div>
+              <div class="bg-slate-800/60 rounded-xl p-3 text-center">
+                <p class="text-emerald-400 font-bold text-base">50 д.</p>
+                <p class="text-slate-500 text-xs mt-0.5">в пути</p>
+              </div>
+            </div>
+
+            <div class="pt-2 border-t border-slate-800 flex items-center justify-between">
+              <div>
+                <p class="text-slate-500 text-xs">Тариф от</p>
+                <p class="text-slate-100 font-bold">$2.10 <span class="text-slate-500 font-normal text-xs">/ кг</span></p>
+              </div>
+              <a href="#contact-form" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-amber-500/15 border border-amber-500/40 text-amber-400 text-sm font-bold hover:bg-amber-500/25 transition-all duration-300">
+                Зафиксировать
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom note -->
+      <p class="text-center text-slate-500 text-sm mt-8">
+        Данные обновляются ежедневно. Нет нужного направления?
+        <a href="#contact-form" class="text-sky-400 hover:text-sky-300 transition-colors">Напишите — откроем новый пул.</a>
+      </p>
+
+    </div>
+  </section>
+
+  <div class="section-line max-w-5xl mx-auto"></div>
+
+  <!-- ═══════════════════════════════════════════════════
+       CONTACT FORM
+  ═══════════════════════════════════════════════════ -->
+  <section id="contact-form" class="py-24 relative">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(56,189,248,0.05)_0%,_transparent_65%)]"></div>
+    <div class="relative max-w-2xl mx-auto px-4 sm:px-6">
+
+      <div class="text-center mb-12 space-y-4">
+        <p class="text-sky-400 text-sm font-semibold uppercase tracking-widest">Бесплатный расчёт</p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-100">Оставить запрос</h2>
+        <p class="text-slate-400">Отправьте запрос — в течение 24 часов пришлём полный расчёт стоимости с учётом всех расходов.</p>
+      </div>
+
+      <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-8 space-y-5 glow-blue">
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div class="space-y-1.5">
+            <label class="text-slate-400 text-sm font-medium">Ваше имя</label>
+            <input type="text" placeholder="Иван Иванов"
+                   class="w-full bg-slate-800/70 border border-slate-700 hover:border-sky-500/40 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500/40 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 transition-all duration-300" />
+          </div>
+          <div class="space-y-1.5">
+            <label class="text-slate-400 text-sm font-medium">Telegram / телефон</label>
+            <input type="text" placeholder="@username или +7..."
+                   class="w-full bg-slate-800/70 border border-slate-700 hover:border-sky-500/40 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500/40 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 transition-all duration-300" />
+          </div>
+        </div>
+
+        <div class="space-y-1.5">
+          <label class="text-slate-400 text-sm font-medium">Какой товар нужен?</label>
+          <input type="text" placeholder="Например: автозапчасти BMW, электроника, текстиль..."
+                 class="w-full bg-slate-800/70 border border-slate-700 hover:border-sky-500/40 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500/40 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 transition-all duration-300" />
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div class="space-y-1.5">
+            <label class="text-slate-400 text-sm font-medium">Примерный объём / вес</label>
+            <input type="text" placeholder="100 кг или 0.5 м³"
+                   class="w-full bg-slate-800/70 border border-slate-700 hover:border-sky-500/40 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500/40 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 transition-all duration-300" />
+          </div>
+          <div class="space-y-1.5">
+            <label class="text-slate-400 text-sm font-medium">Город доставки</label>
+            <input type="text" placeholder="Екатеринбург"
+                   class="w-full bg-slate-800/70 border border-slate-700 hover:border-sky-500/40 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500/40 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 transition-all duration-300" />
+          </div>
+        </div>
+
+        <div class="space-y-1.5">
+          <label class="text-slate-400 text-sm font-medium">Ссылка на товар или дополнительная информация</label>
+          <textarea rows="3" placeholder="Ссылка с 1688, Alibaba, Taobao, описание, фото..."
+                    class="w-full bg-slate-800/70 border border-slate-700 hover:border-sky-500/40 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500/40 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 transition-all duration-300 resize-none"></textarea>
+        </div>
+
+        <button type="button"
+                class="w-full flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-bold text-base transition-all duration-300 glow-btn">
+          <i data-lucide="send" class="w-5 h-5"></i>
+          Отправить запрос на расчёт
+        </button>
+
+        <p class="text-center text-slate-500 text-xs">
+          Нажимая кнопку, вы соглашаетесь на обработку персональных данных. Не спамим.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       BLOCK 5 — FOOTER
+  ═══════════════════════════════════════════════════ -->
+  <footer class="border-t border-slate-800 bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+        <!-- Brand -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="#" class="inline-block">
+            <span class="text-sky-400 font-bold text-2xl tracking-tight">denchik<span class="text-slate-500">.online</span></span>
+          </a>
+          <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
+            Платформа совместного импорта из Китая для малого и среднего бизнеса. Цены крупного опта без собственного контейнера.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <!-- Telegram -->
+            <a href="https://t.me/denchik_import" target="_blank" rel="noopener noreferrer"
+               class="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 hover:border-sky-500/40 hover:bg-sky-500/10 flex items-center justify-center text-slate-400 hover:text-sky-400 transition-all duration-300">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/>
+              </svg>
+            </a>
+            <!-- WhatsApp -->
+            <a href="https://wa.me/79000000000" target="_blank" rel="noopener noreferrer"
+               class="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 hover:border-emerald-500/40 hover:bg-emerald-500/10 flex items-center justify-center text-slate-400 hover:text-emerald-400 transition-all duration-300">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="space-y-4">
+          <h4 class="text-slate-200 font-semibold text-sm uppercase tracking-wider">Навигация</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="#how-it-works"  class="text-slate-400 hover:text-sky-400 transition-colors">Как работаем</a></li>
+            <li><a href="#advantages"    class="text-slate-400 hover:text-sky-400 transition-colors">Преимущества</a></li>
+            <li><a href="#pools-section" class="text-slate-400 hover:text-sky-400 transition-colors">Активные пулы</a></li>
+            <li><a href="#contact-form"  class="text-slate-400 hover:text-sky-400 transition-colors">Запрос на расчёт</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacts -->
+        <div class="space-y-4">
+          <h4 class="text-slate-200 font-semibold text-sm uppercase tracking-wider">Контакты</h4>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-center gap-2 text-slate-400">
+              <i data-lucide="mail" class="w-4 h-4 text-sky-400 shrink-0"></i>
+              <a href="mailto:import@denchik.online" class="hover:text-sky-400 transition-colors break-all">import@denchik.online</a>
+            </li>
+            <li class="flex items-center gap-2 text-slate-400">
+              <i data-lucide="mail" class="w-4 h-4 text-slate-500 shrink-0"></i>
+              <a href="mailto:denis@denchik.online" class="hover:text-sky-400 transition-colors break-all">denis@denchik.online</a>
+            </li>
+            <li class="flex items-center gap-2 text-slate-400">
+              <i data-lucide="send" class="w-4 h-4 text-sky-400 shrink-0"></i>
+              <a href="https://t.me/denchik_import" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition-colors">Telegram-канал</a>
+            </li>
+            <li class="flex items-start gap-2 text-slate-400">
+              <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+              <span class="text-xs leading-relaxed">Официальный договор КП. Белая таможня. ВЭД с 2018 года.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="mt-12 pt-8 border-t border-slate-800/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-600">
+        <p>© 2024–2025 denchik.online — Совместный импорт из Китая. Все права защищены.</p>
+        <p>Сайт не является публичной офертой.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════
+       JS
+  ═══════════════════════════════════════════════════ -->
+  <!-- Lucide Icons — в конце, чтобы не блокировать рендер -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>
+    lucide.createIcons();
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    function closeMobileMenu() {
+      mobileMenu.classList.add('hidden');
+    }
+
+    // Live countdown timers (simulated) — updates every second
+    function padZero(n) { return n < 10 ? '0' + n : n; }
+
+    // Animate progress bars on scroll (IntersectionObserver)
+    const bars = document.querySelectorAll('[style*="width:"]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.transition = 'width 1.2s cubic-bezier(0.4, 0, 0.2, 1)';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    bars.forEach(bar => observer.observe(bar));
+  </script>
+
+</body>
+</html>
