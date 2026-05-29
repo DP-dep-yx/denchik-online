@@ -918,26 +918,28 @@
           const txt = document.getElementById('submit-text');
           btn.disabled = true;
           txt.textContent = 'Отправляем...';
-          const data = Object.fromEntries(new FormData(this));
-          data.access_key = this.querySelector('[name=access_key]').value;
-          try {
-            const res = await fetch('https://api.web3forms.com/submit', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-              body: JSON.stringify(data)
-            });
-            const json = await res.json();
+          const formData = new FormData(this);
+          const object = {};
+          formData.forEach(function(value, key){ object[key] = value; });
+          fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(object)
+          })
+          .then(function(res){ return res.json(); })
+          .then(function(json){
             if (json.success) {
-              this.classList.add('hidden');
+              document.getElementById('request-form').style.display = 'none';
               document.getElementById('form-success').classList.remove('hidden');
             } else {
-              txt.textContent = 'Ошибка. Попробуйте ещё раз.';
+              txt.textContent = json.message || 'Ошибка. Попробуйте ещё раз.';
               btn.disabled = false;
             }
-          } catch {
+          })
+          .catch(function(err){
             txt.textContent = 'Ошибка сети. Попробуйте ещё раз.';
             btn.disabled = false;
-          }
+          });
         });
       </script>
 
