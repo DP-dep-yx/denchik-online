@@ -844,54 +844,102 @@
       </div>
 
       <div class="rounded-2xl p-8 space-y-5 glow-blue" style="background:linear-gradient(135deg,#2d3748 0%,#374151 100%);border:1px solid rgba(148,163,184,0.15);box-shadow:0 4px 32px rgba(0,0,0,0.4)">
-        <div class="grid sm:grid-cols-2 gap-5">
-          <div class="space-y-1.5">
-            <label class="text-slate-400 text-sm font-medium">Ваше имя</label>
-            <input type="text" placeholder="Иван Иванов"
-                   class="w-full bg-slate-800/70 border border-slate-700 hover:border-sky-500/40 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500/40 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 transition-all duration-300" />
+
+        <!-- Сообщение об успехе -->
+        <div id="form-success" class="hidden text-center py-8 space-y-3">
+          <div class="flex justify-center">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.3)">
+              <i data-lucide="check-circle" class="w-8 h-8 text-emerald-400"></i>
+            </div>
           </div>
-          <div class="space-y-1.5">
-            <label class="text-slate-400 text-sm font-medium">Telegram / телефон</label>
-            <input type="text" placeholder="@username или +7..."
-                   class="w-full bg-slate-800/70 border border-slate-700 hover:border-sky-500/40 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500/40 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 transition-all duration-300" />
-          </div>
+          <p class="text-slate-100 font-bold text-lg">Запрос отправлен!</p>
+          <p class="text-slate-400 text-sm">Мы свяжемся с вами в течение 24 часов.</p>
         </div>
 
-        <div class="space-y-1.5">
-          <label class="text-slate-400 text-sm font-medium">Какой товар нужен?</label>
-          <input type="text" placeholder="Например: автозапчасти BMW, электроника, текстиль..."
-                 class="w-full bg-slate-800/70 border border-slate-700 hover:border-sky-500/40 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500/40 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 transition-all duration-300" />
-        </div>
+        <form id="request-form" class="space-y-5">
+          <input type="hidden" name="access_key" value="СЮДА_ВСТАВИТЬ_КЛЮЧ_WEB3FORMS">
+          <input type="hidden" name="subject" value="Новый запрос на расчёт — denchik.online">
+          <input type="hidden" name="from_name" value="denchik.online">
 
-        <div class="grid sm:grid-cols-2 gap-5">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div class="space-y-1.5">
+              <label class="text-slate-400 text-sm font-medium">Ваше имя</label>
+              <input type="text" name="name" placeholder="Иван Иванов" required
+                     class="w-full bg-slate-800/70 border border-slate-700 hover:border-sky-500/40 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500/40 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 transition-all duration-300" />
+            </div>
+            <div class="space-y-1.5">
+              <label class="text-slate-400 text-sm font-medium">Telegram / телефон</label>
+              <input type="text" name="contact" placeholder="@username или +7..." required
+                     class="w-full bg-slate-800/70 border border-slate-700 hover:border-sky-500/40 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500/40 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 transition-all duration-300" />
+            </div>
+          </div>
+
           <div class="space-y-1.5">
-            <label class="text-slate-400 text-sm font-medium">Примерный объём / вес</label>
-            <input type="text" placeholder="100 кг или 0.5 м³"
+            <label class="text-slate-400 text-sm font-medium">Какой товар нужен?</label>
+            <input type="text" name="product" placeholder="Например: автозапчасти BMW, электроника, текстиль..." required
                    class="w-full bg-slate-800/70 border border-slate-700 hover:border-sky-500/40 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500/40 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 transition-all duration-300" />
           </div>
-          <div class="space-y-1.5">
-            <label class="text-slate-400 text-sm font-medium">Город доставки</label>
-            <input type="text" placeholder="Екатеринбург"
-                   class="w-full bg-slate-800/70 border border-slate-700 hover:border-sky-500/40 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500/40 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 transition-all duration-300" />
+
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div class="space-y-1.5">
+              <label class="text-slate-400 text-sm font-medium">Примерный объём / вес</label>
+              <input type="text" name="volume" placeholder="100 кг или 0.5 м³"
+                     class="w-full bg-slate-800/70 border border-slate-700 hover:border-sky-500/40 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500/40 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 transition-all duration-300" />
+            </div>
+            <div class="space-y-1.5">
+              <label class="text-slate-400 text-sm font-medium">Город доставки</label>
+              <input type="text" name="city" placeholder="Екатеринбург"
+                     class="w-full bg-slate-800/70 border border-slate-700 hover:border-sky-500/40 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500/40 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 transition-all duration-300" />
+            </div>
           </div>
-        </div>
 
-        <div class="space-y-1.5">
-          <label class="text-slate-400 text-sm font-medium">Ссылка на товар или дополнительная информация</label>
-          <textarea rows="3" placeholder="Ссылка с 1688, Alibaba, Taobao, описание, фото..."
-                    class="w-full bg-slate-800/70 border border-slate-700 hover:border-sky-500/40 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500/40 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 transition-all duration-300 resize-none"></textarea>
-        </div>
+          <div class="space-y-1.5">
+            <label class="text-slate-400 text-sm font-medium">Ссылка на товар или дополнительная информация</label>
+            <textarea rows="3" name="details" placeholder="Ссылка с 1688, Alibaba, Taobao, описание, фото..."
+                      class="w-full bg-slate-800/70 border border-slate-700 hover:border-sky-500/40 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500/40 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 transition-all duration-300 resize-none"></textarea>
+          </div>
 
-        <button type="button"
-                class="w-full flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-bold text-base transition-all duration-300 glow-btn">
-          <i data-lucide="send" class="w-5 h-5"></i>
-          Отправить запрос на расчёт
-        </button>
+          <button type="submit" id="submit-btn"
+                  class="w-full flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-bold text-base transition-all duration-300 glow-btn">
+            <i data-lucide="send" class="w-5 h-5"></i>
+            <span id="submit-text">Отправить запрос на расчёт</span>
+          </button>
 
-        <p class="text-center text-slate-500 text-xs">
-          Нажимая кнопку, вы соглашаетесь на обработку персональных данных. Не спамим.
-        </p>
+          <p class="text-center text-slate-500 text-xs">
+            Нажимая кнопку, вы соглашаетесь на обработку персональных данных. Не спамим.
+          </p>
+        </form>
       </div>
+
+      <script>
+        document.getElementById('request-form').addEventListener('submit', async function(e) {
+          e.preventDefault();
+          const btn = document.getElementById('submit-btn');
+          const txt = document.getElementById('submit-text');
+          btn.disabled = true;
+          txt.textContent = 'Отправляем...';
+          const data = Object.fromEntries(new FormData(this));
+          data.access_key = this.querySelector('[name=access_key]').value;
+          try {
+            const res = await fetch('https://api.web3forms.com/submit', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+              body: JSON.stringify(data)
+            });
+            const json = await res.json();
+            if (json.success) {
+              this.classList.add('hidden');
+              document.getElementById('form-success').classList.remove('hidden');
+            } else {
+              txt.textContent = 'Ошибка. Попробуйте ещё раз.';
+              btn.disabled = false;
+            }
+          } catch {
+            txt.textContent = 'Ошибка сети. Попробуйте ещё раз.';
+            btn.disabled = false;
+          }
+        });
+      </script>
 
     </div>
   </section>
