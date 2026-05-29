@@ -113,16 +113,16 @@
     }
     .float { animation: float 4s ease-in-out infinite; }
 
-    /* Perimeter orbit (clockwise along photo edges) */
+    /* Perimeter orbit (counter-clockwise along photo edges) */
     @keyframes perimeter-cw {
       0%    { top:   0%; left:  50%; }
-      12.5% { top:   0%; left: 100%; }
-      25%   { top:  50%; left: 100%; }
-      37.5% { top: 100%; left: 100%; }
+      12.5% { top:   0%; left:   0%; }
+      25%   { top:  50%; left:   0%; }
+      37.5% { top: 100%; left:   0%; }
       50%   { top: 100%; left:  50%; }
-      62.5% { top: 100%; left:   0%; }
-      75%   { top:  50%; left:   0%; }
-      87.5% { top:   0%; left:   0%; }
+      62.5% { top: 100%; left: 100%; }
+      75%   { top:  50%; left: 100%; }
+      87.5% { top:   0%; left: 100%; }
       100%  { top:   0%; left:  50%; }
     }
 
@@ -312,7 +312,7 @@
 
               <!-- Badge 1: Белая таможня (green) — top-center at t=0 -->
               <div style="position:absolute;transform:translate(-50%,-50%);animation:perimeter-cw 16s linear infinite;animation-delay:0s;">
-                <div style="background:linear-gradient(175deg,#0b1f14 0%,#091910 100%);border:1px solid rgba(16,185,129,0.5);border-radius:4px;overflow:hidden;min-width:152px;box-shadow:0 0 20px rgba(16,185,129,.25),0 0 40px rgba(16,185,129,.1),6px 8px 24px rgba(0,0,0,0.6);">
+                <div style="background:linear-gradient(175deg,#0b1f14 0%,#091910 100%);border:1px solid rgba(16,185,129,0.5);border-radius:4px;overflow:hidden;width:168px;box-shadow:0 0 20px rgba(16,185,129,.25),0 0 40px rgba(16,185,129,.1),6px 8px 24px rgba(0,0,0,0.6);">
                   <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,0.032) 0,rgba(255,255,255,0.032) 2px,transparent 2px,transparent 18px);"></div>
                   <div style="position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#059669,#10b981,#059669);"></div>
                   <div style="position:absolute;top:5px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.18),transparent);"></div>
@@ -335,7 +335,7 @@
 
               <!-- Badge 2: Договор (blue) — right-center at t=0 (delay -4s) -->
               <div style="position:absolute;transform:translate(-50%,-50%);animation:perimeter-cw 16s linear infinite;animation-delay:-4s;">
-                <div style="background:linear-gradient(175deg,#0b1a28 0%,#091520 100%);border:1px solid rgba(56,189,248,0.5);border-radius:4px;overflow:hidden;min-width:152px;box-shadow:0 0 20px rgba(56,189,248,.25),0 0 40px rgba(56,189,248,.1),-6px 8px 24px rgba(0,0,0,0.6);">
+                <div style="background:linear-gradient(175deg,#0b1a28 0%,#091520 100%);border:1px solid rgba(56,189,248,0.5);border-radius:4px;overflow:hidden;width:168px;box-shadow:0 0 20px rgba(56,189,248,.25),0 0 40px rgba(56,189,248,.1),-6px 8px 24px rgba(0,0,0,0.6);">
                   <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,0.032) 0,rgba(255,255,255,0.032) 2px,transparent 2px,transparent 18px);"></div>
                   <div style="position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#0284c7,#38bdf8,#0284c7);"></div>
                   <div style="position:absolute;top:5px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.18),transparent);"></div>
@@ -358,7 +358,7 @@
 
               <!-- Badge 3: LCL→FCL (cyan) — bottom-center at t=0 (delay -8s) -->
               <div style="position:absolute;transform:translate(-50%,-50%);animation:perimeter-cw 16s linear infinite;animation-delay:-8s;">
-                <div style="background:linear-gradient(175deg,#0a1e22 0%,#08181c 100%);border:1px solid rgba(34,211,238,0.5);border-radius:4px;overflow:hidden;min-width:152px;box-shadow:0 0 20px rgba(34,211,238,0.18),-6px 8px 24px rgba(0,0,0,0.6);">
+                <div style="background:linear-gradient(175deg,#0a1e22 0%,#08181c 100%);border:1px solid rgba(34,211,238,0.5);border-radius:4px;overflow:hidden;width:168px;box-shadow:0 0 20px rgba(34,211,238,0.18),-6px 8px 24px rgba(0,0,0,0.6);">
                   <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,0.032) 0,rgba(255,255,255,0.032) 2px,transparent 2px,transparent 18px);"></div>
                   <div style="position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#0891b2,#22d3ee,#0891b2);"></div>
                   <div style="position:absolute;top:5px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.18),transparent);"></div>
@@ -391,7 +391,7 @@
 
               <!-- Badge 4: -40% (amber) — left-center at t=0 (delay -12s) -->
               <div style="position:absolute;transform:translate(-50%,-50%);animation:perimeter-cw 16s linear infinite;animation-delay:-12s;">
-                <div style="background:linear-gradient(175deg,#1c1506 0%,#160f04 100%);border:1px solid rgba(245,158,11,0.5);border-radius:4px;overflow:hidden;min-width:152px;box-shadow:0 0 20px rgba(245,158,11,0.2),6px 8px 24px rgba(0,0,0,0.6);">
+                <div style="background:linear-gradient(175deg,#1c1506 0%,#160f04 100%);border:1px solid rgba(245,158,11,0.5);border-radius:4px;overflow:hidden;width:168px;box-shadow:0 0 20px rgba(245,158,11,0.2),6px 8px 24px rgba(0,0,0,0.6);">
                   <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,0.032) 0,rgba(255,255,255,0.032) 2px,transparent 2px,transparent 18px);"></div>
                   <div style="position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#d97706,#f59e0b,#d97706);"></div>
                   <div style="position:absolute;top:5px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.18),transparent);"></div>
