@@ -428,14 +428,25 @@
 
           <!-- Step 1 -->
           <div class="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center lg:mb-12">
-            <div class="lg:text-right space-y-3 card-hover rounded-2xl p-6 lg:rounded-r-none lg:border-r-0" style="background:linear-gradient(135deg,#2d3748 0%,#374151 100%);border:1px solid rgba(148,163,184,0.15);box-shadow:0 4px 24px rgba(0,0,0,0.3)"">
-              <div class="flex items-center gap-3 lg:justify-end">
-                <div class="p-2 rounded-lg bg-sky-500/10 border border-sky-500/20">
-                  <i data-lucide="search" class="w-5 h-5 text-sky-400"></i>
+            <div class="card-hover" style="position:relative;overflow:hidden;border-radius:6px;background:linear-gradient(175deg,#0b1a28 0%,#091520 100%);border:1px solid rgba(56,189,248,0.45);box-shadow:0 0 16px rgba(56,189,248,0.12),0 4px 24px rgba(0,0,0,0.5);transform:perspective(800px) rotateY(1.5deg) rotateX(0.5deg);">
+              <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,0.025) 0,rgba(255,255,255,0.025) 2px,transparent 2px,transparent 18px);pointer-events:none;"></div>
+              <div style="position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#0284c7,#38bdf8,#0284c7);"></div>
+              <div style="position:absolute;top:5px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.15),transparent);"></div>
+              <div style="position:absolute;top:0;bottom:0;left:0;width:4px;background:rgba(56,189,248,0.15);"></div>
+              <div style="position:absolute;top:0;bottom:0;right:0;width:4px;background:rgba(56,189,248,0.15);"></div>
+              <div style="position:absolute;top:0;left:0;width:8px;height:8px;background:rgba(56,189,248,0.5);"></div>
+              <div style="position:absolute;top:0;right:0;width:8px;height:8px;background:rgba(56,189,248,0.5);"></div>
+              <div style="position:absolute;bottom:0;left:0;width:8px;height:8px;background:rgba(56,189,248,0.5);"></div>
+              <div style="position:absolute;bottom:0;right:0;width:8px;height:8px;background:rgba(56,189,248,0.5);"></div>
+              <div style="position:relative;padding:20px 20px 18px 20px;" class="space-y-3 lg:text-right">
+                <div class="flex items-center gap-3 lg:justify-end">
+                  <div class="p-2 rounded-lg bg-sky-500/10 border border-sky-500/20">
+                    <i data-lucide="search" class="w-5 h-5 text-sky-400"></i>
+                  </div>
+                  <h3 class="text-slate-100 font-bold text-lg">Запрос на товар</h3>
                 </div>
-                <h3 class="text-slate-100 font-bold text-lg">Запрос на товар</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Отправляете нам запрос на нужный товар из Китая — ссылку с маркетплейса, фото или описание.</p>
               </div>
-              <p class="text-slate-400 text-sm leading-relaxed">Отправляете нам запрос на нужный товар из Китая — ссылку с маркетплейса, фото или описание.</p>
             </div>
             <div class="hidden lg:flex items-center justify-start">
               <div class="step-num w-12 h-12 rounded-full flex items-center justify-center text-sky-400 font-extrabold text-lg -ml-6 z-10">1</div>
@@ -447,27 +458,49 @@
             <div class="hidden lg:flex items-center justify-end">
               <div class="step-num w-12 h-12 rounded-full flex items-center justify-center text-sky-400 font-extrabold text-lg -mr-6 z-10">2</div>
             </div>
-            <div class="space-y-3 card-hover rounded-2xl p-6 lg:rounded-l-none lg:border-l-0" style="background:linear-gradient(135deg,#2d3748 0%,#374151 100%);border:1px solid rgba(148,163,184,0.15);box-shadow:0 4px 24px rgba(0,0,0,0.3)"">
-              <div class="flex items-center gap-3">
-                <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
-                  <i data-lucide="users" class="w-5 h-5 text-emerald-400"></i>
+            <div class="card-hover" style="position:relative;overflow:hidden;border-radius:6px;background:linear-gradient(175deg,#0b1f14 0%,#091910 100%);border:1px solid rgba(16,185,129,0.45);box-shadow:0 0 16px rgba(16,185,129,0.1),0 4px 24px rgba(0,0,0,0.5);transform:perspective(800px) rotateY(-1.5deg) rotateX(0.5deg);">
+              <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,0.025) 0,rgba(255,255,255,0.025) 2px,transparent 2px,transparent 18px);pointer-events:none;"></div>
+              <div style="position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#059669,#10b981,#059669);"></div>
+              <div style="position:absolute;top:5px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.15),transparent);"></div>
+              <div style="position:absolute;top:0;bottom:0;left:0;width:4px;background:rgba(16,185,129,0.15);"></div>
+              <div style="position:absolute;top:0;bottom:0;right:0;width:4px;background:rgba(16,185,129,0.15);"></div>
+              <div style="position:absolute;top:0;left:0;width:8px;height:8px;background:rgba(16,185,129,0.5);"></div>
+              <div style="position:absolute;top:0;right:0;width:8px;height:8px;background:rgba(16,185,129,0.5);"></div>
+              <div style="position:absolute;bottom:0;left:0;width:8px;height:8px;background:rgba(16,185,129,0.5);"></div>
+              <div style="position:absolute;bottom:0;right:0;width:8px;height:8px;background:rgba(16,185,129,0.5);"></div>
+              <div style="position:relative;padding:20px 20px 18px 20px;" class="space-y-3">
+                <div class="flex items-center gap-3">
+                  <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
+                    <i data-lucide="users" class="w-5 h-5 text-emerald-400"></i>
+                  </div>
+                  <h3 class="text-slate-100 font-bold text-lg">Группировка и подбор</h3>
                 </div>
-                <h3 class="text-slate-100 font-bold text-lg">Группировка и подбор</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Объединяем ваш заказ с аналогичными у проверенного поставщика в Китае. Запрашиваем стоимость и сроки производства.</p>
               </div>
-              <p class="text-slate-400 text-sm leading-relaxed">Объединяем ваш заказ с аналогичными у проверенного поставщика в Китае. Запрашиваем стоимость и сроки производства.</p>
             </div>
           </div>
 
           <!-- Step 3 -->
           <div class="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center lg:mb-12">
-            <div class="lg:text-right space-y-3 card-hover rounded-2xl p-6 lg:rounded-r-none lg:border-r-0" style="background:linear-gradient(135deg,#2d3748 0%,#374151 100%);border:1px solid rgba(148,163,184,0.15);box-shadow:0 4px 24px rgba(0,0,0,0.3)"">
-              <div class="flex items-center gap-3 lg:justify-end">
-                <div class="p-2 rounded-lg bg-sky-500/10 border border-sky-500/20">
-                  <i data-lucide="calculator" class="w-5 h-5 text-sky-400"></i>
+            <div class="card-hover" style="position:relative;overflow:hidden;border-radius:6px;background:linear-gradient(175deg,#0b1a28 0%,#091520 100%);border:1px solid rgba(56,189,248,0.45);box-shadow:0 0 16px rgba(56,189,248,0.12),0 4px 24px rgba(0,0,0,0.5);transform:perspective(800px) rotateY(1.5deg) rotateX(0.5deg);">
+              <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,0.025) 0,rgba(255,255,255,0.025) 2px,transparent 2px,transparent 18px);pointer-events:none;"></div>
+              <div style="position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#0284c7,#38bdf8,#0284c7);"></div>
+              <div style="position:absolute;top:5px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.15),transparent);"></div>
+              <div style="position:absolute;top:0;bottom:0;left:0;width:4px;background:rgba(56,189,248,0.15);"></div>
+              <div style="position:absolute;top:0;bottom:0;right:0;width:4px;background:rgba(56,189,248,0.15);"></div>
+              <div style="position:absolute;top:0;left:0;width:8px;height:8px;background:rgba(56,189,248,0.5);"></div>
+              <div style="position:absolute;top:0;right:0;width:8px;height:8px;background:rgba(56,189,248,0.5);"></div>
+              <div style="position:absolute;bottom:0;left:0;width:8px;height:8px;background:rgba(56,189,248,0.5);"></div>
+              <div style="position:absolute;bottom:0;right:0;width:8px;height:8px;background:rgba(56,189,248,0.5);"></div>
+              <div style="position:relative;padding:20px 20px 18px 20px;" class="space-y-3 lg:text-right">
+                <div class="flex items-center gap-3 lg:justify-end">
+                  <div class="p-2 rounded-lg bg-sky-500/10 border border-sky-500/20">
+                    <i data-lucide="calculator" class="w-5 h-5 text-sky-400"></i>
+                  </div>
+                  <h3 class="text-slate-100 font-bold text-lg">Полный расчёт</h3>
                 </div>
-                <h3 class="text-slate-100 font-bold text-lg">Полный расчёт</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Сообщаем итоговую стоимость с учётом товара, доставки, таможенных платежей и всех расходов. Без скрытых наценок.</p>
               </div>
-              <p class="text-slate-400 text-sm leading-relaxed">Сообщаем итоговую стоимость с учётом товара, доставки, таможенных платежей и всех расходов. Без скрытых наценок.</p>
             </div>
             <div class="hidden lg:flex items-center justify-start">
               <div class="step-num w-12 h-12 rounded-full flex items-center justify-center text-sky-400 font-extrabold text-lg -ml-6 z-10">3</div>
@@ -479,27 +512,49 @@
             <div class="hidden lg:flex items-center justify-end">
               <div class="step-num w-12 h-12 rounded-full flex items-center justify-center text-sky-400 font-extrabold text-lg -mr-6 z-10">4</div>
             </div>
-            <div class="space-y-3 card-hover rounded-2xl p-6 lg:rounded-l-none lg:border-l-0" style="background:linear-gradient(135deg,#2d3748 0%,#374151 100%);border:1px solid rgba(148,163,184,0.15);box-shadow:0 4px 24px rgba(0,0,0,0.3)"">
-              <div class="flex items-center gap-3">
-                <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
-                  <i data-lucide="file-signature" class="w-5 h-5 text-emerald-400"></i>
+            <div class="card-hover" style="position:relative;overflow:hidden;border-radius:6px;background:linear-gradient(175deg,#0b1f14 0%,#091910 100%);border:1px solid rgba(16,185,129,0.45);box-shadow:0 0 16px rgba(16,185,129,0.1),0 4px 24px rgba(0,0,0,0.5);transform:perspective(800px) rotateY(-1.5deg) rotateX(0.5deg);">
+              <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,0.025) 0,rgba(255,255,255,0.025) 2px,transparent 2px,transparent 18px);pointer-events:none;"></div>
+              <div style="position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#059669,#10b981,#059669);"></div>
+              <div style="position:absolute;top:5px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.15),transparent);"></div>
+              <div style="position:absolute;top:0;bottom:0;left:0;width:4px;background:rgba(16,185,129,0.15);"></div>
+              <div style="position:absolute;top:0;bottom:0;right:0;width:4px;background:rgba(16,185,129,0.15);"></div>
+              <div style="position:absolute;top:0;left:0;width:8px;height:8px;background:rgba(16,185,129,0.5);"></div>
+              <div style="position:absolute;top:0;right:0;width:8px;height:8px;background:rgba(16,185,129,0.5);"></div>
+              <div style="position:absolute;bottom:0;left:0;width:8px;height:8px;background:rgba(16,185,129,0.5);"></div>
+              <div style="position:absolute;bottom:0;right:0;width:8px;height:8px;background:rgba(16,185,129,0.5);"></div>
+              <div style="position:relative;padding:20px 20px 18px 20px;" class="space-y-3">
+                <div class="flex items-center gap-3">
+                  <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
+                    <i data-lucide="file-signature" class="w-5 h-5 text-emerald-400"></i>
+                  </div>
+                  <h3 class="text-slate-100 font-bold text-lg">Договор и предоплата</h3>
                 </div>
-                <h3 class="text-slate-100 font-bold text-lg">Договор и предоплата</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Заключается официальный договор купли-продажи. Вносите предоплату — только после этого размещаем заказ на фабрике.</p>
               </div>
-              <p class="text-slate-400 text-sm leading-relaxed">Заключается официальный договор купли-продажи. Вносите предоплату — только после этого размещаем заказ на фабрике.</p>
             </div>
           </div>
 
           <!-- Step 5 -->
           <div class="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center lg:mb-12">
-            <div class="lg:text-right space-y-3 card-hover rounded-2xl p-6 lg:rounded-r-none lg:border-r-0" style="background:linear-gradient(135deg,#2d3748 0%,#374151 100%);border:1px solid rgba(148,163,184,0.15);box-shadow:0 4px 24px rgba(0,0,0,0.3)"">
-              <div class="flex items-center gap-3 lg:justify-end">
-                <div class="p-2 rounded-lg bg-sky-500/10 border border-sky-500/20">
-                  <i data-lucide="package-check" class="w-5 h-5 text-sky-400"></i>
+            <div class="card-hover" style="position:relative;overflow:hidden;border-radius:6px;background:linear-gradient(175deg,#0b1a28 0%,#091520 100%);border:1px solid rgba(56,189,248,0.45);box-shadow:0 0 16px rgba(56,189,248,0.12),0 4px 24px rgba(0,0,0,0.5);transform:perspective(800px) rotateY(1.5deg) rotateX(0.5deg);">
+              <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,0.025) 0,rgba(255,255,255,0.025) 2px,transparent 2px,transparent 18px);pointer-events:none;"></div>
+              <div style="position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#0284c7,#38bdf8,#0284c7);"></div>
+              <div style="position:absolute;top:5px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.15),transparent);"></div>
+              <div style="position:absolute;top:0;bottom:0;left:0;width:4px;background:rgba(56,189,248,0.15);"></div>
+              <div style="position:absolute;top:0;bottom:0;right:0;width:4px;background:rgba(56,189,248,0.15);"></div>
+              <div style="position:absolute;top:0;left:0;width:8px;height:8px;background:rgba(56,189,248,0.5);"></div>
+              <div style="position:absolute;top:0;right:0;width:8px;height:8px;background:rgba(56,189,248,0.5);"></div>
+              <div style="position:absolute;bottom:0;left:0;width:8px;height:8px;background:rgba(56,189,248,0.5);"></div>
+              <div style="position:absolute;bottom:0;right:0;width:8px;height:8px;background:rgba(56,189,248,0.5);"></div>
+              <div style="position:relative;padding:20px 20px 18px 20px;" class="space-y-3 lg:text-right">
+                <div class="flex items-center gap-3 lg:justify-end">
+                  <div class="p-2 rounded-lg bg-sky-500/10 border border-sky-500/20">
+                    <i data-lucide="package-check" class="w-5 h-5 text-sky-400"></i>
+                  </div>
+                  <h3 class="text-slate-100 font-bold text-lg">Контроль и отправка</h3>
                 </div>
-                <h3 class="text-slate-100 font-bold text-lg">Контроль и отправка</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Наш представитель проверяет товар на фабрике, консолидируем грузы на складе в Китае и отправляем сборным контейнером.</p>
               </div>
-              <p class="text-slate-400 text-sm leading-relaxed">Наш представитель проверяет товар на фабрике, консолидируем грузы на складе в Китае и отправляем сборным контейнером.</p>
             </div>
             <div class="hidden lg:flex items-center justify-start">
               <div class="step-num w-12 h-12 rounded-full flex items-center justify-center text-sky-400 font-extrabold text-lg -ml-6 z-10">5</div>
@@ -511,14 +566,25 @@
             <div class="hidden lg:flex items-center justify-end">
               <div class="step-num w-12 h-12 rounded-full flex items-center justify-center text-sky-400 font-extrabold text-lg -mr-6 z-10" style="border-color:rgba(16,185,129,.4)">6</div>
             </div>
-            <div class="space-y-3 card-hover rounded-2xl p-6 lg:rounded-l-none lg:border-l-0" style="background:linear-gradient(135deg,#2d3748 0%,#374151 100%);border:1px solid rgba(148,163,184,0.15);box-shadow:0 4px 24px rgba(0,0,0,0.3)"">
-              <div class="flex items-center gap-3">
-                <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
-                  <i data-lucide="truck" class="w-5 h-5 text-emerald-400"></i>
+            <div class="card-hover" style="position:relative;overflow:hidden;border-radius:6px;background:linear-gradient(175deg,#0b1f14 0%,#091910 100%);border:1px solid rgba(16,185,129,0.45);box-shadow:0 0 16px rgba(16,185,129,0.1),0 4px 24px rgba(0,0,0,0.5);transform:perspective(800px) rotateY(-1.5deg) rotateX(0.5deg);">
+              <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,0.025) 0,rgba(255,255,255,0.025) 2px,transparent 2px,transparent 18px);pointer-events:none;"></div>
+              <div style="position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#059669,#10b981,#059669);"></div>
+              <div style="position:absolute;top:5px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.15),transparent);"></div>
+              <div style="position:absolute;top:0;bottom:0;left:0;width:4px;background:rgba(16,185,129,0.15);"></div>
+              <div style="position:absolute;top:0;bottom:0;right:0;width:4px;background:rgba(16,185,129,0.15);"></div>
+              <div style="position:absolute;top:0;left:0;width:8px;height:8px;background:rgba(16,185,129,0.5);"></div>
+              <div style="position:absolute;top:0;right:0;width:8px;height:8px;background:rgba(16,185,129,0.5);"></div>
+              <div style="position:absolute;bottom:0;left:0;width:8px;height:8px;background:rgba(16,185,129,0.5);"></div>
+              <div style="position:absolute;bottom:0;right:0;width:8px;height:8px;background:rgba(16,185,129,0.5);"></div>
+              <div style="position:relative;padding:20px 20px 18px 20px;" class="space-y-3">
+                <div class="flex items-center gap-3">
+                  <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
+                    <i data-lucide="truck" class="w-5 h-5 text-emerald-400"></i>
+                  </div>
+                  <h3 class="text-slate-100 font-bold text-lg">Таможня и выдача</h3>
                 </div>
-                <h3 class="text-slate-100 font-bold text-lg">Таможня и выдача</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">После прохождения таможенного оформления получаете товар и оплачиваете остаток. Всё чисто, официально, с документами.</p>
               </div>
-              <p class="text-slate-400 text-sm leading-relaxed">После прохождения таможенного оформления получаете товар и оплачиваете остаток. Всё чисто, официально, с документами.</p>
             </div>
           </div>
 
