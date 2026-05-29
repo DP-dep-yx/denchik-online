@@ -92,8 +92,10 @@
       border: 1.5px solid rgba(56,189,248,.4);
       box-shadow: 0 0 16px rgba(56,189,248,.2);
     }
-    #how-it-works h3 { color: #f1f5f9; }
-    #how-it-works .card-hover p { color: #94a3b8; }
+    #how-it-works h3 { color: #f1f5f9; transition: font-size 0.25s ease; }
+    #how-it-works .card-hover p { color: #94a3b8; transition: font-size 0.25s ease; }
+    #how-it-works .card-hover:hover h3 { font-size: 1.15rem; }
+    #how-it-works .card-hover:hover p { font-size: 0.9rem; }
 
     /* Section divider */
     .section-line {
@@ -334,12 +336,10 @@
        BLOCK 2 — HOW IT WORKS (6 steps)
   ═══════════════════════════════════════════════════ -->
   <section id="how-it-works" class="py-24 relative overflow-hidden">
-    <!-- Dark gradient background -->
-    <div class="absolute inset-0" style="background:linear-gradient(160deg,#0c1628 0%,#0f172a 40%,#071a12 100%)"></div>
+    <!-- Background -->
+    <div class="absolute inset-0" style="background:linear-gradient(150deg,#0f2137 0%,#162032 25%,#0f1f2e 55%,#0d2318 100%)"></div>
     <!-- Radial glow accents -->
-    <div class="absolute inset-0" style="background-image:radial-gradient(ellipse at 15% 50%,rgba(56,189,248,0.07) 0%,transparent 55%),radial-gradient(ellipse at 85% 50%,rgba(16,185,129,0.06) 0%,transparent 55%)"></div>
-    <!-- Subtle dot grid -->
-    <div class="absolute inset-0 opacity-[0.04]" style="background-image:radial-gradient(circle,rgba(148,163,184,1) 1px,transparent 1px);background-size:32px 32px"></div>
+    <div class="absolute inset-0" style="background-image:radial-gradient(ellipse at 10% 40%,rgba(56,189,248,0.10) 0%,transparent 50%),radial-gradient(ellipse at 90% 60%,rgba(16,185,129,0.09) 0%,transparent 50%),radial-gradient(ellipse at 50% 10%,rgba(99,102,241,0.07) 0%,transparent 45%)"></div>
     <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <!-- Heading -->
