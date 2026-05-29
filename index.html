@@ -287,48 +287,96 @@
             </div>
           </div>
 
-          <!-- Floating badges -->
-          <div class="float absolute -top-4 -right-4 sm:right-0 lg:-right-8 bg-slate-900 border border-emerald-500/30 rounded-2xl px-4 py-3 glow-green shadow-xl">
-            <div class="flex items-center gap-2">
-              <span class="w-2.5 h-2.5 rounded-full" style="background-color:#ffffff;box-shadow:0 0 6px 1px rgba(255,255,255,0.8)"></span>
-              <span class="text-white font-bold text-sm">Белая таможня</span>
+          <!-- Floating badges — container shape -->
+          <div class="float absolute -top-4 -right-4 sm:right-0 lg:-right-8"
+               style="background:linear-gradient(175deg,#0b1f14 0%,#091910 100%);border:1px solid rgba(16,185,129,0.5);border-radius:4px;overflow:hidden;min-width:152px;box-shadow:0 0 20px rgba(16,185,129,.25),0 0 40px rgba(16,185,129,.1),0 4px 20px rgba(0,0,0,0.5);">
+            <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,0.032) 0,rgba(255,255,255,0.032) 2px,transparent 2px,transparent 18px);"></div>
+            <div style="position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#059669,#10b981,#059669);"></div>
+            <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:rgba(255,255,255,0.07);"></div>
+            <div style="position:absolute;top:0;bottom:0;left:0;width:5px;background:rgba(16,185,129,0.18);"></div>
+            <div style="position:absolute;top:0;bottom:0;right:0;width:5px;background:rgba(16,185,129,0.18);"></div>
+            <div style="position:absolute;top:0;left:0;width:9px;height:9px;background:rgba(16,185,129,0.5);"></div>
+            <div style="position:absolute;top:0;right:0;width:9px;height:9px;background:rgba(16,185,129,0.5);"></div>
+            <div style="position:absolute;bottom:0;left:0;width:9px;height:9px;background:rgba(16,185,129,0.5);"></div>
+            <div style="position:absolute;bottom:0;right:0;width:9px;height:9px;background:rgba(16,185,129,0.5);"></div>
+            <div style="position:relative;padding:14px 14px 10px 14px;">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full" style="background-color:#ffffff;box-shadow:0 0 6px 1px rgba(255,255,255,0.8)"></span>
+                <span class="text-white font-bold text-sm">Белая таможня</span>
+              </div>
+              <p class="text-slate-500 text-xs mt-0.5">100% официально</p>
             </div>
-            <p class="text-slate-500 text-xs mt-0.5">100% официально</p>
           </div>
 
-          <div class="float absolute -bottom-4 -left-4 sm:left-0 lg:-left-8 bg-slate-900 border border-sky-500/30 rounded-2xl px-4 py-3 glow-blue shadow-xl" style="animation-delay:.8s">
-            <div class="flex items-center gap-2">
-              <i data-lucide="shield-check" class="w-4 h-4 text-sky-400"></i>
-              <span class="text-sky-400 font-bold text-sm">Договор</span>
+          <div class="float absolute -bottom-4 -left-4 sm:left-0 lg:-left-8"
+               style="animation-delay:.8s;background:linear-gradient(175deg,#0b1a28 0%,#091520 100%);border:1px solid rgba(56,189,248,0.5);border-radius:4px;overflow:hidden;min-width:152px;box-shadow:0 0 20px rgba(56,189,248,.25),0 0 40px rgba(56,189,248,.1),0 4px 20px rgba(0,0,0,0.5);">
+            <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,0.032) 0,rgba(255,255,255,0.032) 2px,transparent 2px,transparent 18px);"></div>
+            <div style="position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#0284c7,#38bdf8,#0284c7);"></div>
+            <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:rgba(255,255,255,0.07);"></div>
+            <div style="position:absolute;top:0;bottom:0;left:0;width:5px;background:rgba(56,189,248,0.18);"></div>
+            <div style="position:absolute;top:0;bottom:0;right:0;width:5px;background:rgba(56,189,248,0.18);"></div>
+            <div style="position:absolute;top:0;left:0;width:9px;height:9px;background:rgba(56,189,248,0.5);"></div>
+            <div style="position:absolute;top:0;right:0;width:9px;height:9px;background:rgba(56,189,248,0.5);"></div>
+            <div style="position:absolute;bottom:0;left:0;width:9px;height:9px;background:rgba(56,189,248,0.5);"></div>
+            <div style="position:absolute;bottom:0;right:0;width:9px;height:9px;background:rgba(56,189,248,0.5);"></div>
+            <div style="position:relative;padding:14px 14px 10px 14px;">
+              <div class="flex items-center gap-2">
+                <i data-lucide="shield-check" class="w-4 h-4 text-sky-400"></i>
+                <span class="text-sky-400 font-bold text-sm">Договор</span>
+              </div>
+              <p class="text-slate-500 text-xs mt-0.5">Официальный договор КП</p>
             </div>
-            <p class="text-slate-500 text-xs mt-0.5">Официальный договор КП</p>
           </div>
 
           <!-- LCL → FCL badge -->
-          <div class="float absolute -top-4 -left-4 sm:left-0 lg:-left-10 bg-slate-900 border border-cyan-500/30 rounded-2xl px-4 py-3 shadow-xl" style="animation-delay:2.2s;box-shadow:0 0 20px rgba(34,211,238,0.12),0 4px 24px rgba(0,0,0,0.4)">
-            <div class="flex items-center gap-2">
-              <span class="text-slate-300 font-bold text-sm tracking-wide">LCL</span>
-              <svg width="36" height="14" viewBox="0 0 36 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="arrowGrad" x1="0" y1="7" x2="36" y2="7" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stop-color="#64748b"/>
-                    <stop offset="100%" stop-color="#22d3ee"/>
-                  </linearGradient>
-                </defs>
-                <line x1="1" y1="7" x2="28" y2="7" stroke="url(#arrowGrad)" stroke-width="1.8" stroke-linecap="round"/>
-                <polyline points="22,2 30,7 22,12" stroke="url(#arrowGrad)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-              </svg>
-              <span class="font-bold text-sm" style="color:#22d3ee;text-shadow:0 0 10px rgba(34,211,238,0.6)">FCL</span>
+          <div class="float absolute -top-4 -left-4 sm:left-0 lg:-left-10"
+               style="animation-delay:2.2s;background:linear-gradient(175deg,#0a1e22 0%,#08181c 100%);border:1px solid rgba(34,211,238,0.5);border-radius:4px;overflow:hidden;min-width:152px;box-shadow:0 0 20px rgba(34,211,238,0.18),0 4px 24px rgba(0,0,0,0.5);">
+            <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,0.032) 0,rgba(255,255,255,0.032) 2px,transparent 2px,transparent 18px);"></div>
+            <div style="position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#0891b2,#22d3ee,#0891b2);"></div>
+            <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:rgba(255,255,255,0.07);"></div>
+            <div style="position:absolute;top:0;bottom:0;left:0;width:5px;background:rgba(34,211,238,0.18);"></div>
+            <div style="position:absolute;top:0;bottom:0;right:0;width:5px;background:rgba(34,211,238,0.18);"></div>
+            <div style="position:absolute;top:0;left:0;width:9px;height:9px;background:rgba(34,211,238,0.5);"></div>
+            <div style="position:absolute;top:0;right:0;width:9px;height:9px;background:rgba(34,211,238,0.5);"></div>
+            <div style="position:absolute;bottom:0;left:0;width:9px;height:9px;background:rgba(34,211,238,0.5);"></div>
+            <div style="position:absolute;bottom:0;right:0;width:9px;height:9px;background:rgba(34,211,238,0.5);"></div>
+            <div style="position:relative;padding:14px 14px 10px 14px;">
+              <div class="flex items-center gap-2">
+                <span class="text-slate-300 font-bold text-sm tracking-wide">LCL</span>
+                <svg width="36" height="14" viewBox="0 0 36 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="arrowGrad" x1="0" y1="7" x2="36" y2="7" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#64748b"/>
+                      <stop offset="100%" stop-color="#22d3ee"/>
+                    </linearGradient>
+                  </defs>
+                  <line x1="1" y1="7" x2="28" y2="7" stroke="url(#arrowGrad)" stroke-width="1.8" stroke-linecap="round"/>
+                  <polyline points="22,2 30,7 22,12" stroke="url(#arrowGrad)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                </svg>
+                <span class="font-bold text-sm" style="color:#22d3ee;text-shadow:0 0 10px rgba(34,211,238,0.6)">FCL</span>
+              </div>
+              <p class="text-slate-500 text-xs mt-0.5">Тариф полного контейнера</p>
             </div>
-            <p class="text-slate-500 text-xs mt-0.5">Тариф полного контейнера</p>
           </div>
 
-          <div class="float absolute top-1/2 -translate-y-1/2 -right-2 sm:-right-4 lg:-right-12 bg-slate-900 border border-amber-500/30 rounded-2xl px-4 py-3 shadow-xl" style="animation-delay:1.6s">
-            <div class="flex items-center gap-2">
-              <i data-lucide="trending-down" class="w-4 h-4 text-amber-400"></i>
-              <span class="text-amber-400 font-bold text-sm">-40% к цене</span>
+          <div class="float absolute top-1/2 -translate-y-1/2 -right-2 sm:-right-4 lg:-right-12"
+               style="animation-delay:1.6s;background:linear-gradient(175deg,#1c1506 0%,#160f04 100%);border:1px solid rgba(245,158,11,0.5);border-radius:4px;overflow:hidden;min-width:152px;box-shadow:0 0 20px rgba(245,158,11,0.2),0 4px 20px rgba(0,0,0,0.5);">
+            <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,0.032) 0,rgba(255,255,255,0.032) 2px,transparent 2px,transparent 18px);"></div>
+            <div style="position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#d97706,#f59e0b,#d97706);"></div>
+            <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:rgba(255,255,255,0.07);"></div>
+            <div style="position:absolute;top:0;bottom:0;left:0;width:5px;background:rgba(245,158,11,0.18);"></div>
+            <div style="position:absolute;top:0;bottom:0;right:0;width:5px;background:rgba(245,158,11,0.18);"></div>
+            <div style="position:absolute;top:0;left:0;width:9px;height:9px;background:rgba(245,158,11,0.5);"></div>
+            <div style="position:absolute;top:0;right:0;width:9px;height:9px;background:rgba(245,158,11,0.5);"></div>
+            <div style="position:absolute;bottom:0;left:0;width:9px;height:9px;background:rgba(245,158,11,0.5);"></div>
+            <div style="position:absolute;bottom:0;right:0;width:9px;height:9px;background:rgba(245,158,11,0.5);"></div>
+            <div style="position:relative;padding:14px 14px 10px 14px;">
+              <div class="flex items-center gap-2">
+                <i data-lucide="trending-down" class="w-4 h-4 text-amber-400"></i>
+                <span class="text-amber-400 font-bold text-sm">-40% к цене</span>
+              </div>
+              <p class="text-slate-500 text-xs mt-0.5">vs розничный импорт</p>
             </div>
-            <p class="text-slate-500 text-xs mt-0.5">vs розничный импорт</p>
           </div>
         </div>
 
