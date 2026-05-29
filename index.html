@@ -905,6 +905,8 @@
                       class="w-full bg-slate-800/70 border border-slate-700 hover:border-sky-500/40 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500/40 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 transition-all duration-300 resize-none"></textarea>
           </div>
 
+          <div id="ts-widget" class="cf-turnstile" data-sitekey="0x4AAAAAADYeTCS94GhlqUCi" data-size="invisible" data-execution="execute"></div>
+
           <button type="submit" id="submit-btn"
                   class="w-full flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-bold text-base transition-all duration-300 glow-btn">
             <i data-lucide="send" class="w-5 h-5"></i>
@@ -918,34 +920,53 @@
       </div>
 
       <script>
-        document.getElementById('request-form').addEventListener('submit', async function(e) {
+        document.getElementById('request-form').addEventListener('submit', function(e) {
           e.preventDefault();
-          const btn = document.getElementById('submit-btn');
-          const txt = document.getElementById('submit-text');
+          var form = this;
+          var btn = document.getElementById('submit-btn');
+          var txt = document.getElementById('submit-text');
           btn.disabled = true;
-          txt.textContent = 'Отправляем...';
-          const formData = new FormData(this);
-          const object = {};
-          formData.forEach(function(value, key){ object[key] = value; });
-          fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-            body: JSON.stringify(object)
-          })
-          .then(function(res){ return res.json(); })
-          .then(function(json){
-            if (json.success) {
-              document.getElementById('request-form').style.display = 'none';
-              document.getElementById('form-success').classList.remove('hidden');
-            } else {
-              txt.textContent = json.message || 'Ошибка. Попробуйте ещё раз.';
+          txt.textContent = 'Проверка...';
+
+          function doSubmit(token) {
+            txt.textContent = 'Отправляем...';
+            var object = {};
+            new FormData(form).forEach(function(v, k) { object[k] = v; });
+            if (token) object['cf-turnstile-response'] = token;
+            fetch('https://api.web3forms.com/submit', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+              body: JSON.stringify(object)
+            })
+            .then(function(r) { return r.json(); })
+            .then(function(j) {
+              if (j.success) {
+                form.style.display = 'none';
+                document.getElementById('form-success').classList.remove('hidden');
+              } else {
+                txt.textContent = j.message || 'Ошибка. Попробуйте ещё раз.';
+                btn.disabled = false;
+                if (window.turnstile) turnstile.reset('#ts-widget');
+              }
+            })
+            .catch(function() {
+              txt.textContent = 'Ошибка сети. Попробуйте ещё раз.';
               btn.disabled = false;
-            }
-          })
-          .catch(function(err){
-            txt.textContent = 'Ошибка сети. Попробуйте ещё раз.';
-            btn.disabled = false;
-          });
+              if (window.turnstile) turnstile.reset('#ts-widget');
+            });
+          }
+
+          if (window.turnstile) {
+            turnstile.execute('#ts-widget', {
+              callback: function(token) { doSubmit(token); },
+              'error-callback': function() {
+                txt.textContent = 'Ошибка проверки. Попробуйте ещё раз.';
+                btn.disabled = false;
+              }
+            });
+          } else {
+            doSubmit(null);
+          }
         });
       </script>
 
@@ -1064,5 +1085,6 @@
     bars.forEach(bar => observer.observe(bar));
   </script>
 
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </body>
 </html>
