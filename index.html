@@ -769,8 +769,9 @@
   <!-- ═══════════════════════════════════════════════════
        CONTACT FORM
   ═══════════════════════════════════════════════════ -->
-  <section id="contact-form" class="py-24 relative">
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(56,189,248,0.05)_0%,_transparent_65%)]"></div>
+  <section id="contact-form" class="py-24 relative overflow-hidden">
+    <div class="absolute inset-0" style="background:linear-gradient(150deg,#0f2137 0%,#162032 25%,#0f1f2e 55%,#0d2318 100%)"></div>
+    <div class="absolute inset-0" style="background-image:radial-gradient(ellipse at 10% 40%,rgba(56,189,248,0.10) 0%,transparent 50%),radial-gradient(ellipse at 90% 60%,rgba(16,185,129,0.09) 0%,transparent 50%),radial-gradient(ellipse at 50% 10%,rgba(99,102,241,0.07) 0%,transparent 45%)"></div>
     <div class="relative max-w-2xl mx-auto px-4 sm:px-6">
 
       <div class="text-center mb-12 space-y-4">
@@ -779,7 +780,7 @@
         <p class="text-slate-400">Отправьте запрос — в течение 24 часов пришлём полный расчёт стоимости с учётом всех расходов.</p>
       </div>
 
-      <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-8 space-y-5 glow-blue">
+      <div class="rounded-2xl p-8 space-y-5 glow-blue" style="background:linear-gradient(135deg,#2d3748 0%,#374151 100%);border:1px solid rgba(148,163,184,0.15);box-shadow:0 4px 32px rgba(0,0,0,0.4)">
         <div class="grid sm:grid-cols-2 gap-5">
           <div class="space-y-1.5">
             <label class="text-slate-400 text-sm font-medium">Ваше имя</label>
