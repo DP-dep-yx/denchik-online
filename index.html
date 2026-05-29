@@ -560,43 +560,44 @@
         </a>
       </div>
 
-      <!-- Dashboard grid -->
-      <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+      <!-- Dashboard grid — subgrid для выравнивания строк по горизонтали -->
+      <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-6">
 
-        <!-- Container Card 1 — 74% -->
-        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-sky-500/40 rounded-2xl overflow-hidden relative">
-          <!-- Top accent line -->
-          <div class="h-1 w-full bg-gradient-to-r from-sky-600 via-sky-400 to-sky-600"></div>
-          <div class="p-6 space-y-5">
-            <!-- Header -->
-            <div class="flex items-start justify-between">
-              <div>
-                <div class="flex items-center gap-2 mb-1">
-                  <i data-lucide="container" class="w-4 h-4 text-sky-400"></i>
-                  <span class="text-slate-500 text-xs font-medium uppercase tracking-wider">Контейнер №104</span>
+        <!-- Container Card 1 -->
+        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-sky-500/40 rounded-2xl overflow-hidden relative" style="grid-row:span 5;display:grid;grid-template-rows:subgrid;row-gap:1.25rem;">
+          <!-- S1: accent + header -->
+          <div>
+            <div class="h-1 w-full bg-gradient-to-r from-sky-600 via-sky-400 to-sky-600"></div>
+            <div class="px-6 pt-5">
+              <div class="flex items-start justify-between">
+                <div>
+                  <div class="flex items-center gap-2 mb-1">
+                    <i data-lucide="container" class="w-4 h-4 text-sky-400"></i>
+                    <span class="text-slate-500 text-xs font-medium uppercase tracking-wider">Контейнер №104</span>
+                  </div>
+                  <h3 class="text-slate-100 font-bold text-lg">Иу (Yiwu) → Москва</h3>
+                  <p class="text-slate-500 text-xs mt-0.5">40HC • LCL сборный</p>
                 </div>
-                <h3 class="text-slate-100 font-bold text-lg">Иу (Yiwu) → Москва</h3>
-                <p class="text-slate-500 text-xs mt-0.5">40HC • LCL сборный</p>
-              </div>
-              <span class="px-2.5 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-bold">Набор</span>
-            </div>
-
-            <!-- Progress -->
-            <div class="space-y-2">
-              <div class="flex justify-between text-xs font-medium">
-                <span class="text-slate-400">Заполненность контейнера</span>
-                <span class="text-sky-400 font-bold text-sm">28%</span>
-              </div>
-              <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
-                <div class="h-full rounded-full progress-shimmer" style="width:28%"></div>
-              </div>
-              <div class="flex justify-between text-xs text-slate-500">
-                <span>19.6 м³ занято</span>
-                <span>70 м³ макс.</span>
+                <span class="px-2.5 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-bold">Набор</span>
               </div>
             </div>
-
-            <!-- Available banner -->
+          </div>
+          <!-- S2: progress -->
+          <div class="px-6 space-y-2">
+            <div class="flex justify-between text-xs font-medium">
+              <span class="text-slate-400">Заполненность контейнера</span>
+              <span class="text-sky-400 font-bold text-sm">28%</span>
+            </div>
+            <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
+              <div class="h-full rounded-full progress-shimmer" style="width:28%"></div>
+            </div>
+            <div class="flex justify-between text-xs text-slate-500">
+              <span>19.6 м³ занято</span>
+              <span>70 м³ макс.</span>
+            </div>
+          </div>
+          <!-- S3: available banner -->
+          <div class="px-6">
             <div class="flex items-center gap-3 bg-sky-500/10 border border-sky-500/25 rounded-xl p-3">
               <i data-lucide="package-open" class="w-4 h-4 text-sky-400 shrink-0"></i>
               <div>
@@ -604,8 +605,9 @@
                 <p class="text-slate-400 text-xs">Свободное место в контейнере</p>
               </div>
             </div>
-
-            <!-- Metrics -->
+          </div>
+          <!-- S4: metrics -->
+          <div class="px-6">
             <div class="grid grid-cols-3 gap-3">
               <div class="bg-slate-800/60 rounded-xl p-3 text-center">
                 <p class="text-sky-400 font-bold text-base">12</p>
@@ -620,52 +622,55 @@
                 <p class="text-slate-500 text-xs mt-0.5">в пути</p>
               </div>
             </div>
-
-            <!-- Footer -->
-            <div class="pt-2 border-t border-slate-800 flex items-center justify-between">
-              <div>
-                <p class="text-slate-500 text-xs">Тариф от</p>
-                <p class="text-slate-100 font-bold">$2.40 <span class="text-slate-500 font-normal text-xs">/ кг</span></p>
-              </div>
-              <a href="#contact-form" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-400 text-sm font-semibold hover:bg-sky-500/20 transition-all duration-300">
-                Зайти в пул
-                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-              </a>
+          </div>
+          <!-- S5: footer -->
+          <div class="px-6 pb-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+            <div>
+              <p class="text-slate-500 text-xs">Тариф от</p>
+              <p class="text-slate-100 font-bold">$2.40 <span class="text-slate-500 font-normal text-xs">/ кг</span></p>
             </div>
+            <a href="#contact-form" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-400 text-sm font-semibold hover:bg-sky-500/20 transition-all duration-300">
+              Зайти в пул
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
           </div>
         </div>
 
-        <!-- Container Card 2 — 42% -->
-        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-emerald-500/40 rounded-2xl overflow-hidden relative">
-          <div class="h-1 w-full bg-gradient-to-r from-emerald-600 via-emerald-400 to-emerald-600"></div>
-          <div class="p-6 space-y-5">
-            <div class="flex items-start justify-between">
-              <div>
-                <div class="flex items-center gap-2 mb-1">
-                  <i data-lucide="truck" class="w-4 h-4 text-emerald-400"></i>
-                  <span class="text-slate-500 text-xs font-medium uppercase tracking-wider">Авто-сборник №89</span>
+        <!-- Container Card 2 -->
+        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-emerald-500/40 rounded-2xl overflow-hidden relative" style="grid-row:span 5;display:grid;grid-template-rows:subgrid;row-gap:1.25rem;">
+          <!-- S1: accent + header -->
+          <div>
+            <div class="h-1 w-full bg-gradient-to-r from-emerald-600 via-emerald-400 to-emerald-600"></div>
+            <div class="px-6 pt-5">
+              <div class="flex items-start justify-between">
+                <div>
+                  <div class="flex items-center gap-2 mb-1">
+                    <i data-lucide="truck" class="w-4 h-4 text-emerald-400"></i>
+                    <span class="text-slate-500 text-xs font-medium uppercase tracking-wider">Авто-сборник №89</span>
+                  </div>
+                  <h3 class="text-slate-100 font-bold text-lg">Чэнду (Chengdu) → Екатеринбург</h3>
+                  <p class="text-slate-500 text-xs mt-0.5">Авто + ж/д • LCL сборный</p>
                 </div>
-                <h3 class="text-slate-100 font-bold text-lg">Чэнду (Chengdu) → Екатеринбург</h3>
-                <p class="text-slate-500 text-xs mt-0.5">Авто + ж/д • LCL сборный</p>
-              </div>
-              <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold">Открыт</span>
-            </div>
-
-            <div class="space-y-2">
-              <div class="flex justify-between text-xs font-medium">
-                <span class="text-slate-400">Заполненность контейнера</span>
-                <span class="text-emerald-400 font-bold text-sm">12%</span>
-              </div>
-              <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
-                <div class="h-full rounded-full progress-shimmer-green" style="width:12%"></div>
-              </div>
-              <div class="flex justify-between text-xs text-slate-500">
-                <span>8.4 м³ занято</span>
-                <span>70 м³ макс.</span>
+                <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold">Открыт</span>
               </div>
             </div>
-
-            <!-- Available banner -->
+          </div>
+          <!-- S2: progress -->
+          <div class="px-6 space-y-2">
+            <div class="flex justify-between text-xs font-medium">
+              <span class="text-slate-400">Заполненность контейнера</span>
+              <span class="text-emerald-400 font-bold text-sm">12%</span>
+            </div>
+            <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
+              <div class="h-full rounded-full progress-shimmer-green" style="width:12%"></div>
+            </div>
+            <div class="flex justify-between text-xs text-slate-500">
+              <span>8.4 м³ занято</span>
+              <span>70 м³ макс.</span>
+            </div>
+          </div>
+          <!-- S3: available banner -->
+          <div class="px-6">
             <div class="flex items-center gap-3 bg-emerald-500/10 border border-emerald-500/25 rounded-xl p-3">
               <i data-lucide="package-open" class="w-4 h-4 text-emerald-400 shrink-0"></i>
               <div>
@@ -673,7 +678,9 @@
                 <p class="text-slate-400 text-xs">Свободное место в контейнере</p>
               </div>
             </div>
-
+          </div>
+          <!-- S4: metrics -->
+          <div class="px-6">
             <div class="grid grid-cols-3 gap-3">
               <div class="bg-slate-800/60 rounded-xl p-3 text-center">
                 <p class="text-emerald-400 font-bold text-base">7</p>
@@ -688,53 +695,56 @@
                 <p class="text-slate-500 text-xs mt-0.5">в пути</p>
               </div>
             </div>
-
-            <div class="pt-2 border-t border-slate-800 flex items-center justify-between">
-              <div>
-                <p class="text-slate-500 text-xs">Тариф от</p>
-                <p class="text-slate-100 font-bold">$1.80 <span class="text-slate-500 font-normal text-xs">/ кг</span></p>
-              </div>
-              <a href="#contact-form" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-semibold hover:bg-emerald-500/20 transition-all duration-300">
-                Зайти в пул
-                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-              </a>
+          </div>
+          <!-- S5: footer -->
+          <div class="px-6 pb-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+            <div>
+              <p class="text-slate-500 text-xs">Тариф от</p>
+              <p class="text-slate-100 font-bold">$1.80 <span class="text-slate-500 font-normal text-xs">/ кг</span></p>
             </div>
+            <a href="#contact-form" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-semibold hover:bg-emerald-500/20 transition-all duration-300">
+              Зайти в пул
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
           </div>
         </div>
 
-        <!-- Container Card 3 — 91% URGENT -->
-        <div class="card-hover bg-slate-900/80 border border-amber-700/40 hover:border-amber-500/60 rounded-2xl overflow-hidden relative">
-          <!-- Urgent glow -->
+        <!-- Container Card 3 -->
+        <div class="card-hover bg-slate-900/80 border border-amber-700/40 hover:border-amber-500/60 rounded-2xl overflow-hidden relative" style="grid-row:span 5;display:grid;grid-template-rows:subgrid;row-gap:1.25rem;">
           <div class="absolute inset-0 bg-amber-500/3 pointer-events-none"></div>
-          <div class="h-1 w-full bg-gradient-to-r from-amber-600 via-amber-400 to-amber-600"></div>
-          <div class="p-6 space-y-5 relative">
-            <div class="flex items-start justify-between">
-              <div>
-                <div class="flex items-center gap-2 mb-1">
-                  <i data-lucide="zap" class="w-4 h-4 text-amber-400"></i>
-                  <span class="text-slate-500 text-xs font-medium uppercase tracking-wider">Контейнер №105</span>
+          <!-- S1: accent + header -->
+          <div class="relative">
+            <div class="h-1 w-full bg-gradient-to-r from-amber-600 via-amber-400 to-amber-600"></div>
+            <div class="px-6 pt-5">
+              <div class="flex items-start justify-between">
+                <div>
+                  <div class="flex items-center gap-2 mb-1">
+                    <i data-lucide="zap" class="w-4 h-4 text-amber-400"></i>
+                    <span class="text-slate-500 text-xs font-medium uppercase tracking-wider">Контейнер №105</span>
+                  </div>
+                  <h3 class="text-slate-100 font-bold text-lg">Сиань (Xi'an) → Новосибирск</h3>
+                  <p class="text-slate-500 text-xs mt-0.5">40HC • LCL сборный</p>
                 </div>
-                <h3 class="text-slate-100 font-bold text-lg">Сиань (Xi'an) → Новосибирск</h3>
-                <p class="text-slate-500 text-xs mt-0.5">40HC • LCL сборный</p>
-              </div>
-              <span class="px-2.5 py-1 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-400 text-xs font-bold animate-pulse">🔔 Срочно</span>
-            </div>
-
-            <div class="space-y-2">
-              <div class="flex justify-between text-xs font-medium">
-                <span class="text-slate-400">Заполненность контейнера</span>
-                <span class="text-amber-400 font-bold text-sm">16%</span>
-              </div>
-              <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
-                <div class="h-full rounded-full progress-shimmer-amber" style="width:16%"></div>
-              </div>
-              <div class="flex justify-between text-xs text-slate-500">
-                <span>11.2 м³ занято</span>
-                <span>70 м³ макс.</span>
+                <span class="px-2.5 py-1 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-400 text-xs font-bold animate-pulse">🔔 Срочно</span>
               </div>
             </div>
-
-            <!-- Urgency banner -->
+          </div>
+          <!-- S2: progress -->
+          <div class="px-6 space-y-2 relative">
+            <div class="flex justify-between text-xs font-medium">
+              <span class="text-slate-400">Заполненность контейнера</span>
+              <span class="text-amber-400 font-bold text-sm">16%</span>
+            </div>
+            <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
+              <div class="h-full rounded-full progress-shimmer-amber" style="width:16%"></div>
+            </div>
+            <div class="flex justify-between text-xs text-slate-500">
+              <span>11.2 м³ занято</span>
+              <span>70 м³ макс.</span>
+            </div>
+          </div>
+          <!-- S3: urgency banner -->
+          <div class="px-6 relative">
             <div class="flex items-center gap-3 bg-amber-500/10 border border-amber-500/25 rounded-xl p-3">
               <i data-lucide="clock" class="w-4 h-4 text-amber-400 shrink-0"></i>
               <div>
@@ -742,7 +752,9 @@
                 <p class="text-slate-400 text-xs">Закрытие пула через <span class="text-amber-400 font-semibold">5 дней</span></p>
               </div>
             </div>
-
+          </div>
+          <!-- S4: metrics -->
+          <div class="px-6 relative">
             <div class="grid grid-cols-3 gap-3">
               <div class="bg-slate-800/60 rounded-xl p-3 text-center">
                 <p class="text-amber-400 font-bold text-base">18</p>
@@ -757,17 +769,17 @@
                 <p class="text-slate-500 text-xs mt-0.5">в пути</p>
               </div>
             </div>
-
-            <div class="pt-2 border-t border-slate-800 flex items-center justify-between">
-              <div>
-                <p class="text-slate-500 text-xs">Тариф от</p>
-                <p class="text-slate-100 font-bold">$2.10 <span class="text-slate-500 font-normal text-xs">/ кг</span></p>
-              </div>
-              <a href="#contact-form" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-amber-500/15 border border-amber-500/40 text-amber-400 text-sm font-bold hover:bg-amber-500/25 transition-all duration-300">
-                Зафиксировать
-                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-              </a>
+          </div>
+          <!-- S5: footer -->
+          <div class="px-6 pb-6 pt-4 border-t border-slate-800 flex items-center justify-between relative">
+            <div>
+              <p class="text-slate-500 text-xs">Тариф от</p>
+              <p class="text-slate-100 font-bold">$2.10 <span class="text-slate-500 font-normal text-xs">/ кг</span></p>
             </div>
+            <a href="#contact-form" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-amber-500/15 border border-amber-500/40 text-amber-400 text-sm font-bold hover:bg-amber-500/25 transition-all duration-300">
+              Зафиксировать
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
           </div>
         </div>
 
