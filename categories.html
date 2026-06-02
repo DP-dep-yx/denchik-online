@@ -176,9 +176,29 @@
       <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-100 mb-4">
         Категории <span class="gradient-text">товара</span>
       </h1>
-      <p class="text-slate-400 text-lg max-w-2xl">
+      <p class="text-slate-400 text-lg max-w-2xl mb-8">
         Везём любые группы товаров из Китая по фабричным ценам. Выберите категорию и оставьте запрос — рассчитаем стоимость доставки в течение часа.
       </p>
+      <!-- Search -->
+      <div style="position:relative;max-width:32rem;">
+        <i data-lucide="search" style="position:absolute;left:1rem;top:50%;transform:translateY(-50%);width:1.1rem;height:1.1rem;color:#475569;pointer-events:none;"></i>
+        <input
+          id="cat-search"
+          type="text"
+          placeholder="Поиск категории..."
+          autocomplete="off"
+          style="width:100%;padding:0.75rem 1rem 0.75rem 2.75rem;border-radius:0.75rem;background:rgba(15,23,42,0.7);border:1px solid rgba(148,163,184,0.15);color:#e2e8f0;font-size:0.95rem;font-family:inherit;outline:none;transition:border-color 0.2s;"
+          onfocus="this.style.borderColor='rgba(56,189,248,0.5)'"
+          onblur="this.style.borderColor='rgba(148,163,184,0.15)'"
+        />
+        <button
+          id="cat-search-clear"
+          onclick="document.getElementById('cat-search').value='';document.getElementById('cat-search').dispatchEvent(new Event('input'));this.style.display='none';"
+          style="display:none;position:absolute;right:0.75rem;top:50%;transform:translateY(-50%);background:none;border:none;color:#475569;cursor:pointer;padding:0.25rem;"
+          aria-label="Очистить">
+          <i data-lucide="x" style="width:1rem;height:1rem;"></i>
+        </button>
+      </div>
     </div>
   </section>
 
@@ -188,10 +208,16 @@
   <section class="py-20 relative" style="background:linear-gradient(150deg,#0f2137 0%,#162032 25%,#0f1f2e 55%,#0d2318 100%)">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div id="cat-empty" style="display:none;text-align:center;padding:4rem 0;">
+        <i data-lucide="search-x" style="width:3rem;height:3rem;color:#475569;margin:0 auto 1rem;display:block;"></i>
+        <p style="color:#94a3b8;font-size:1.05rem;">Ничего не найдено по запросу «<span id="cat-empty-q"></span>»</p>
+        <p style="color:#64748b;font-size:0.85rem;margin-top:0.5rem;">Попробуйте другой запрос или <a href="index.html#contact-form" style="color:#38bdf8;">напишите нам</a> — привезём любой товар.</p>
+      </div>
+
+      <div id="cat-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <!-- Одежда и обувь -->
-        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-sky-500/40 rounded-2xl p-6">
+        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-sky-500/40 rounded-2xl p-6" data-search="одежда обувь мужская женская детская куртки пуховики кеды кроссовки трикотаж">
           <div class="flex items-start gap-4 mb-4">
             <div class="cat-icon-wrap" style="background:rgba(56,189,248,0.12);border:1px solid rgba(56,189,248,0.2);">
               <i data-lucide="shirt" style="width:1.25rem;height:1.25rem;color:#38bdf8;"></i>
@@ -216,7 +242,7 @@
         </div>
 
         <!-- Аксессуары -->
-        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-violet-500/40 rounded-2xl p-6">
+        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-violet-500/40 rounded-2xl p-6" data-search="аксессуары сумки ремни украшения бижутерия кошельки головные уборы рюкзаки">
           <div class="flex items-start gap-4 mb-4">
             <div class="cat-icon-wrap" style="background:rgba(139,92,246,0.12);border:1px solid rgba(139,92,246,0.2);">
               <i data-lucide="gem" style="width:1.25rem;height:1.25rem;color:#a78bfa;"></i>
@@ -241,7 +267,7 @@
         </div>
 
         <!-- Игрушки -->
-        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-pink-500/40 rounded-2xl p-6">
+        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-pink-500/40 rounded-2xl p-6" data-search="игрушки дети конструкторы мягкие радиоуправляемые развивающие сертификат">
           <div class="flex items-start gap-4 mb-4">
             <div class="cat-icon-wrap" style="background:rgba(236,72,153,0.12);border:1px solid rgba(236,72,153,0.2);">
               <i data-lucide="puzzle" style="width:1.25rem;height:1.25rem;color:#f472b6;"></i>
@@ -266,7 +292,7 @@
         </div>
 
         <!-- Товары для дома -->
-        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-emerald-500/40 rounded-2xl p-6">
+        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-emerald-500/40 rounded-2xl p-6" data-search="товары дом декор текстиль хозтовары постельное шторы органайзеры интерьер уют">
           <div class="flex items-start gap-4 mb-4">
             <div class="cat-icon-wrap" style="background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.2);">
               <i data-lucide="home" style="width:1.25rem;height:1.25rem;color:#34d399;"></i>
@@ -291,7 +317,7 @@
         </div>
 
         <!-- Электроника -->
-        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-cyan-500/40 rounded-2xl p-6">
+        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-cyan-500/40 rounded-2xl p-6" data-search="электроника гаджеты смартфоны планшеты наушники часы компоненты периферия умные устройства">
           <div class="flex items-start gap-4 mb-4">
             <div class="cat-icon-wrap" style="background:rgba(6,182,212,0.12);border:1px solid rgba(6,182,212,0.2);">
               <i data-lucide="cpu" style="width:1.25rem;height:1.25rem;color:#22d3ee;"></i>
@@ -316,7 +342,7 @@
         </div>
 
         <!-- Запчасти -->
-        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-orange-500/40 rounded-2xl p-6">
+        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-orange-500/40 rounded-2xl p-6" data-search="запчасти авто мото автомобиль грузовой мотоцикл спецтехника сельхоз расходники оригинал аналог">
           <div class="flex items-start gap-4 mb-4">
             <div class="cat-icon-wrap" style="background:rgba(249,115,22,0.12);border:1px solid rgba(249,115,22,0.2);">
               <i data-lucide="settings-2" style="width:1.25rem;height:1.25rem;color:#fb923c;"></i>
@@ -341,7 +367,7 @@
         </div>
 
         <!-- Одежда (отдельная) -->
-        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-indigo-500/40 rounded-2xl p-6">
+        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-indigo-500/40 rounded-2xl p-6" data-search="одежда базовый трикотаж офис спецодежда рабочая маркировка честный знак сезонная коллекция">
           <div class="flex items-start gap-4 mb-4">
             <div class="cat-icon-wrap" style="background:rgba(99,102,241,0.12);border:1px solid rgba(99,102,241,0.2);">
               <i data-lucide="layers" style="width:1.25rem;height:1.25rem;color:#818cf8;"></i>
@@ -366,7 +392,7 @@
         </div>
 
         <!-- Инструменты -->
-        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-yellow-500/40 rounded-2xl p-6">
+        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-yellow-500/40 rounded-2xl p-6" data-search="инструменты электроинструмент ручной измерительные строительство ремонт расходные материалы">
           <div class="flex items-start gap-4 mb-4">
             <div class="cat-icon-wrap" style="background:rgba(234,179,8,0.12);border:1px solid rgba(234,179,8,0.2);">
               <i data-lucide="wrench" style="width:1.25rem;height:1.25rem;color:#facc15;"></i>
@@ -391,7 +417,7 @@
         </div>
 
         <!-- Текстиль -->
-        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-teal-500/40 rounded-2xl p-6">
+        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-teal-500/40 rounded-2xl p-6" data-search="текстиль ткани рулоны шторы скатерти полотенца постельные комплекты домашний">
           <div class="flex items-start gap-4 mb-4">
             <div class="cat-icon-wrap" style="background:rgba(20,184,166,0.12);border:1px solid rgba(20,184,166,0.2);">
               <i data-lucide="wind" style="width:1.25rem;height:1.25rem;color:#2dd4bf;"></i>
@@ -416,7 +442,7 @@
         </div>
 
         <!-- Керамика -->
-        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-amber-500/40 rounded-2xl p-6">
+        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-amber-500/40 rounded-2xl p-6" data-search="керамика плитка декор садовая фигуры вазы интерьер отделочные">
           <div class="flex items-start gap-4 mb-4">
             <div class="cat-icon-wrap" style="background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.2);">
               <i data-lucide="circle-dot" style="width:1.25rem;height:1.25rem;color:#fbbf24;"></i>
@@ -441,7 +467,7 @@
         </div>
 
         <!-- Стройматериалы -->
-        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-slate-400/40 rounded-2xl p-6">
+        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-slate-400/40 rounded-2xl p-6" data-search="стройматериалы ламинат профили фурнитура крепёж герметики краски грунтовки отделка строительство">
           <div class="flex items-start gap-4 mb-4">
             <div class="cat-icon-wrap" style="background:rgba(148,163,184,0.12);border:1px solid rgba(148,163,184,0.2);">
               <i data-lucide="hard-hat" style="width:1.25rem;height:1.25rem;color:#94a3b8;"></i>
@@ -466,7 +492,7 @@
         </div>
 
         <!-- Посуда -->
-        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-rose-500/40 rounded-2xl p-6">
+        <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-rose-500/40 rounded-2xl p-6" data-search="посуда кухня сервировка столовые наборы кастрюли сковороды термосы гаджеты оптовые">
           <div class="flex items-start gap-4 mb-4">
             <div class="cat-icon-wrap" style="background:rgba(244,63,94,0.12);border:1px solid rgba(244,63,94,0.2);">
               <i data-lucide="utensils" style="width:1.25rem;height:1.25rem;color:#fb7185;"></i>
@@ -593,6 +619,33 @@
     function closeMobileMenu() {
       mobileMenu.classList.add('hidden');
     }
+
+    // Search
+    const searchInput = document.getElementById('cat-search');
+    const clearBtn = document.getElementById('cat-search-clear');
+    const grid = document.getElementById('cat-grid');
+    const emptyState = document.getElementById('cat-empty');
+    const emptyQ = document.getElementById('cat-empty-q');
+    const cards = grid.querySelectorAll('[data-search]');
+
+    searchInput.addEventListener('input', function () {
+      const q = this.value.trim().toLowerCase();
+      clearBtn.style.display = q ? 'block' : 'none';
+      let visible = 0;
+      cards.forEach(function (card) {
+        const text = (card.dataset.search + ' ' + card.innerText).toLowerCase();
+        const show = !q || text.includes(q);
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      if (q && visible === 0) {
+        emptyQ.textContent = searchInput.value.trim();
+        emptyState.style.display = 'block';
+        lucide.createIcons();
+      } else {
+        emptyState.style.display = 'none';
+      }
+    });
   </script>
 
 </body>
