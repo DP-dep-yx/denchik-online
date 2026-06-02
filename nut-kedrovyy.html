@@ -71,6 +71,14 @@
         <a href="index.html#advantages" class="hover:text-sky-400 transition-colors">Преимущества</a>
         <a href="index.html#pools-section" class="hover:text-sky-400 transition-colors">Текущие поставки</a>
         <a href="tel:+79122421781" class="flex items-center gap-1.5 text-slate-400 hover:text-emerald-400 transition-colors text-sm"><i data-lucide="phone" class="w-4 h-4"></i>+7 (912) 242-17-81</a>
+        <!-- Nav search -->
+        <div style="position:relative;" id="nav-search-wrap">
+          <div style="display:flex;align-items:center;gap:0.4rem;background:rgba(15,23,42,0.6);border:1px solid rgba(148,163,184,0.12);border-radius:0.5rem;padding:0.35rem 0.65rem;transition:border-color 0.2s;" id="nav-search-box">
+            <i data-lucide="search" style="width:0.875rem;height:0.875rem;color:#475569;flex-shrink:0;"></i>
+            <input id="nav-search-input" type="text" placeholder="Поиск товара..." autocomplete="off" style="background:none;border:none;outline:none;color:#e2e8f0;font-size:0.78rem;width:120px;font-family:inherit;" onfocus="document.getElementById('nav-search-box').style.borderColor='rgba(56,189,248,0.45)';navSearchShow()" onblur="setTimeout(function(){document.getElementById('nav-search-box').style.borderColor='rgba(148,163,184,0.12)';navSearchHide();},180)" oninput="navSearchDo(this.value)" />
+          </div>
+          <div id="nav-search-drop" style="display:none;position:absolute;right:0;top:calc(100% + 0.5rem);width:290px;background:linear-gradient(135deg,#0f1f2e,#162032);border:1px solid rgba(148,163,184,0.15);border-radius:0.875rem;overflow:hidden;z-index:200;box-shadow:0 12px 40px rgba(0,0,0,0.5);"></div>
+        </div>
         <a href="index.html#contact-form" class="ml-2 px-4 py-2 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-400 hover:bg-sky-500/20 transition-all duration-300">Связаться</a>
       </div>
       <button id="menu-btn" class="md:hidden p-2 text-slate-400 hover:text-sky-400 transition-colors" aria-label="Меню"><i data-lucide="menu" class="w-6 h-6"></i></button>
@@ -234,6 +242,54 @@
     const mobileMenu = document.getElementById('mobile-menu');
     menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
     function closeMobileMenu() { mobileMenu.classList.add('hidden'); }
-  </script>
+  
+    // ── Nav search ─────────────────────────────────────────
+    var _SD=[
+      {t:'Главная',s:'Страница',u:'index.html'},
+      {t:'Как работаем',s:'Раздел',u:'index.html#how-it-works'},
+      {t:'Преимущества',s:'Раздел',u:'index.html#advantages'},
+      {t:'Текущие поставки',s:'Раздел',u:'index.html#pools-section'},
+      {t:'Запрос на расчёт',s:'Раздел',u:'index.html#contact-form'},
+      {t:'Все категории',s:'Страница',u:'categories.html'},
+      {t:'Одежда и обувь',s:'Категория',u:'cat-odezhda-obuv.html'},
+      {t:'Аксессуары',s:'Категория',u:'cat-aksessuary.html'},
+      {t:'Игрушки',s:'Категория',u:'cat-igrushki.html'},
+      {t:'Товары для дома',s:'Категория',u:'cat-tovary-doma.html'},
+      {t:'Электроника',s:'Категория',u:'cat-elektronika.html'},
+      {t:'Запчасти (авто)',s:'Категория',u:'cat-zapchasti.html'},
+      {t:'Одежда',s:'Категория',u:'cat-odezhda.html'},
+      {t:'Инструменты',s:'Категория',u:'cat-instrumenty.html'},
+      {t:'Текстиль',s:'Категория',u:'cat-tekstil.html'},
+      {t:'Керамика',s:'Категория',u:'cat-keramika.html'},
+      {t:'Стройматериалы',s:'Категория',u:'cat-stroymaterialy.html'},
+      {t:'Посуда',s:'Категория',u:'cat-posuda.html'},
+      {t:'Орехи',s:'Категория',u:'cat-orehi.html'},
+      {t:'Сухофрукты',s:'Категория',u:'cat-sukhofrukty.html'},
+      {t:'Арахис',s:'Орехи',u:'nut-arakhis.html'},
+      {t:'Грецкий орех',s:'Орехи',u:'nut-greckiy.html'},
+      {t:'Грецкий орех ядро',s:'Орехи · ТН ВЭД 0802320000',u:'nut-greckiy-yadro.html'},
+      {t:'Грецкий орех в скорлупе',s:'Орехи · ТН ВЭД 0802310000',u:'nut-greckiy-skorlupa.html'},
+      {t:'Кедровый орех',s:'Орехи',u:'nut-kedrovyy.html'},
+      {t:'Кешью',s:'Орехи',u:'nut-keshu.html'},
+      {t:'Макадамия',s:'Орехи',u:'nut-makadamia.html'},
+      {t:'Миндаль',s:'Орехи',u:'nut-mindal.html'},
+      {t:'Пекан',s:'Орехи',u:'nut-pekan.html'},
+      {t:'Смесь орехов',s:'Орехи',u:'nut-smes.html'},
+      {t:'Фисташки',s:'Орехи',u:'nut-fistashki.html'},
+      {t:'Фундук',s:'Орехи',u:'nut-funduk.html'}
+    ];
+    function navSearchDo(q){
+      var drop=document.getElementById('nav-search-drop');
+      if(!q||!q.trim()){drop.style.display='none';return;}
+      var ql=q.toLowerCase();
+      var res=_SD.filter(function(i){return i.t.toLowerCase().indexOf(ql)>=0||i.s.toLowerCase().indexOf(ql)>=0;}).slice(0,9);
+      if(!res.length){drop.innerHTML='<p style="padding:0.875rem 1rem;color:#64748b;font-size:0.78rem;">Ничего не найдено</p>';drop.style.display='block';return;}
+      drop.innerHTML=res.map(function(i){return '<a href="'+i.u+'" style="display:flex;flex-direction:column;padding:0.55rem 1rem;text-decoration:none;border-bottom:1px solid rgba(148,163,184,0.06);" onmouseover="this.style.background='rgba(56,189,248,0.07)'" onmouseout="this.style.background='none'"><span style="color:#e2e8f0;font-size:0.82rem;font-weight:600;">'+i.t+'</span><span style="color:#64748b;font-size:0.7rem;margin-top:0.1rem;">'+i.s+'</span></a>';}).join('');
+      drop.style.display='block';
+    }
+    function navSearchShow(){var v=document.getElementById('nav-search-input').value;if(v)navSearchDo(v);}
+    function navSearchHide(){document.getElementById('nav-search-drop').style.display='none';}
+    // ───────────────────────────────────────────────────────
+</script>
 </body>
 </html>
