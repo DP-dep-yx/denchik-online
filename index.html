@@ -718,24 +718,34 @@
 
         <!-- Container Card 1 -->
         <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-sky-500/40 rounded-2xl overflow-hidden relative" style="grid-row:span 6;display:grid;grid-template-rows:subgrid;row-gap:1.25rem;">
-          <!-- S1: accent + header -->
+          <!-- S1: categories -->
           <div>
             <div class="h-1 w-full bg-gradient-to-r from-sky-600 via-sky-400 to-sky-600"></div>
-            <div class="px-8 pt-8">
-              <div class="flex items-start justify-between">
-                <div>
-                  <div class="flex items-center gap-2 mb-1">
-                    <i data-lucide="container" class="w-4 h-4 text-sky-400"></i>
-                    <span class="text-slate-500 text-xs font-medium uppercase tracking-wider">Контейнер №104</span>
-                  </div>
-                  <h3 class="text-slate-100 font-bold text-lg">Иу (Yiwu) → Москва</h3>
-                  <p class="text-slate-500 text-xs mt-0.5">40HC • LCL сборный</p>
-                </div>
-                <span class="px-2.5 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-bold">Открыт</span>
+            <div class="px-8 pt-4 pb-1">
+              <p class="text-slate-500 text-xs font-medium uppercase tracking-wider mb-2">Категории товара</p>
+              <div style="display:flex;flex-wrap:wrap;gap:0.375rem;">
+                <span style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;">Одежда и обувь</span>
+                <span style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;">Аксессуары</span>
+                <span style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;">Игрушки</span>
+                <span style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;">Товары для дома</span>
               </div>
             </div>
           </div>
-          <!-- S2: progress -->
+          <!-- S2: accent + header -->
+          <div class="px-8">
+            <div class="flex items-start justify-between">
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <i data-lucide="container" class="w-4 h-4 text-sky-400"></i>
+                  <span class="text-slate-500 text-xs font-medium uppercase tracking-wider">Контейнер №104</span>
+                </div>
+                <h3 class="text-slate-100 font-bold text-lg">Иу (Yiwu) → Москва</h3>
+                <p class="text-slate-500 text-xs mt-0.5">40HC • LCL сборный</p>
+              </div>
+              <span class="px-2.5 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-bold">Открыт</span>
+            </div>
+          </div>
+          <!-- S3: progress -->
           <div class="px-8 space-y-2">
             <div class="flex justify-between text-xs font-medium">
               <span class="text-slate-400">Заполненность по объёму</span>
@@ -760,7 +770,7 @@
               <span>Осталось ~15.7 т</span>
             </div>
           </div>
-          <!-- S3: available banner -->
+          <!-- S4: available banner -->
           <div class="px-8">
             <div class="flex items-center gap-3 bg-sky-500/10 border border-sky-500/25 rounded-xl p-3">
               <i data-lucide="package-open" class="w-4 h-4 text-sky-400 shrink-0"></i>
@@ -770,7 +780,7 @@
               </div>
             </div>
           </div>
-          <!-- S4: metrics -->
+          <!-- S5: metrics -->
           <div class="px-8">
             <div class="grid grid-cols-3 gap-3">
               <div class="bg-slate-800/60 rounded-xl p-3 text-center">
@@ -785,16 +795,6 @@
                 <p class="text-emerald-400 font-bold text-base">16 д.</p>
                 <p class="text-slate-500 text-xs mt-0.5">в пути</p>
               </div>
-            </div>
-          </div>
-          <!-- S5: categories -->
-          <div class="px-8">
-            <p class="text-slate-500 text-xs font-medium uppercase tracking-wider mb-2">Категории товара</p>
-            <div style="display:flex;flex-wrap:wrap;gap:0.375rem;">
-              <span style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;">Одежда и обувь</span>
-              <span style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;">Аксессуары</span>
-              <span style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;">Игрушки</span>
-              <span style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;">Товары для дома</span>
             </div>
           </div>
           <!-- S6: footer -->
@@ -812,24 +812,34 @@
 
         <!-- Container Card 2 -->
         <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-emerald-500/40 rounded-2xl overflow-hidden relative" style="grid-row:span 6;display:grid;grid-template-rows:subgrid;row-gap:1.25rem;">
-          <!-- S1: accent + header -->
+          <!-- S1: categories -->
           <div>
             <div class="h-1 w-full bg-gradient-to-r from-emerald-600 via-emerald-400 to-emerald-600"></div>
-            <div class="px-8 pt-8">
-              <div class="flex items-start justify-between">
-                <div>
-                  <div class="flex items-center gap-2 mb-1">
-                    <i data-lucide="container" class="w-4 h-4 text-emerald-400"></i>
-                    <span class="text-slate-500 text-xs font-medium uppercase tracking-wider">Контейнер №105</span>
-                  </div>
-                  <h3 class="text-slate-100 font-bold text-lg">Чэнду (Chengdu) → Екатеринбург</h3>
-                  <p class="text-slate-500 text-xs mt-0.5">40HC • LCL сборный</p>
-                </div>
-                <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold">Открыт</span>
+            <div class="px-8 pt-4 pb-1">
+              <p class="text-slate-500 text-xs font-medium uppercase tracking-wider mb-2">Категории товара</p>
+              <div style="display:flex;flex-wrap:wrap;gap:0.375rem;">
+                <span style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;">Электроника</span>
+                <span style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;">Запчасти</span>
+                <span style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;">Одежда</span>
+                <span style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;">Инструменты</span>
               </div>
             </div>
           </div>
-          <!-- S2: progress -->
+          <!-- S2: accent + header -->
+          <div class="px-8">
+            <div class="flex items-start justify-between">
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <i data-lucide="container" class="w-4 h-4 text-emerald-400"></i>
+                  <span class="text-slate-500 text-xs font-medium uppercase tracking-wider">Контейнер №105</span>
+                </div>
+                <h3 class="text-slate-100 font-bold text-lg">Чэнду (Chengdu) → Екатеринбург</h3>
+                <p class="text-slate-500 text-xs mt-0.5">40HC • LCL сборный</p>
+              </div>
+              <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold">Открыт</span>
+            </div>
+          </div>
+          <!-- S3: progress -->
           <div class="px-8 space-y-2">
             <div class="flex justify-between text-xs font-medium">
               <span class="text-slate-400">Заполненность по объёму</span>
@@ -854,7 +864,7 @@
               <span>Осталось ~13.0 т</span>
             </div>
           </div>
-          <!-- S3: available banner -->
+          <!-- S4: available banner -->
           <div class="px-8">
             <div class="flex items-center gap-3 bg-emerald-500/10 border border-emerald-500/25 rounded-xl p-3">
               <i data-lucide="package-open" class="w-4 h-4 text-emerald-400 shrink-0"></i>
@@ -864,7 +874,7 @@
               </div>
             </div>
           </div>
-          <!-- S4: metrics -->
+          <!-- S5: metrics -->
           <div class="px-8">
             <div class="grid grid-cols-3 gap-3">
               <div class="bg-slate-800/60 rounded-xl p-3 text-center">
@@ -879,16 +889,6 @@
                 <p class="text-emerald-400 font-bold text-base">20 д.</p>
                 <p class="text-slate-500 text-xs mt-0.5">в пути</p>
               </div>
-            </div>
-          </div>
-          <!-- S5: categories -->
-          <div class="px-8">
-            <p class="text-slate-500 text-xs font-medium uppercase tracking-wider mb-2">Категории товара</p>
-            <div style="display:flex;flex-wrap:wrap;gap:0.375rem;">
-              <span style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;">Электроника</span>
-              <span style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;">Запчасти</span>
-              <span style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;">Одежда</span>
-              <span style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;">Инструменты</span>
             </div>
           </div>
           <!-- S6: footer -->
@@ -907,24 +907,34 @@
         <!-- Container Card 3 -->
         <div class="card-hover bg-slate-900/80 border border-amber-700/40 hover:border-amber-500/60 rounded-2xl overflow-hidden relative" style="grid-row:span 6;display:grid;grid-template-rows:subgrid;row-gap:1.25rem;">
           <div class="absolute inset-0 bg-amber-500/3 pointer-events-none"></div>
-          <!-- S1: accent + header -->
+          <!-- S1: categories -->
           <div class="relative">
             <div class="h-1 w-full bg-gradient-to-r from-amber-600 via-amber-400 to-amber-600"></div>
-            <div class="px-8 pt-8">
-              <div class="flex items-start justify-between">
-                <div>
-                  <div class="flex items-center gap-2 mb-1">
-                    <i data-lucide="container" class="w-4 h-4 text-amber-400"></i>
-                    <span class="text-slate-500 text-xs font-medium uppercase tracking-wider">Контейнер №106</span>
-                  </div>
-                  <h3 class="text-slate-100 font-bold text-lg">Сиань (Xi'an) → Новосибирск</h3>
-                  <p class="text-slate-500 text-xs mt-0.5">40HC • LCL сборный</p>
-                </div>
-                <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold">Открыт</span>
+            <div class="px-8 pt-4 pb-1">
+              <p class="text-slate-500 text-xs font-medium uppercase tracking-wider mb-2">Категории товара</p>
+              <div style="display:flex;flex-wrap:wrap;gap:0.375rem;">
+                <span style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;">Текстиль</span>
+                <span style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;">Керамика</span>
+                <span style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;">Стройматериалы</span>
+                <span style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;">Посуда</span>
               </div>
             </div>
           </div>
-          <!-- S2: progress -->
+          <!-- S2: accent + header -->
+          <div class="px-8 relative">
+            <div class="flex items-start justify-between">
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <i data-lucide="container" class="w-4 h-4 text-amber-400"></i>
+                  <span class="text-slate-500 text-xs font-medium uppercase tracking-wider">Контейнер №106</span>
+                </div>
+                <h3 class="text-slate-100 font-bold text-lg">Сиань (Xi'an) → Новосибирск</h3>
+                <p class="text-slate-500 text-xs mt-0.5">40HC • LCL сборный</p>
+              </div>
+              <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold">Открыт</span>
+            </div>
+          </div>
+          <!-- S3: progress -->
           <div class="px-8 space-y-2 relative">
             <div class="flex justify-between text-xs font-medium">
               <span class="text-slate-400">Заполненность по объёму</span>
@@ -949,7 +959,7 @@
               <span>Осталось ~12.5 т</span>
             </div>
           </div>
-          <!-- S3: urgency banner -->
+          <!-- S4: urgency banner -->
           <div class="px-8 relative">
             <div class="flex items-center gap-3 bg-amber-500/10 border border-amber-500/25 rounded-xl p-3">
               <i data-lucide="clock" class="w-4 h-4 text-amber-400 shrink-0"></i>
@@ -959,7 +969,7 @@
               </div>
             </div>
           </div>
-          <!-- S4: metrics -->
+          <!-- S5: metrics -->
           <div class="px-8 relative">
             <div class="grid grid-cols-3 gap-3">
               <div class="bg-slate-800/60 rounded-xl p-3 text-center">
@@ -974,16 +984,6 @@
                 <p class="text-emerald-400 font-bold text-base">20 д.</p>
                 <p class="text-slate-500 text-xs mt-0.5">в пути</p>
               </div>
-            </div>
-          </div>
-          <!-- S5: categories -->
-          <div class="px-8 relative">
-            <p class="text-slate-500 text-xs font-medium uppercase tracking-wider mb-2">Категории товара</p>
-            <div style="display:flex;flex-wrap:wrap;gap:0.375rem;">
-              <span style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;">Текстиль</span>
-              <span style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;">Керамика</span>
-              <span style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;">Стройматериалы</span>
-              <span style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;">Посуда</span>
             </div>
           </div>
           <!-- S6: footer -->
