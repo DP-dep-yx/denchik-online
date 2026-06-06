@@ -100,6 +100,62 @@
     #how-it-works .card-hover:hover p { font-size: 0.9rem; }
     #how-it-works .card-hover:hover { border-color: rgba(56,189,248,0.35) !important; box-shadow: 0 4px 32px rgba(56,189,248,0.12), 0 4px 24px rgba(0,0,0,0.3) !important; }
 
+    /* Lightbox */
+    #img-lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(2,6,23,0.92);
+      backdrop-filter: blur(6px);
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      cursor: zoom-out;
+      animation: lbIn .2s ease;
+    }
+    #img-lightbox.open { display: flex; }
+    @keyframes lbIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    #img-lightbox img {
+      max-width: min(1400px, 96vw);
+      max-height: 92vh;
+      width: auto;
+      height: auto;
+      border-radius: 0.875rem;
+      border: 1px solid rgba(56,189,248,0.25);
+      box-shadow: 0 24px 80px rgba(0,0,0,0.7);
+      cursor: default;
+      animation: lbImgIn .25s ease;
+    }
+    @keyframes lbImgIn {
+      from { transform: scale(0.93); opacity: 0; }
+      to   { transform: scale(1);    opacity: 1; }
+    }
+    #lb-close {
+      position: fixed;
+      top: 1rem;
+      right: 1.25rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background: rgba(15,23,42,0.85);
+      border: 1px solid rgba(148,163,184,0.2);
+      color: #94a3b8;
+      font-size: 1.25rem;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background .15s, color .15s;
+    }
+    #lb-close:hover { background: rgba(56,189,248,0.15); color: #38bdf8; }
+    .how-img-col img { cursor: zoom-in; transition: opacity .2s; }
+    .how-img-col img:hover { opacity: .88; }
+
     /* How-it-works two-column layout */
     @media (min-width: 1024px) {
       .lg-how-grid {
@@ -1330,5 +1386,31 @@
     function navSearchHide(){document.getElementById('nav-search-drop').style.display='none';}
     // ───────────────────────────────────────────────────────
 </script>
+  <!-- Lightbox -->
+  <div id="img-lightbox" role="dialog" aria-modal="true" aria-label="Инфографика">
+    <button id="lb-close" aria-label="Закрыть">✕</button>
+    <img id="lb-img" src="" alt="Совместный импорт из Китая — схема работы" />
+  </div>
+  <script>
+    (function(){
+      var lb = document.getElementById('img-lightbox');
+      var lbImg = document.getElementById('lb-img');
+      var trigger = document.querySelector('.how-img-col img');
+      if (!trigger || !lb) return;
+      trigger.setAttribute('title', 'Нажмите для увеличения');
+      trigger.addEventListener('click', function(){
+        lbImg.src = this.currentSrc || this.src;
+        lb.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+      document.getElementById('lb-close').addEventListener('click', closeLb);
+      lb.addEventListener('click', function(e){ if (e.target === lb) closeLb(); });
+      document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeLb(); });
+      function closeLb(){
+        lb.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    })();
+  </script>
 </body>
 </html>
