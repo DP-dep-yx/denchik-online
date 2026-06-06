@@ -1,20 +1,16 @@
 <!DOCTYPE html>
-<html lang="ru" class="scroll-smooth">
+<html lang="zh" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Совместный импорт из Китая | Денис Пьянков — denchik.online</title>
-  <meta name="description" content="Совместный импорт и выкуп товаров из Китая под ключ для МСП и селлеров. Цены фабрик без контейнера, белая таможня, юридическая защита." />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="shortcut icon" href="favicon.svg" />
-
-  <!-- Fonts -->
+  <title>中国联合进口 | Denis Pyankow — denchik.online</title>
+  <meta name="description" content="面向中小企业和卖家的中国联合进口平台。工厂批发价，无需自备集装箱，合法清关，法律保障。" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="shortcut icon" href="../favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" />
-
-  <!-- Tailwind CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../style.css" />
   <script>
     tailwind.config = {
       theme: {
@@ -35,31 +31,17 @@
       }
     }
   </script>
-
   <style>
     body { font-family: 'Manrope', sans-serif; }
-
-    /* Ticker */
     .ticker-wrap { overflow: hidden; white-space: nowrap; }
     .ticker-track { display: inline-flex; animation: ticker 40s linear infinite; }
     .ticker-wrap:hover .ticker-track { animation-play-state: paused; }
-
-    /* Neon glow effects */
     .glow-blue  { box-shadow: 0 0 20px rgba(56,189,248,.25), 0 0 40px rgba(56,189,248,.1); }
     .glow-green { box-shadow: 0 0 20px rgba(16,185,129,.25), 0 0 40px rgba(16,185,129,.1); }
     .glow-btn   { box-shadow: 0 0 24px rgba(56,189,248,.45); }
     .glow-btn:hover { box-shadow: 0 0 40px rgba(56,189,248,.7); }
-
-    /* Card hover */
-    .card-hover {
-      transition: all 0.3s ease-in-out;
-    }
-    .card-hover:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 32px rgba(56,189,248,.18);
-    }
-
-    /* Progress bar shimmer */
+    .card-hover { transition: all 0.3s ease-in-out; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(56,189,248,.18); }
     @keyframes shimmer {
       0%   { background-position: 200% center; }
       100% { background-position: -200% center; }
@@ -79,16 +61,12 @@
       background-size: 200% auto;
       animation: shimmer 2.5s linear infinite;
     }
-
-    /* Gradient text */
     .gradient-text {
       background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #10b981 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-
-    /* Step number glow */
     .step-num {
       background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
       border: 1.5px solid rgba(56,189,248,.4);
@@ -99,92 +77,37 @@
     #how-it-works .card-hover:hover h3 { font-size: 1.15rem; }
     #how-it-works .card-hover:hover p { font-size: 0.9rem; }
     #how-it-works .card-hover:hover { border-color: rgba(56,189,248,0.35) !important; box-shadow: 0 4px 32px rgba(56,189,248,0.12), 0 4px 24px rgba(0,0,0,0.3) !important; }
-
-    /* Lightbox */
     #img-lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      background: rgba(2,6,23,0.92);
-      backdrop-filter: blur(6px);
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-      cursor: zoom-out;
-      animation: lbIn .2s ease;
+      display: none; position: fixed; inset: 0; z-index: 9999;
+      background: rgba(2,6,23,0.92); backdrop-filter: blur(6px);
+      align-items: center; justify-content: center; padding: 1rem;
+      cursor: zoom-out; animation: lbIn .2s ease;
     }
     #img-lightbox.open { display: flex; }
-    @keyframes lbIn {
-      from { opacity: 0; }
-      to   { opacity: 1; }
-    }
+    @keyframes lbIn { from { opacity: 0; } to { opacity: 1; } }
     #img-lightbox img {
-      max-width: min(1400px, 96vw);
-      max-height: 92vh;
-      width: auto;
-      height: auto;
-      border-radius: 0.875rem;
-      border: 1px solid rgba(56,189,248,0.25);
-      box-shadow: 0 24px 80px rgba(0,0,0,0.7);
-      cursor: default;
+      max-width: min(1400px, 96vw); max-height: 92vh; width: auto; height: auto;
+      border-radius: 0.875rem; border: 1px solid rgba(56,189,248,0.25);
+      box-shadow: 0 24px 80px rgba(0,0,0,0.7); cursor: default;
       animation: lbImgIn .25s ease;
     }
-    @keyframes lbImgIn {
-      from { transform: scale(0.93); opacity: 0; }
-      to   { transform: scale(1);    opacity: 1; }
-    }
+    @keyframes lbImgIn { from { transform: scale(0.93); opacity: 0; } to { transform: scale(1); opacity: 1; } }
     #lb-close {
-      position: fixed;
-      top: 1rem;
-      right: 1.25rem;
-      width: 2.5rem;
-      height: 2.5rem;
-      border-radius: 50%;
-      background: rgba(15,23,42,0.85);
-      border: 1px solid rgba(148,163,184,0.2);
-      color: #94a3b8;
-      font-size: 1.25rem;
-      line-height: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
+      position: fixed; top: 1rem; right: 1.25rem; width: 2.5rem; height: 2.5rem;
+      border-radius: 50%; background: rgba(15,23,42,0.85);
+      border: 1px solid rgba(148,163,184,0.2); color: #94a3b8;
+      font-size: 1.25rem; line-height: 1; display: flex;
+      align-items: center; justify-content: center; cursor: pointer;
       transition: background .15s, color .15s;
     }
     #lb-close:hover { background: rgba(56,189,248,0.15); color: #38bdf8; }
     .how-img-col img { cursor: zoom-in; transition: opacity .2s; }
     .how-img-col img:hover { opacity: .88; }
-
-    /* How-it-works two-column layout */
-    @media (min-width: 1024px) {
-      .lg-how-grid {
-        grid-template-columns: 45% 1fr !important;
-      }
-      .how-img-col {
-        display: block !important;
-      }
-    }
-    @media (max-width: 1023px) {
-      .how-img-col {
-        position: static !important;
-      }
-    }
-
-    /* Section divider */
-    .section-line {
-      background: linear-gradient(90deg, transparent, #38bdf8, transparent);
-      height: 1px;
-    }
-
-    /* Floating badge */
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50%       { transform: translateY(-8px); }
-    }
+    @media (min-width: 1024px) { .lg-how-grid { grid-template-columns: 45% 1fr !important; } .how-img-col { display: block !important; } }
+    @media (max-width: 1023px) { .how-img-col { position: static !important; } }
+    .section-line { background: linear-gradient(90deg, transparent, #38bdf8, transparent); height: 1px; }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
     .float { animation: float 4s ease-in-out infinite; }
-
-    /* Perimeter orbit (counter-clockwise along photo edges) */
     @keyframes perimeter-cw {
       0%    { top:   0%; left:  50%; }
       12.5% { top:   0%; left:   0%; }
@@ -196,15 +119,12 @@
       87.5% { top:   0%; left: 100%; }
       100%  { top:   0%; left:  50%; }
     }
-
-    /* Scrollbar */
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: #0f172a; }
     ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
     ::-webkit-scrollbar-thumb:hover { background: #38bdf8; }
   </style>
 </head>
-
 <body class="bg-zinc-950 text-slate-200 antialiased">
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
@@ -217,12 +137,7 @@
     ym(109628865, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
   </script>
   <noscript><div><img src="https://mc.yandex.ru/watch/109628865" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-  <!-- /Yandex.Metrika counter -->
 
-
-  <!-- ═══════════════════════════════════════════════════
-       STICKY WRAPPER: TICKER + NAVIGATION
-  ═══════════════════════════════════════════════════ -->
   <div style="position:sticky;top:0;z-index:50">
 
   <!-- TICKER -->
@@ -230,56 +145,54 @@
     <div class="ticker-wrap py-2">
       <div class="ticker-track">
         <span class="inline-flex items-center gap-6 px-8 text-sm font-medium text-slate-300">
-          <span class="text-sky-400 font-semibold">🔥 Открытые пулы:</span>
-          <span>Контейнер №104 · Иу (Yiwu) → Москва:
-            <span class="text-sky-400 font-bold">собрано 28%</span> · до закрытия <span class="text-slate-200 font-semibold">8 дн.</span>
+          <span class="text-sky-400 font-semibold">🔥 开放拼团：</span>
+          <span>集装箱 №104 · 义乌 → 莫斯科：
+            <span class="text-sky-400 font-bold">已填充 28%</span> · 距截止 <span class="text-slate-200 font-semibold">8 天</span>
           </span>
           <span class="text-slate-600">•</span>
-          <span>Контейнер №105 · Чэнду (Chengdu) → Екатеринбург:
-            <span class="text-emerald-400 font-bold">собрано 32%</span> · до закрытия <span class="text-slate-200 font-semibold">12 дн.</span>
+          <span>集装箱 №105 · 成都 → 叶卡捷琳堡：
+            <span class="text-emerald-400 font-bold">已填充 32%</span> · 距截止 <span class="text-slate-200 font-semibold">12 天</span>
           </span>
           <span class="text-slate-600">•</span>
-          <span>Контейнер №106 · Сиань (Xi'an) → Новосибирск:
-            <span class="text-amber-400 font-bold">собрано 16%</span> · до закрытия <span class="text-slate-200 font-semibold">16 дн.</span>
+          <span>集装箱 №106 · 西安 → 新西伯利亚：
+            <span class="text-amber-400 font-bold">已填充 16%</span> · 距截止 <span class="text-slate-200 font-semibold">16 天</span>
           </span>
           <span class="text-slate-600">•</span>
-          <span class="text-slate-400">Присоединиться к пулу →</span>
+          <span class="text-slate-400">加入拼团 →</span>
           <span class="mx-16"></span>
         </span>
         <span class="inline-flex items-center gap-6 px-8 text-sm font-medium text-slate-300">
-          <span class="text-sky-400 font-semibold">🔥 Открытые пулы:</span>
-          <span>Контейнер №104 · Иу (Yiwu) → Москва:
-            <span class="text-sky-400 font-bold">собрано 28%</span> · до закрытия <span class="text-slate-200 font-semibold">8 дн.</span>
+          <span class="text-sky-400 font-semibold">🔥 开放拼团：</span>
+          <span>集装箱 №104 · 义乌 → 莫斯科：
+            <span class="text-sky-400 font-bold">已填充 28%</span> · 距截止 <span class="text-slate-200 font-semibold">8 天</span>
           </span>
           <span class="text-slate-600">•</span>
-          <span>Контейнер №105 · Чэнду (Chengdu) → Екатеринбург:
-            <span class="text-emerald-400 font-bold">собрано 32%</span> · до закрытия <span class="text-slate-200 font-semibold">12 дн.</span>
+          <span>集装箱 №105 · 成都 → 叶卡捷琳堡：
+            <span class="text-emerald-400 font-bold">已填充 32%</span> · 距截止 <span class="text-slate-200 font-semibold">12 天</span>
           </span>
           <span class="text-slate-600">•</span>
-          <span>Контейнер №106 · Сиань (Xi'an) → Новосибирск:
-            <span class="text-amber-400 font-bold">собрано 16%</span> · до закрытия <span class="text-slate-200 font-semibold">16 дн.</span>
+          <span>集装箱 №106 · 西安 → 新西伯利亚：
+            <span class="text-amber-400 font-bold">已填充 16%</span> · 距截止 <span class="text-slate-200 font-semibold">16 天</span>
           </span>
           <span class="text-slate-600">•</span>
-          <span class="text-slate-400">Присоединиться к пулу →</span>
+          <span class="text-slate-400">加入拼团 →</span>
           <span class="mx-16"></span>
         </span>
       </div>
     </div>
   </a>
 
-  <!-- ═══════════════════════════════════════════════════
-       NAVIGATION
-  ═══════════════════════════════════════════════════ -->
+  <!-- NAVIGATION -->
   <header class="backdrop-blur-md border-b border-slate-800/60" style="background:rgba(2,6,23,0.95)">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <a href="#" class="flex items-center gap-2">
         <span class="text-sky-400 font-bold text-xl tracking-tight">denchik<span class="text-slate-400">.online</span></span>
       </a>
       <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
-        <a href="#how-it-works" class="hover:text-sky-400 transition-colors">Как работаем</a>
-        <a href="#advantages" class="hover:text-sky-400 transition-colors">Преимущества</a>
-        <a href="#pools-section" class="hover:text-sky-400 transition-colors">Текущие поставки</a>
-        <a href="categories.html" class="hover:text-sky-400 transition-colors">Товары</a>
+        <a href="#how-it-works" class="hover:text-sky-400 transition-colors">工作流程</a>
+        <a href="#advantages" class="hover:text-sky-400 transition-colors">核心优势</a>
+        <a href="#pools-section" class="hover:text-sky-400 transition-colors">当前货运</a>
+        <a href="categories.html" class="hover:text-sky-400 transition-colors">商品目录</a>
         <a href="tel:+79122421781" class="flex items-center gap-1.5 text-slate-400 hover:text-emerald-400 transition-colors text-sm">
           <i data-lucide="phone" class="w-4 h-4"></i>
           +7 (912) 242-17-81
@@ -288,42 +201,35 @@
         <div style="position:relative;" id="nav-search-wrap">
           <div style="display:flex;align-items:center;gap:0.4rem;background:rgba(15,23,42,0.6);border:1px solid rgba(148,163,184,0.12);border-radius:0.5rem;padding:0.35rem 0.65rem;transition:border-color 0.2s;" id="nav-search-box">
             <i data-lucide="search" style="width:0.875rem;height:0.875rem;color:#475569;flex-shrink:0;"></i>
-            <input id="nav-search-input" type="text" placeholder="Поиск товара..." autocomplete="off" style="background:none;border:none;outline:none;color:#e2e8f0;font-size:0.78rem;width:120px;font-family:inherit;" onfocus="document.getElementById('nav-search-box').style.borderColor='rgba(56,189,248,0.45)';navSearchShow()" onblur="setTimeout(function(){document.getElementById('nav-search-box').style.borderColor='rgba(148,163,184,0.12)';navSearchHide();},180)" oninput="navSearchDo(this.value)" />
+            <input id="nav-search-input" type="text" placeholder="搜索商品..." autocomplete="off" style="background:none;border:none;outline:none;color:#e2e8f0;font-size:0.78rem;width:120px;font-family:inherit;" onfocus="document.getElementById('nav-search-box').style.borderColor='rgba(56,189,248,0.45)';navSearchShow()" onblur="setTimeout(function(){document.getElementById('nav-search-box').style.borderColor='rgba(148,163,184,0.12)';navSearchHide();},180)" oninput="navSearchDo(this.value)" />
           </div>
           <div id="nav-search-drop" style="display:none;position:absolute;right:0;top:calc(100% + 0.5rem);width:290px;background:linear-gradient(135deg,#0f1f2e,#162032);border:1px solid rgba(148,163,184,0.15);border-radius:0.875rem;overflow:hidden;z-index:200;box-shadow:0 12px 40px rgba(0,0,0,0.5);"></div>
         </div>
-        <a href="zh/index.html" class="zh-switcher" style="display:flex;align-items:center;gap:0.3rem;font-size:0.75rem;font-weight:600;color:#64748b;transition:color 0.2s;text-decoration:none;" onmouseover="this.style.color='#cbd5e1'" onmouseout="this.style.color='#64748b'" title="切换到中文版"><span style="font-size:1rem;line-height:1;">🇨🇳</span><span>中文</span></a>
+        <a href="../index.html" class="zh-switcher" style="display:flex;align-items:center;gap:0.3rem;font-size:0.75rem;font-weight:600;color:#64748b;transition:color 0.2s;text-decoration:none;" onmouseover="this.style.color='#cbd5e1'" onmouseout="this.style.color='#64748b'" title="切换到俄语版"><span style="font-size:1rem;line-height:1;">🇷🇺</span><span>RU</span></a>
         <a href="#contact-form" class="ml-2 px-4 py-2 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-400 hover:bg-sky-500/20 transition-all duration-300">
-          Связаться
+          联系我们
         </a>
       </div>
-      <!-- Mobile burger -->
-      <button id="menu-btn" class="md:hidden p-2 text-slate-400 hover:text-sky-400 transition-colors" aria-label="Меню">
+      <button id="menu-btn" class="md:hidden p-2 text-slate-400 hover:text-sky-400 transition-colors" aria-label="菜单">
         <i data-lucide="menu" class="w-6 h-6"></i>
       </button>
     </nav>
-    <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800 bg-zinc-950">
       <div class="px-4 py-4 flex flex-col gap-4 text-sm font-medium">
-        <a href="#how-it-works"   class="text-slate-400 hover:text-sky-400 transition-colors" onclick="closeMobileMenu()">Как работаем</a>
-        <a href="#advantages"     class="text-slate-400 hover:text-sky-400 transition-colors" onclick="closeMobileMenu()">Преимущества</a>
-        <a href="#pools-section"  class="text-slate-400 hover:text-sky-400 transition-colors" onclick="closeMobileMenu()">Текущие поставки</a>
-        <a href="categories.html" class="text-slate-400 hover:text-sky-400 transition-colors" onclick="closeMobileMenu()">Товары</a>
-        <a href="#contact-form"   class="text-sky-400 font-semibold" onclick="closeMobileMenu()">Связаться →</a>
+        <a href="#how-it-works" class="text-slate-400 hover:text-sky-400 transition-colors" onclick="closeMobileMenu()">工作流程</a>
+        <a href="#advantages" class="text-slate-400 hover:text-sky-400 transition-colors" onclick="closeMobileMenu()">核心优势</a>
+        <a href="#pools-section" class="text-slate-400 hover:text-sky-400 transition-colors" onclick="closeMobileMenu()">当前货运</a>
+        <a href="categories.html" class="text-slate-400 hover:text-sky-400 transition-colors" onclick="closeMobileMenu()">商品目录</a>
+        <a href="#contact-form" class="text-sky-400 font-semibold" onclick="closeMobileMenu()">联系我们 →</a>
       </div>
     </div>
   </header>
-  </div><!-- /sticky wrapper -->
+  </div>
 
-  <!-- ═══════════════════════════════════════════════════
-       BLOCK 1 — HERO
-  ═══════════════════════════════════════════════════ -->
-  <section class="relative min-h-screen flex items-center overflow-hidden" style="background-image:url('port.webp');background-size:cover;background-position:center;background-repeat:no-repeat;">
-    <!-- Left-side gradient: dark behind text, photo visible on right -->
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center overflow-hidden" style="background-image:url('../port.webp');background-size:cover;background-position:center;background-repeat:no-repeat;">
     <div class="absolute inset-0" style="background:linear-gradient(to right,rgba(9,9,11,0.93) 0%,rgba(9,9,11,0.88) 35%,rgba(9,9,11,0.55) 60%,rgba(9,9,11,0.25) 100%)"></div>
-    <!-- Bottom vignette -->
     <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(9,9,11,0.7) 0%,transparent 40%)"></div>
-    <!-- Sky blue tint on left -->
     <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(56,189,248,0.08)_0%,_transparent_50%)]"></div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 w-full">
@@ -331,89 +237,76 @@
 
         <!-- Left: Text -->
         <div class="space-y-8 relative rounded-2xl p-8 backdrop-blur-sm" style="background:linear-gradient(135deg,rgba(9,9,11,0.55) 0%,rgba(15,23,42,0.35) 100%);border:1px solid rgba(148,163,184,0.08);box-shadow:0 8px 32px rgba(0,0,0,0.4)">
-          <!-- Badge -->
           <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold uppercase tracking-widest">
             <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse-slow"></span>
-            B2B Платформа совместного импорта
+            B2B 联合进口平台
           </div>
 
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
-            <span class="text-slate-100">Закупайте в Китае </span><span style="color:#22d3ee;text-shadow:0 0 18px rgba(34,211,238,0.7),0 0 40px rgba(34,211,238,0.35)">на равных</span><br />
-            <span class="text-slate-100">с лидерами рынка!</span><br />
-            <span class="text-3xl sm:text-4xl lg:text-5xl font-bold" style="color:#bae6fd">Цены крупного опта при заказе </span><span class="text-3xl sm:text-4xl lg:text-5xl font-bold" style="color:#34d399;text-shadow:0 0 18px rgba(52,211,153,0.7),0 0 40px rgba(52,211,153,0.35)">от 10 кг.</span>
+            <span class="text-slate-100">与市场领军企业</span><span style="color:#22d3ee;text-shadow:0 0 18px rgba(34,211,238,0.7),0 0 40px rgba(34,211,238,0.35)">平等采购！</span><br />
+            <span class="text-3xl sm:text-4xl lg:text-5xl font-bold" style="color:#bae6fd">批发价格，</span><span class="text-3xl sm:text-4xl lg:text-5xl font-bold" style="color:#34d399;text-shadow:0 0 18px rgba(52,211,153,0.7),0 0 40px rgba(52,211,153,0.35)">起订10公斤。</span>
           </h1>
 
           <div class="space-y-3 max-w-xl">
             <p class="text-sm font-semibold uppercase tracking-widest text-sky-400 flex items-center gap-2">
-              <i data-lucide="users" class="w-4 h-4"></i>Для малого и среднего бизнеса
+              <i data-lucide="users" class="w-4 h-4"></i>适合中小企业
             </p>
             <ul class="space-y-3 text-slate-300 text-[15px] leading-relaxed">
               <li class="flex items-start gap-3">
                 <i data-lucide="package-check" class="w-5 h-5 text-slate-400 shrink-0 mt-0.5"></i>
-                <span>Выкупаем товары на фабриках КНР по <span class="text-slate-100 font-medium">минимальным оптовым ценам</span>.</span>
+                <span>在中国工厂以<span class="text-slate-100 font-medium">最低批发价</span>采购商品。</span>
               </li>
               <li class="flex items-start gap-3">
                 <i data-lucide="container" class="w-5 h-5 text-slate-400 shrink-0 mt-0.5"></i>
-                <span>Без переплат за «воздух» — стоимость <span class="text-slate-100 font-medium">LCL-перевозки по тарифам FCL</span>.</span>
+                <span>无需支付"空气费"——<span class="text-slate-100 font-medium">以整柜价格享受拼柜运输</span>。</span>
               </li>
               <li class="flex items-start gap-3">
                 <i data-lucide="file-signature" class="w-5 h-5 text-slate-400 shrink-0 mt-0.5"></i>
-                <span>Прозрачные контракты: наша компания, фабрика КНР и ваше юрлицо. <span class="text-slate-100 font-medium">Официальное таможенное оформление</span> и защита интересов на всех этапах.</span>
+                <span>透明合同：我方公司、中国工厂与您的法人实体三方签约。<span class="text-slate-100 font-medium">官方清关</span>，全程护航。</span>
               </li>
               <li class="flex items-start gap-3">
                 <i data-lucide="trending-down" class="w-5 h-5 text-slate-400 shrink-0 mt-0.5"></i>
-                <span>Согласовываем минимальную стоимость позиций и добиваемся <span class="text-slate-100 font-medium">лучших коммерческих условий</span>.</span>
+                <span>协商最低单品价格，争取<span class="text-slate-100 font-medium">最优商业条件</span>。</span>
               </li>
             </ul>
           </div>
 
-          <!-- CTA -->
           <div class="flex flex-col sm:flex-row gap-4">
             <a href="#contact-form"
                class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-bold text-base transition-all duration-300 glow-btn">
               <i data-lucide="send" class="w-5 h-5"></i>
-              Оставить запрос на расчёт
+              提交询盘申请
             </a>
             <a href="#pools-section"
                class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-sky-500/50 text-slate-300 font-semibold text-base transition-all duration-300">
               <i data-lucide="box" class="w-5 h-5"></i>
-              Текущие поставки
+              当前货运
             </a>
           </div>
         </div>
 
         <!-- Right: Photo + orbit badges -->
         <div class="relative flex items-center justify-center">
-          <!-- Photo wrapper — overflow:visible so badges show outside -->
           <div class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96" style="overflow:visible;min-width:288px;min-height:288px;">
-
-            <!-- Photo -->
             <div class="relative w-full h-full rounded-3xl overflow-hidden border border-slate-700/60 glow-blue card-hover group"
                  style="overflow:hidden;border-radius:1.5rem;">
-              <picture><source srcset="myphoto.webp" type="image/webp"><img src="myphoto.png"
-                   alt="Денис Пьянков — эксперт по импорту из Китая"
-                   onerror="this.onerror=null;this.src='myphoto.png'"
+              <picture><source srcset="../myphoto.webp" type="image/webp"><img src="../myphoto.png"
+                   alt="Denis Pyankow — 中国进口专家"
+                   onerror="this.onerror=null;this.src='../myphoto.png'"
                    style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block"
                    class="transition-transform duration-500 group-hover:scale-105" /></picture>
               <div class="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-zinc-950/90 to-transparent"></div>
               <div class="absolute bottom-4 left-0 right-0 text-center">
-                <p class="text-slate-100 font-bold text-base drop-shadow">Денис Пьянков</p>
-                <p class="text-sky-400 text-xs font-medium drop-shadow">Эксперт по импорту из Китая</p>
+                <p class="text-slate-100 font-bold text-base drop-shadow">Denis Pyankow</p>
+                <p class="text-sky-400 text-xs font-medium drop-shadow">中国进口专家</p>
               </div>
             </div>
-
-            <!-- Orbit container — same footprint as photo, badges overflow -->
             <div style="position:absolute;inset:0;pointer-events:none;overflow:visible;">
-
-              <!-- Badge 1: Белая таможня (green) — top-center at t=0 -->
+              <!-- Badge 1: 正规清关 (green) -->
               <div style="position:absolute;transform:translate(-50%,-50%);animation:perimeter-cw 32s linear infinite;animation-delay:0s;">
                 <div style="background:linear-gradient(175deg,#0b1f14 0%,#091910 100%);border:1px solid rgba(16,185,129,0.5);border-radius:4px;overflow:hidden;width:168px;box-shadow:0 0 20px rgba(16,185,129,.25),0 0 40px rgba(16,185,129,.1),6px 8px 24px rgba(0,0,0,0.6);">
                   <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,0.032) 0,rgba(255,255,255,0.032) 2px,transparent 2px,transparent 18px);"></div>
                   <div style="position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#059669,#10b981,#059669);"></div>
-                  <div style="position:absolute;top:5px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.18),transparent);"></div>
-                  <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:rgba(255,255,255,0.07);"></div>
-                  <div style="position:absolute;top:0;bottom:0;left:0;width:5px;background:rgba(16,185,129,0.18);"></div>
-                  <div style="position:absolute;top:0;bottom:0;right:0;width:5px;background:rgba(16,185,129,0.18);"></div>
                   <div style="position:absolute;top:0;left:0;width:9px;height:9px;background:rgba(16,185,129,0.5);"></div>
                   <div style="position:absolute;top:0;right:0;width:9px;height:9px;background:rgba(16,185,129,0.5);"></div>
                   <div style="position:absolute;bottom:0;left:0;width:9px;height:9px;background:rgba(16,185,129,0.5);"></div>
@@ -421,22 +314,16 @@
                   <div style="position:relative;padding:14px 14px 10px 14px;">
                     <div class="flex items-center gap-2">
                       <span class="w-2.5 h-2.5 rounded-full" style="background-color:#ffffff;box-shadow:0 0 6px 1px rgba(255,255,255,0.8)"></span>
-                      <span class="text-white font-bold text-sm">Белая таможня</span>
+                      <span class="text-white font-bold text-sm">正规清关</span>
                     </div>
-                    <p class="text-slate-500 text-xs mt-0.5">100% официально</p>
+                    <p class="text-slate-500 text-xs mt-0.5">100% 合法合规</p>
                   </div>
                 </div>
               </div>
-
-              <!-- Badge 2: Договор (blue) — right-center at t=0 (delay -4s) -->
+              <!-- Badge 2: 合同 (blue) -->
               <div style="position:absolute;transform:translate(-50%,-50%);animation:perimeter-cw 32s linear infinite;animation-delay:-8s;">
                 <div style="background:linear-gradient(175deg,#0b1a28 0%,#091520 100%);border:1px solid rgba(56,189,248,0.5);border-radius:4px;overflow:hidden;width:168px;box-shadow:0 0 20px rgba(56,189,248,.25),0 0 40px rgba(56,189,248,.1),-6px 8px 24px rgba(0,0,0,0.6);">
-                  <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,0.032) 0,rgba(255,255,255,0.032) 2px,transparent 2px,transparent 18px);"></div>
                   <div style="position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#0284c7,#38bdf8,#0284c7);"></div>
-                  <div style="position:absolute;top:5px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.18),transparent);"></div>
-                  <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:rgba(255,255,255,0.07);"></div>
-                  <div style="position:absolute;top:0;bottom:0;left:0;width:5px;background:rgba(56,189,248,0.18);"></div>
-                  <div style="position:absolute;top:0;bottom:0;right:0;width:5px;background:rgba(56,189,248,0.18);"></div>
                   <div style="position:absolute;top:0;left:0;width:9px;height:9px;background:rgba(56,189,248,0.5);"></div>
                   <div style="position:absolute;top:0;right:0;width:9px;height:9px;background:rgba(56,189,248,0.5);"></div>
                   <div style="position:absolute;bottom:0;left:0;width:9px;height:9px;background:rgba(56,189,248,0.5);"></div>
@@ -444,22 +331,16 @@
                   <div style="position:relative;padding:14px 14px 10px 14px;">
                     <div class="flex items-center gap-2">
                       <i data-lucide="shield-check" class="w-4 h-4 text-sky-400"></i>
-                      <span class="text-sky-400 font-bold text-sm">Договор</span>
+                      <span class="text-sky-400 font-bold text-sm">正式合同</span>
                     </div>
-                    <p class="text-slate-500 text-xs mt-0.5">Официальный договор</p>
+                    <p class="text-slate-500 text-xs mt-0.5">官方买卖合同</p>
                   </div>
                 </div>
               </div>
-
-              <!-- Badge 3: LCL→FCL (cyan) — bottom-center at t=0 (delay -8s) -->
+              <!-- Badge 3: LCL→FCL (cyan) -->
               <div style="position:absolute;transform:translate(-50%,-50%);animation:perimeter-cw 32s linear infinite;animation-delay:-16s;">
                 <div style="background:linear-gradient(175deg,#0a1e22 0%,#08181c 100%);border:1px solid rgba(34,211,238,0.5);border-radius:4px;overflow:hidden;width:168px;box-shadow:0 0 20px rgba(34,211,238,0.18),-6px 8px 24px rgba(0,0,0,0.6);">
-                  <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,0.032) 0,rgba(255,255,255,0.032) 2px,transparent 2px,transparent 18px);"></div>
                   <div style="position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#0891b2,#22d3ee,#0891b2);"></div>
-                  <div style="position:absolute;top:5px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.18),transparent);"></div>
-                  <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:rgba(255,255,255,0.07);"></div>
-                  <div style="position:absolute;top:0;bottom:0;left:0;width:5px;background:rgba(34,211,238,0.18);"></div>
-                  <div style="position:absolute;top:0;bottom:0;right:0;width:5px;background:rgba(34,211,238,0.18);"></div>
                   <div style="position:absolute;top:0;left:0;width:9px;height:9px;background:rgba(34,211,238,0.5);"></div>
                   <div style="position:absolute;top:0;right:0;width:9px;height:9px;background:rgba(34,211,238,0.5);"></div>
                   <div style="position:absolute;bottom:0;left:0;width:9px;height:9px;background:rgba(34,211,238,0.5);"></div>
@@ -468,31 +349,20 @@
                     <div class="flex items-center gap-2">
                       <span class="text-slate-300 font-bold text-sm tracking-wide">LCL</span>
                       <svg width="36" height="14" viewBox="0 0 36 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                          <linearGradient id="arrowGrad" x1="0" y1="7" x2="36" y2="7" gradientUnits="userSpaceOnUse">
-                            <stop offset="0%" stop-color="#64748b"/>
-                            <stop offset="100%" stop-color="#22d3ee"/>
-                          </linearGradient>
-                        </defs>
+                        <defs><linearGradient id="arrowGrad" x1="0" y1="7" x2="36" y2="7" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#64748b"/><stop offset="100%" stop-color="#22d3ee"/></linearGradient></defs>
                         <line x1="1" y1="7" x2="28" y2="7" stroke="url(#arrowGrad)" stroke-width="1.8" stroke-linecap="round"/>
                         <polyline points="22,2 30,7 22,12" stroke="url(#arrowGrad)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                       </svg>
                       <span class="font-bold text-sm" style="color:#22d3ee;text-shadow:0 0 10px rgba(34,211,238,0.6)">FCL</span>
                     </div>
-                    <p class="text-slate-500 text-xs mt-0.5">Тариф полного контейнера</p>
+                    <p class="text-slate-500 text-xs mt-0.5">整柜运价</p>
                   </div>
                 </div>
               </div>
-
-              <!-- Badge 4: -40% (amber) — left-center at t=0 (delay -12s) -->
+              <!-- Badge 4: -40% (amber) -->
               <div style="position:absolute;transform:translate(-50%,-50%);animation:perimeter-cw 32s linear infinite;animation-delay:-24s;">
                 <div style="background:linear-gradient(175deg,#1c1506 0%,#160f04 100%);border:1px solid rgba(245,158,11,0.5);border-radius:4px;overflow:hidden;width:168px;box-shadow:0 0 20px rgba(245,158,11,0.2),6px 8px 24px rgba(0,0,0,0.6);">
-                  <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,0.032) 0,rgba(255,255,255,0.032) 2px,transparent 2px,transparent 18px);"></div>
                   <div style="position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#d97706,#f59e0b,#d97706);"></div>
-                  <div style="position:absolute;top:5px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.18),transparent);"></div>
-                  <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:rgba(255,255,255,0.07);"></div>
-                  <div style="position:absolute;top:0;bottom:0;left:0;width:5px;background:rgba(245,158,11,0.18);"></div>
-                  <div style="position:absolute;top:0;bottom:0;right:0;width:5px;background:rgba(245,158,11,0.18);"></div>
                   <div style="position:absolute;top:0;left:0;width:9px;height:9px;background:rgba(245,158,11,0.5);"></div>
                   <div style="position:absolute;top:0;right:0;width:9px;height:9px;background:rgba(245,158,11,0.5);"></div>
                   <div style="position:absolute;bottom:0;left:0;width:9px;height:9px;background:rgba(245,158,11,0.5);"></div>
@@ -500,13 +370,12 @@
                   <div style="position:relative;padding:14px 14px 10px 14px;">
                     <div class="flex items-center gap-2">
                       <i data-lucide="trending-down" class="w-4 h-4 text-amber-400"></i>
-                      <span class="text-amber-400 font-bold text-sm">-40% к цене</span>
+                      <span class="text-amber-400 font-bold text-sm">省40%</span>
                     </div>
-                    <p class="text-slate-500 text-xs mt-0.5">vs розничный импорт</p>
+                    <p class="text-slate-500 text-xs mt-0.5">vs 零散进口</p>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -517,45 +386,32 @@
 
   <div class="section-line max-w-5xl mx-auto"></div>
 
-  <!-- ═══════════════════════════════════════════════════
-       BLOCK 2 — HOW IT WORKS (6 steps)
-  ═══════════════════════════════════════════════════ -->
+  <!-- HOW IT WORKS -->
   <section id="how-it-works" class="py-24 relative overflow-hidden">
-    <!-- Background -->
     <div class="absolute inset-0" style="background:linear-gradient(150deg,#0f2137 0%,#162032 25%,#0f1f2e 55%,#0d2318 100%)"></div>
-    <!-- Radial glow accents -->
     <div class="absolute inset-0" style="background-image:radial-gradient(ellipse at 10% 40%,rgba(56,189,248,0.10) 0%,transparent 50%),radial-gradient(ellipse at 90% 60%,rgba(16,185,129,0.09) 0%,transparent 50%),radial-gradient(ellipse at 50% 10%,rgba(99,102,241,0.07) 0%,transparent 45%)"></div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-      <!-- Two-column layout: image left, steps right -->
       <div style="display:grid;grid-template-columns:1fr;gap:3rem;align-items:start;" class="lg-how-grid">
-
         <!-- LEFT: sticky image -->
         <div style="position:sticky;top:6rem;" class="how-img-col">
           <picture>
-            <source srcset="pool.webp" type="image/webp" />
-            <img src="pool.png" alt="Совместный импорт из Китая — схема работы"
+            <source srcset="../pool.webp" type="image/webp" />
+            <img src="../pool.png" alt="联合进口流程图"
               style="width:100%;border-radius:1rem;border:1px solid rgba(56,189,248,0.18);box-shadow:0 8px 48px rgba(0,0,0,0.5),0 0 0 1px rgba(56,189,248,0.08);display:block;"
               loading="lazy" width="1400" height="746" />
           </picture>
-          <!-- Caption -->
           <p style="text-align:center;color:#475569;font-size:0.72rem;margin-top:0.75rem;letter-spacing:0.04em;">
-            Схема совместного импорта · denchik.online
+            联合进口流程图 · denchik.online
           </p>
         </div>
-
         <!-- RIGHT: heading + steps -->
         <div class="how-steps-col">
-          <!-- Heading -->
           <div class="mb-10 space-y-3">
-            <p class="text-sky-400 text-sm font-semibold uppercase tracking-widest">Как это работает</p>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-100">6 шагов от запроса до получения</h2>
-            <p class="text-slate-400">Прозрачный процесс без скрытых платежей — вы знаете точную стоимость ещё до оплаты.</p>
+            <p class="text-sky-400 text-sm font-semibold uppercase tracking-widest">工作流程</p>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-100">从询盘到收货6个步骤</h2>
+            <p class="text-slate-400">全程透明，无隐藏费用——付款前即可确认总报价。</p>
           </div>
-
-          <!-- Steps -->
           <div class="space-y-4">
-
             <!-- Step 1 -->
             <div class="flex items-stretch gap-4">
               <div class="flex flex-col items-center gap-1 flex-shrink-0">
@@ -569,13 +425,12 @@
                     <div class="p-1.5 rounded-lg bg-sky-500/10 border border-sky-500/20">
                       <i data-lucide="search" class="w-4 h-4 text-sky-400"></i>
                     </div>
-                    <h3 class="text-slate-100 font-bold">Запрос на товар</h3>
+                    <h3 class="text-slate-100 font-bold">提交询盘</h3>
                   </div>
-                  <p class="text-slate-400 text-sm leading-relaxed">Отправляете нам запрос на нужный товар из Китая — ссылку с маркетплейса, фото или описание.</p>
+                  <p class="text-slate-400 text-sm leading-relaxed">向我们发送所需商品的询盘——提供链接、图片或描述均可。</p>
                 </div>
               </div>
             </div>
-
             <!-- Step 2 -->
             <div class="flex items-stretch gap-4">
               <div class="flex flex-col items-center gap-1 flex-shrink-0">
@@ -589,13 +444,12 @@
                     <div class="p-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
                       <i data-lucide="users" class="w-4 h-4 text-emerald-400"></i>
                     </div>
-                    <h3 class="text-slate-100 font-bold">Группировка и подбор</h3>
+                    <h3 class="text-slate-100 font-bold">组团与筛选</h3>
                   </div>
-                  <p class="text-slate-400 text-sm leading-relaxed">Объединяем ваш заказ с аналогичными у проверенного поставщика в Китае. Запрашиваем стоимость и сроки производства.</p>
+                  <p class="text-slate-400 text-sm leading-relaxed">将您的订单与同类订单合并，在中国筛选可靠供应商，询问价格和生产周期。</p>
                 </div>
               </div>
             </div>
-
             <!-- Step 3 -->
             <div class="flex items-stretch gap-4">
               <div class="flex flex-col items-center gap-1 flex-shrink-0">
@@ -609,13 +463,12 @@
                     <div class="p-1.5 rounded-lg bg-sky-500/10 border border-sky-500/20">
                       <i data-lucide="calculator" class="w-4 h-4 text-sky-400"></i>
                     </div>
-                    <h3 class="text-slate-100 font-bold">Полный расчёт</h3>
+                    <h3 class="text-slate-100 font-bold">完整报价</h3>
                   </div>
-                  <p class="text-slate-400 text-sm leading-relaxed">Сообщаем итоговую стоимость с учётом товара, доставки, таможенных платежей и всех расходов. Без скрытых наценок.</p>
+                  <p class="text-slate-400 text-sm leading-relaxed">提供含商品、运费、关税及全部费用的最终报价，无任何隐藏收费。</p>
                 </div>
               </div>
             </div>
-
             <!-- Step 4 -->
             <div class="flex items-stretch gap-4">
               <div class="flex flex-col items-center gap-1 flex-shrink-0">
@@ -629,13 +482,12 @@
                     <div class="p-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
                       <i data-lucide="file-signature" class="w-4 h-4 text-emerald-400"></i>
                     </div>
-                    <h3 class="text-slate-100 font-bold">Договор и предоплата</h3>
+                    <h3 class="text-slate-100 font-bold">签约与预付款</h3>
                   </div>
-                  <p class="text-slate-400 text-sm leading-relaxed">Заключается официальный договор купли-продажи. Вносите предоплату — только после этого размещаем заказ на фабрике.</p>
+                  <p class="text-slate-400 text-sm leading-relaxed">签订正式买卖合同，收到预付款后方才在工厂下单。</p>
                 </div>
               </div>
             </div>
-
             <!-- Step 5 -->
             <div class="flex items-stretch gap-4">
               <div class="flex flex-col items-center gap-1 flex-shrink-0">
@@ -649,13 +501,12 @@
                     <div class="p-1.5 rounded-lg bg-sky-500/10 border border-sky-500/20">
                       <i data-lucide="package-check" class="w-4 h-4 text-sky-400"></i>
                     </div>
-                    <h3 class="text-slate-100 font-bold">Контроль и отправка</h3>
+                    <h3 class="text-slate-100 font-bold">质检与发货</h3>
                   </div>
-                  <p class="text-slate-400 text-sm leading-relaxed">Наш представитель проверяет товар на фабрике, консолидируем грузы на складе в Китае и отправляем сборным контейнером.</p>
+                  <p class="text-slate-400 text-sm leading-relaxed">我们的代表在工厂验货，于中国仓库拼箱，以拼柜方式发货。</p>
                 </div>
               </div>
             </div>
-
             <!-- Step 6 -->
             <div class="flex items-start gap-4">
               <div class="flex flex-col items-center flex-shrink-0">
@@ -668,509 +519,455 @@
                     <div class="p-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
                       <i data-lucide="truck" class="w-4 h-4 text-emerald-400"></i>
                     </div>
-                    <h3 class="text-slate-100 font-bold">Таможня и выдача</h3>
+                    <h3 class="text-slate-100 font-bold">清关与提货</h3>
                   </div>
-                  <p class="text-slate-400 text-sm leading-relaxed">После прохождения таможенного оформления получаете товар и оплачиваете остаток. Всё чисто, официально, с документами.</p>
+                  <p class="text-slate-400 text-sm leading-relaxed">清关完成后收取货物并支付尾款，全程合规，手续齐全。</p>
                 </div>
               </div>
             </div>
-
           </div>
-        </div><!-- /right -->
-
-      </div><!-- /two-col -->
+        </div>
+      </div>
     </div>
   </section>
 
   <div class="section-line max-w-5xl mx-auto"></div>
 
-  <!-- ═══════════════════════════════════════════════════
-       BLOCK 3 — ADVANTAGES (4 cards)
-  ═══════════════════════════════════════════════════ -->
+  <!-- ADVANTAGES -->
   <section id="advantages" class="py-24 relative overflow-hidden">
     <div class="absolute inset-0" style="background:linear-gradient(150deg,#0f2137 0%,#162032 25%,#0f1f2e 55%,#0d2318 100%)"></div>
     <div class="absolute inset-0" style="background-image:radial-gradient(ellipse at 10% 40%,rgba(56,189,248,0.10) 0%,transparent 50%),radial-gradient(ellipse at 90% 60%,rgba(16,185,129,0.09) 0%,transparent 50%),radial-gradient(ellipse at 50% 10%,rgba(99,102,241,0.07) 0%,transparent 45%)"></div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
       <div class="text-center mb-16 space-y-4">
-        <p class="text-emerald-400 text-sm font-semibold uppercase tracking-widest">Почему выгодно</p>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-100">Сила коллективного объёма</h2>
-        <p class="text-slate-400 max-w-xl mx-auto">Объединяя десятки клиентов, мы формируем для фабрик крупный постоянный заказ — и передаём эти условия вам.</p>
+        <p class="text-emerald-400 text-sm font-semibold uppercase tracking-widest">为什么选择我们</p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-100">集体采购的力量</h2>
+        <p class="text-slate-400 max-w-xl mx-auto">汇聚数十位客户，形成稳定的大批量订单，将这一优势直接传递给您。</p>
       </div>
-
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
         <!-- Card 1 -->
         <div class="card-hover rounded-2xl p-6 space-y-4 relative overflow-hidden group" style="background:linear-gradient(135deg,#2d3748 0%,#374151 100%);border:1px solid rgba(148,163,184,0.15);box-shadow:0 4px 24px rgba(0,0,0,0.3)">
           <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-sky-500/0 via-sky-500/60 to-sky-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center">
             <i data-lucide="layers" class="w-6 h-6 text-sky-400"></i>
           </div>
-          <h3 class="text-slate-100 font-bold text-base leading-snug">Крупный опт при любом объёме</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Для поставщика в Китае ваша партия — часть большого постоянного заказа от нашей компании. Вы получаете оптовые условия даже при минимальном объёме.</p>
+          <h3 class="text-slate-100 font-bold text-base leading-snug">任意数量享受批发价</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">对中国供应商而言，您的订单是我们公司大额持续订单的一部分，您即便起订量最小，也能享受批发条件。</p>
           <div class="pt-2 border-t border-slate-600/40">
-            <span class="text-sky-400 text-xs font-semibold">От 1 кг / от 1 единицы товара</span>
+            <span class="text-sky-400 text-xs font-semibold">从1公斤 / 从1件起</span>
           </div>
         </div>
-
         <!-- Card 2 -->
         <div class="card-hover bg-slate-900/70 border border-slate-800 hover:border-emerald-500/40 rounded-2xl p-6 space-y-4 relative overflow-hidden group">
           <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500/0 via-emerald-500/60 to-emerald-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
             <i data-lucide="trending-up" class="w-6 h-6 text-emerald-400"></i>
           </div>
-          <h3 class="text-slate-100 font-bold text-base leading-snug">Преимущество по цене и качеству</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Объединение заказов даёт минимальную цену от фабрик и особое внимание к производству вашей партии — как у крупного корпоративного клиента.</p>
+          <h3 class="text-slate-100 font-bold text-base leading-snug">价格与品质双重优势</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">合并订单让我们能从工厂获得最低价，同时您的批次受到大客户级别的特别关注。</p>
           <div class="pt-2 border-t border-slate-600/40">
-            <span class="text-emerald-400 text-xs font-semibold">Экономия до 40% vs прямой импорт</span>
+            <span class="text-emerald-400 text-xs font-semibold">节省高达40% vs 直接进口</span>
           </div>
         </div>
-
         <!-- Card 3 -->
         <div class="card-hover rounded-2xl p-6 space-y-4 relative overflow-hidden group" style="background:linear-gradient(135deg,#2d3748 0%,#374151 100%);border:1px solid rgba(148,163,184,0.15);box-shadow:0 4px 24px rgba(0,0,0,0.3)">
           <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-sky-500/0 via-sky-500/60 to-sky-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center">
             <i data-lucide="shield" class="w-6 h-6 text-sky-400"></i>
           </div>
-          <h3 class="text-slate-100 font-bold text-base leading-snug">Защита интересов</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Мы жёстко отстаиваем ваши интересы непосредственно на фабрике, стирая языковой барьер. Переговоры, контроль качества, приёмка — всё на нас.</p>
+          <h3 class="text-slate-100 font-bold text-base leading-snug">利益保护</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">我们直接在工厂为您争取最佳条件，消除语言障碍。谈判、质检、验收——全由我们承担。</p>
           <div class="pt-2 border-t border-slate-600/40">
-            <span class="text-sky-400 text-xs font-semibold">Наш представитель в Китае</span>
+            <span class="text-sky-400 text-xs font-semibold">我们在中国设有代表</span>
           </div>
         </div>
-
         <!-- Card 4 -->
         <div class="card-hover bg-slate-900/70 border border-slate-800 hover:border-emerald-500/40 rounded-2xl p-6 space-y-4 relative overflow-hidden group">
           <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500/0 via-emerald-500/60 to-emerald-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
             <i data-lucide="badge-check" class="w-6 h-6 text-emerald-400"></i>
           </div>
-          <h3 class="text-slate-100 font-bold text-base leading-snug">Гарантия и компенсации</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">При браке или просрочке производства мы берём урегулирование на себя, добиваемся денежных компенсаций и поддерживаем полноценную гарантию.</p>
+          <h3 class="text-slate-100 font-bold text-base leading-snug">保障与赔偿</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">出现瑕疵或延期，我们全权处理，争取货币赔偿并提供完整保障。</p>
           <div class="pt-2 border-t border-slate-600/40">
-            <span class="text-emerald-400 text-xs font-semibold">Юридическая ответственность</span>
+            <span class="text-emerald-400 text-xs font-semibold">法律责任</span>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
   <div class="section-line max-w-5xl mx-auto"></div>
 
-  <!-- ═══════════════════════════════════════════════════
-       BLOCK 4 — ACTIVE POOLS DASHBOARD
-  ═══════════════════════════════════════════════════ -->
+  <!-- POOLS DASHBOARD -->
   <section id="pools-section" class="py-24 relative">
     <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(56,189,248,0.06)_0%,_transparent_60%)]"></div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-      <!-- Heading -->
       <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
         <div class="space-y-3">
           <div class="flex items-center gap-2">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <p class="text-emerald-400 text-sm font-semibold uppercase tracking-widest">Live</p>
+            <p class="text-emerald-400 text-sm font-semibold uppercase tracking-widest">实时</p>
           </div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-100">Текущие поставки</h2>
-          <p class="text-slate-400">Присоединяйтесь к открытым пулам — чем быстрее закроем, тем раньше отправим.</p>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-100">当前货运</h2>
+          <p class="text-slate-400">加入开放拼团——越快拼满，越早发货。</p>
         </div>
         <a href="#contact-form"
            class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-sky-500/10 border border-sky-500/30 text-sky-400 font-semibold text-sm hover:bg-sky-500/20 transition-all duration-300 whitespace-nowrap">
           <i data-lucide="plus-circle" class="w-4 h-4"></i>
-          Открыть новый пул
+          开启新拼团
         </a>
       </div>
 
-      <!-- Dashboard grid — subgrid для выравнивания строк по горизонтали -->
       <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
-
-        <!-- Container Card 1 -->
+        <!-- Container 1 -->
         <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-sky-500/40 rounded-2xl overflow-hidden relative" style="grid-row:span 6;display:grid;grid-template-rows:subgrid;row-gap:1.25rem;">
-          <!-- S1: categories -->
           <div>
             <div class="h-1 w-full bg-gradient-to-r from-sky-600 via-sky-400 to-sky-600"></div>
             <div class="px-8 pt-4 pb-1">
-              <a href="categories.html" class="text-slate-500 hover:text-sky-400 transition-colors text-xs font-medium uppercase tracking-wider mb-2" style="display:block;margin-bottom:0.5rem;">Категории товара →</a>
+              <a href="categories.html" class="text-slate-500 hover:text-sky-400 transition-colors text-xs font-medium uppercase tracking-wider mb-2" style="display:block;margin-bottom:0.5rem;">商品类别 →</a>
               <div style="display:flex;flex-wrap:wrap;gap:0.375rem;">
-                <a href="categories.html" style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(56,189,248,0.4)';this.style.color='#7dd3fc'" onmouseout="this.style.borderColor='rgba(148,163,184,0.15)';this.style.color='#94a3b8'">Одежда и обувь</a>
-                <a href="categories.html" style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(56,189,248,0.4)';this.style.color='#7dd3fc'" onmouseout="this.style.borderColor='rgba(148,163,184,0.15)';this.style.color='#94a3b8'">Аксессуары</a>
-                <a href="categories.html" style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(56,189,248,0.4)';this.style.color='#7dd3fc'" onmouseout="this.style.borderColor='rgba(148,163,184,0.15)';this.style.color='#94a3b8'">Игрушки</a>
-                <a href="categories.html" style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(56,189,248,0.4)';this.style.color='#7dd3fc'" onmouseout="this.style.borderColor='rgba(148,163,184,0.15)';this.style.color='#94a3b8'">Товары для дома</a>
+                <a href="categories.html" style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(56,189,248,0.4)';this.style.color='#7dd3fc'" onmouseout="this.style.borderColor='rgba(148,163,184,0.15)';this.style.color='#94a3b8'">服装与鞋类</a>
+                <a href="categories.html" style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(56,189,248,0.4)';this.style.color='#7dd3fc'" onmouseout="this.style.borderColor='rgba(148,163,184,0.15)';this.style.color='#94a3b8'">配饰</a>
+                <a href="categories.html" style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(56,189,248,0.4)';this.style.color='#7dd3fc'" onmouseout="this.style.borderColor='rgba(148,163,184,0.15)';this.style.color='#94a3b8'">玩具</a>
+                <a href="categories.html" style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(56,189,248,0.4)';this.style.color='#7dd3fc'" onmouseout="this.style.borderColor='rgba(148,163,184,0.15)';this.style.color='#94a3b8'">家居用品</a>
               </div>
             </div>
           </div>
-          <!-- S2: accent + header -->
           <div class="px-8">
             <div class="flex items-start justify-between">
               <div>
                 <div class="flex items-center gap-2 mb-1">
                   <i data-lucide="container" class="w-4 h-4 text-sky-400"></i>
-                  <span class="text-slate-500 text-xs font-medium uppercase tracking-wider">Контейнер №104</span>
+                  <span class="text-slate-500 text-xs font-medium uppercase tracking-wider">集装箱 №104</span>
                 </div>
-                <h3 class="text-slate-100 font-bold text-lg">Иу (Yiwu) → Москва</h3>
-                <p class="text-slate-500 text-xs mt-0.5">40HC • LCL сборный</p>
+                <h3 class="text-slate-100 font-bold text-lg">义乌 → 莫斯科</h3>
+                <p class="text-slate-500 text-xs mt-0.5">40HC • 拼箱 LCL</p>
               </div>
-              <span class="px-2.5 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-bold">Открыт</span>
+              <span class="px-2.5 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-bold">开放中</span>
             </div>
           </div>
-          <!-- S3: progress -->
           <div class="px-8 space-y-2">
             <div class="flex justify-between text-xs font-medium">
-              <span class="text-slate-400">Заполненность по объёму</span>
+              <span class="text-slate-400">体积填充率</span>
               <span class="text-sky-400 font-bold text-sm">28%</span>
             </div>
             <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
               <div class="h-full rounded-full progress-shimmer" style="width:28%"></div>
             </div>
             <div class="flex justify-between text-xs text-slate-500">
-              <span>19.6 м³ занято</span>
-              <span>70 м³ макс.</span>
+              <span>19.6 m³ 已占用</span>
+              <span>70 m³ 最大</span>
             </div>
             <div class="flex justify-between text-xs font-medium pt-1">
-              <span class="text-slate-400">Заполненность по весу</span>
+              <span class="text-slate-400">重量填充率</span>
               <span class="text-sky-400 font-bold text-sm">20%</span>
             </div>
             <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
               <div class="h-full rounded-full progress-shimmer" style="width:20%"></div>
             </div>
             <div class="flex justify-between text-xs text-slate-500">
-              <span>5.3 т занято</span>
-              <span>Осталось ~15.7 т</span>
+              <span>5.3 т 已占用</span>
+              <span>剩余约 15.7 т</span>
             </div>
           </div>
-          <!-- S4: available banner -->
           <div class="px-8">
             <div class="flex items-center gap-3 bg-sky-500/10 border border-sky-500/25 rounded-xl p-3">
               <i data-lucide="package-open" class="w-4 h-4 text-sky-400 shrink-0"></i>
               <div>
-                <p class="text-sky-300 text-xs font-bold">Осталось ~50.4 м³</p>
-                <p class="text-slate-400 text-xs">Свободное место в контейнере</p>
+                <p class="text-sky-300 text-xs font-bold">剩余约 50.4 m³</p>
+                <p class="text-slate-400 text-xs">集装箱剩余空间</p>
               </div>
             </div>
           </div>
-          <!-- S5: metrics -->
           <div class="px-8">
             <div class="grid grid-cols-3 gap-3">
               <div class="bg-slate-800/60 rounded-xl p-3 text-center">
                 <p class="text-sky-400 font-bold text-base">12</p>
-                <p class="text-slate-500 text-xs mt-0.5">участников</p>
+                <p class="text-slate-500 text-xs mt-0.5">参与者</p>
               </div>
               <div class="bg-slate-800/60 rounded-xl p-3 text-center">
-                <p class="text-slate-100 font-bold text-base">8 д.</p>
-                <p class="text-slate-500 text-xs mt-0.5">до закрытия</p>
+                <p class="text-slate-100 font-bold text-base">8 天</p>
+                <p class="text-slate-500 text-xs mt-0.5">距截止</p>
               </div>
               <div class="bg-slate-800/60 rounded-xl p-3 text-center">
-                <p class="text-emerald-400 font-bold text-base">16 д.</p>
-                <p class="text-slate-500 text-xs mt-0.5">в пути</p>
+                <p class="text-emerald-400 font-bold text-base">16 天</p>
+                <p class="text-slate-500 text-xs mt-0.5">运输中</p>
               </div>
             </div>
           </div>
-          <!-- S6: footer -->
           <div class="px-8 pb-10 pt-4 border-t border-slate-800 flex items-center justify-between">
             <div>
-              <p class="text-slate-500 text-xs">Текущая стоимость транспортировки</p>
-              <p class="text-slate-100 font-bold">$0.87 <span class="text-slate-500 font-normal text-xs">USD за 1 кг</span></p>
+              <p class="text-slate-500 text-xs">当前运费</p>
+              <p class="text-slate-100 font-bold">$0.87 <span class="text-slate-500 font-normal text-xs">美元/公斤</span></p>
             </div>
             <a href="#contact-form" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-400 text-sm font-semibold hover:bg-sky-500/20 transition-all duration-300">
-              Зайти в пул
+              加入拼团
               <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
             </a>
           </div>
         </div>
 
-        <!-- Container Card 2 -->
+        <!-- Container 2 -->
         <div class="card-hover bg-slate-900/80 border border-slate-800 hover:border-emerald-500/40 rounded-2xl overflow-hidden relative" style="grid-row:span 6;display:grid;grid-template-rows:subgrid;row-gap:1.25rem;">
-          <!-- S1: categories -->
           <div>
             <div class="h-1 w-full bg-gradient-to-r from-emerald-600 via-emerald-400 to-emerald-600"></div>
             <div class="px-8 pt-4 pb-1">
-              <a href="categories.html" class="text-slate-500 hover:text-sky-400 transition-colors text-xs font-medium uppercase tracking-wider mb-2" style="display:block;margin-bottom:0.5rem;">Категории товара →</a>
+              <a href="categories.html" class="text-slate-500 hover:text-sky-400 transition-colors text-xs font-medium uppercase tracking-wider mb-2" style="display:block;margin-bottom:0.5rem;">商品类别 →</a>
               <div style="display:flex;flex-wrap:wrap;gap:0.375rem;">
-                <a href="categories.html" style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(56,189,248,0.4)';this.style.color='#7dd3fc'" onmouseout="this.style.borderColor='rgba(148,163,184,0.15)';this.style.color='#94a3b8'">Электроника</a>
-                <a href="categories.html" style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(56,189,248,0.4)';this.style.color='#7dd3fc'" onmouseout="this.style.borderColor='rgba(148,163,184,0.15)';this.style.color='#94a3b8'">Запчасти</a>
-                <a href="categories.html" style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(56,189,248,0.4)';this.style.color='#7dd3fc'" onmouseout="this.style.borderColor='rgba(148,163,184,0.15)';this.style.color='#94a3b8'">Одежда</a>
-                <a href="categories.html" style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(56,189,248,0.4)';this.style.color='#7dd3fc'" onmouseout="this.style.borderColor='rgba(148,163,184,0.15)';this.style.color='#94a3b8'">Инструменты</a>
+                <a href="categories.html" style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(56,189,248,0.4)';this.style.color='#7dd3fc'" onmouseout="this.style.borderColor='rgba(148,163,184,0.15)';this.style.color='#94a3b8'">电子产品</a>
+                <a href="categories.html" style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(56,189,248,0.4)';this.style.color='#7dd3fc'" onmouseout="this.style.borderColor='rgba(148,163,184,0.15)';this.style.color='#94a3b8'">汽车配件</a>
+                <a href="categories.html" style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(56,189,248,0.4)';this.style.color='#7dd3fc'" onmouseout="this.style.borderColor='rgba(148,163,184,0.15)';this.style.color='#94a3b8'">服装</a>
+                <a href="categories.html" style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(56,189,248,0.4)';this.style.color='#7dd3fc'" onmouseout="this.style.borderColor='rgba(148,163,184,0.15)';this.style.color='#94a3b8'">工具</a>
               </div>
             </div>
           </div>
-          <!-- S2: accent + header -->
           <div class="px-8">
             <div class="flex items-start justify-between">
               <div>
                 <div class="flex items-center gap-2 mb-1">
                   <i data-lucide="container" class="w-4 h-4 text-emerald-400"></i>
-                  <span class="text-slate-500 text-xs font-medium uppercase tracking-wider">Контейнер №105</span>
+                  <span class="text-slate-500 text-xs font-medium uppercase tracking-wider">集装箱 №105</span>
                 </div>
-                <h3 class="text-slate-100 font-bold text-lg">Чэнду (Chengdu) → Екатеринбург</h3>
-                <p class="text-slate-500 text-xs mt-0.5">40HC • LCL сборный</p>
+                <h3 class="text-slate-100 font-bold text-lg">成都 → 叶卡捷琳堡</h3>
+                <p class="text-slate-500 text-xs mt-0.5">40HC • 拼箱 LCL</p>
               </div>
-              <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold">Открыт</span>
+              <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold">开放中</span>
             </div>
           </div>
-          <!-- S3: progress -->
           <div class="px-8 space-y-2">
             <div class="flex justify-between text-xs font-medium">
-              <span class="text-slate-400">Заполненность по объёму</span>
+              <span class="text-slate-400">体积填充率</span>
               <span class="text-emerald-400 font-bold text-sm">32%</span>
             </div>
             <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
               <div class="h-full rounded-full progress-shimmer-green" style="width:32%"></div>
             </div>
             <div class="flex justify-between text-xs text-slate-500">
-              <span>22.4 м³ занято</span>
-              <span>70 м³ макс.</span>
+              <span>22.4 m³ 已占用</span>
+              <span>70 m³ 最大</span>
             </div>
             <div class="flex justify-between text-xs font-medium pt-1">
-              <span class="text-slate-400">Заполненность по весу</span>
+              <span class="text-slate-400">重量填充率</span>
               <span class="text-emerald-400 font-bold text-sm">30%</span>
             </div>
             <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
               <div class="h-full rounded-full progress-shimmer-green" style="width:30%"></div>
             </div>
             <div class="flex justify-between text-xs text-slate-500">
-              <span>8.0 т занято</span>
-              <span>Осталось ~13.0 т</span>
+              <span>8.0 т 已占用</span>
+              <span>剩余约 13.0 т</span>
             </div>
           </div>
-          <!-- S4: available banner -->
           <div class="px-8">
             <div class="flex items-center gap-3 bg-emerald-500/10 border border-emerald-500/25 rounded-xl p-3">
               <i data-lucide="package-open" class="w-4 h-4 text-emerald-400 shrink-0"></i>
               <div>
-                <p class="text-emerald-300 text-xs font-bold">Осталось ~47.6 м³</p>
-                <p class="text-slate-400 text-xs">Свободное место в контейнере</p>
+                <p class="text-emerald-300 text-xs font-bold">剩余约 47.6 m³</p>
+                <p class="text-slate-400 text-xs">集装箱剩余空间</p>
               </div>
             </div>
           </div>
-          <!-- S5: metrics -->
           <div class="px-8">
             <div class="grid grid-cols-3 gap-3">
               <div class="bg-slate-800/60 rounded-xl p-3 text-center">
                 <p class="text-emerald-400 font-bold text-base">7</p>
-                <p class="text-slate-500 text-xs mt-0.5">участников</p>
+                <p class="text-slate-500 text-xs mt-0.5">参与者</p>
               </div>
               <div class="bg-slate-800/60 rounded-xl p-3 text-center">
-                <p class="text-slate-100 font-bold text-base">12 д.</p>
-                <p class="text-slate-500 text-xs mt-0.5">до закрытия</p>
+                <p class="text-slate-100 font-bold text-base">12 天</p>
+                <p class="text-slate-500 text-xs mt-0.5">距截止</p>
               </div>
               <div class="bg-slate-800/60 rounded-xl p-3 text-center">
-                <p class="text-emerald-400 font-bold text-base">20 д.</p>
-                <p class="text-slate-500 text-xs mt-0.5">в пути</p>
+                <p class="text-emerald-400 font-bold text-base">20 天</p>
+                <p class="text-slate-500 text-xs mt-0.5">运输中</p>
               </div>
             </div>
           </div>
-          <!-- S6: footer -->
           <div class="px-8 pb-10 pt-4 border-t border-slate-800 flex items-center justify-between">
             <div>
-              <p class="text-slate-500 text-xs">Текущая стоимость транспортировки</p>
-              <p class="text-slate-100 font-bold">$0.47 <span class="text-slate-500 font-normal text-xs">USD за 1 кг</span></p>
+              <p class="text-slate-500 text-xs">当前运费</p>
+              <p class="text-slate-100 font-bold">$0.47 <span class="text-slate-500 font-normal text-xs">美元/公斤</span></p>
             </div>
             <a href="#contact-form" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-semibold hover:bg-emerald-500/20 transition-all duration-300">
-              Зайти в пул
+              加入拼团
               <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
             </a>
           </div>
         </div>
 
-        <!-- Container Card 3 -->
+        <!-- Container 3 -->
         <div class="card-hover bg-slate-900/80 border border-amber-700/40 hover:border-amber-500/60 rounded-2xl overflow-hidden relative" style="grid-row:span 6;display:grid;grid-template-rows:subgrid;row-gap:1.25rem;">
           <div class="absolute inset-0 bg-amber-500/3 pointer-events-none"></div>
-          <!-- S1: categories -->
           <div class="relative">
             <div class="h-1 w-full bg-gradient-to-r from-amber-600 via-amber-400 to-amber-600"></div>
             <div class="px-8 pt-4 pb-1">
-              <a href="categories.html" class="text-slate-500 hover:text-sky-400 transition-colors text-xs font-medium uppercase tracking-wider mb-2" style="display:block;margin-bottom:0.5rem;">Категории товара →</a>
+              <a href="categories.html" class="text-slate-500 hover:text-sky-400 transition-colors text-xs font-medium uppercase tracking-wider mb-2" style="display:block;margin-bottom:0.5rem;">商品类别 →</a>
               <div style="display:flex;flex-wrap:wrap;gap:0.375rem;">
-                <a href="categories.html" style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(56,189,248,0.4)';this.style.color='#7dd3fc'" onmouseout="this.style.borderColor='rgba(148,163,184,0.15)';this.style.color='#94a3b8'">Текстиль</a>
-                <a href="categories.html" style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(56,189,248,0.4)';this.style.color='#7dd3fc'" onmouseout="this.style.borderColor='rgba(148,163,184,0.15)';this.style.color='#94a3b8'">Керамика</a>
-                <a href="categories.html" style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(56,189,248,0.4)';this.style.color='#7dd3fc'" onmouseout="this.style.borderColor='rgba(148,163,184,0.15)';this.style.color='#94a3b8'">Стройматериалы</a>
-                <a href="categories.html" style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(56,189,248,0.4)';this.style.color='#7dd3fc'" onmouseout="this.style.borderColor='rgba(148,163,184,0.15)';this.style.color='#94a3b8'">Посуда</a>
+                <a href="categories.html" style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(56,189,248,0.4)';this.style.color='#7dd3fc'" onmouseout="this.style.borderColor='rgba(148,163,184,0.15)';this.style.color='#94a3b8'">纺织品</a>
+                <a href="categories.html" style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(56,189,248,0.4)';this.style.color='#7dd3fc'" onmouseout="this.style.borderColor='rgba(148,163,184,0.15)';this.style.color='#94a3b8'">陶瓷</a>
+                <a href="categories.html" style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(56,189,248,0.4)';this.style.color='#7dd3fc'" onmouseout="this.style.borderColor='rgba(148,163,184,0.15)';this.style.color='#94a3b8'">建筑材料</a>
+                <a href="categories.html" style="padding:0.2rem 0.6rem;border-radius:0.375rem;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:0.7rem;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(56,189,248,0.4)';this.style.color='#7dd3fc'" onmouseout="this.style.borderColor='rgba(148,163,184,0.15)';this.style.color='#94a3b8'">餐具厨具</a>
               </div>
             </div>
           </div>
-          <!-- S2: accent + header -->
           <div class="px-8 relative">
             <div class="flex items-start justify-between">
               <div>
                 <div class="flex items-center gap-2 mb-1">
                   <i data-lucide="container" class="w-4 h-4 text-amber-400"></i>
-                  <span class="text-slate-500 text-xs font-medium uppercase tracking-wider">Контейнер №106</span>
+                  <span class="text-slate-500 text-xs font-medium uppercase tracking-wider">集装箱 №106</span>
                 </div>
-                <h3 class="text-slate-100 font-bold text-lg">Сиань (Xi'an) → Новосибирск</h3>
-                <p class="text-slate-500 text-xs mt-0.5">40HC • LCL сборный</p>
+                <h3 class="text-slate-100 font-bold text-lg">西安 → 新西伯利亚</h3>
+                <p class="text-slate-500 text-xs mt-0.5">40HC • 拼箱 LCL</p>
               </div>
-              <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold">Открыт</span>
+              <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold">开放中</span>
             </div>
           </div>
-          <!-- S3: progress -->
           <div class="px-8 space-y-2 relative">
             <div class="flex justify-between text-xs font-medium">
-              <span class="text-slate-400">Заполненность по объёму</span>
+              <span class="text-slate-400">体积填充率</span>
               <span class="text-amber-400 font-bold text-sm">16%</span>
             </div>
             <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
               <div class="h-full rounded-full progress-shimmer-amber" style="width:16%"></div>
             </div>
             <div class="flex justify-between text-xs text-slate-500">
-              <span>11.2 м³ занято</span>
-              <span>70 м³ макс.</span>
+              <span>11.2 m³ 已占用</span>
+              <span>70 m³ 最大</span>
             </div>
             <div class="flex justify-between text-xs font-medium pt-1">
-              <span class="text-slate-400">Заполненность по весу</span>
+              <span class="text-slate-400">重量填充率</span>
               <span class="text-amber-400 font-bold text-sm">32%</span>
             </div>
             <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
               <div class="h-full rounded-full progress-shimmer-amber" style="width:32%"></div>
             </div>
             <div class="flex justify-between text-xs text-slate-500">
-              <span>8.5 т занято</span>
-              <span>Осталось ~12.5 т</span>
+              <span>8.5 т 已占用</span>
+              <span>剩余约 12.5 т</span>
             </div>
           </div>
-          <!-- S4: urgency banner -->
           <div class="px-8 relative">
             <div class="flex items-center gap-3 bg-amber-500/10 border border-amber-500/25 rounded-xl p-3">
               <i data-lucide="clock" class="w-4 h-4 text-amber-400 shrink-0"></i>
               <div>
-                <p class="text-amber-300 text-xs font-bold">Осталось ~58.8 м³</p>
-                <p class="text-slate-400 text-xs">Закрытие пула через <span class="text-amber-400 font-semibold">16 дней</span></p>
+                <p class="text-amber-300 text-xs font-bold">剩余约 58.8 m³</p>
+                <p class="text-slate-400 text-xs">拼团截止还有 <span class="text-amber-400 font-semibold">16 天</span></p>
               </div>
             </div>
           </div>
-          <!-- S5: metrics -->
           <div class="px-8 relative">
             <div class="grid grid-cols-3 gap-3">
               <div class="bg-slate-800/60 rounded-xl p-3 text-center">
                 <p class="text-amber-400 font-bold text-base">18</p>
-                <p class="text-slate-500 text-xs mt-0.5">участников</p>
+                <p class="text-slate-500 text-xs mt-0.5">参与者</p>
               </div>
               <div class="bg-slate-800/60 rounded-xl p-3 text-center">
-                <p class="text-amber-400 font-bold text-base">16 д.</p>
-                <p class="text-slate-500 text-xs mt-0.5">до закрытия</p>
+                <p class="text-amber-400 font-bold text-base">16 天</p>
+                <p class="text-slate-500 text-xs mt-0.5">距截止</p>
               </div>
               <div class="bg-slate-800/60 rounded-xl p-3 text-center">
-                <p class="text-emerald-400 font-bold text-base">20 д.</p>
-                <p class="text-slate-500 text-xs mt-0.5">в пути</p>
+                <p class="text-emerald-400 font-bold text-base">20 天</p>
+                <p class="text-slate-500 text-xs mt-0.5">运输中</p>
               </div>
             </div>
           </div>
-          <!-- S6: footer -->
           <div class="px-8 pb-10 pt-4 border-t border-slate-800 flex items-center justify-between relative">
             <div>
-              <p class="text-slate-500 text-xs">Текущая стоимость транспортировки</p>
-              <p class="text-slate-100 font-bold">$0.36 <span class="text-slate-500 font-normal text-xs">USD за 1 кг</span></p>
+              <p class="text-slate-500 text-xs">当前运费</p>
+              <p class="text-slate-100 font-bold">$0.36 <span class="text-slate-500 font-normal text-xs">美元/公斤</span></p>
             </div>
             <a href="#contact-form" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-amber-500/15 border border-amber-500/40 text-amber-400 text-sm font-bold hover:bg-amber-500/25 transition-all duration-300">
-              Зайти в пул
+              加入拼团
               <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
             </a>
           </div>
         </div>
-
       </div>
 
-      <!-- Bottom note -->
       <p class="text-center text-slate-500 text-sm mt-8">
-        Данные обновляются ежедневно. Нет нужного направления?
-        <a href="#contact-form" class="text-sky-400 hover:text-sky-300 transition-colors">Напишите — откроем новый пул.</a>
+        数据每日更新。没有合适的路线？
+        <a href="#contact-form" class="text-sky-400 hover:text-sky-300 transition-colors">联系我们——开启新的拼团。</a>
       </p>
-
     </div>
   </section>
 
   <div class="section-line max-w-5xl mx-auto"></div>
 
-  <!-- ═══════════════════════════════════════════════════
-       CONTACT FORM
-  ═══════════════════════════════════════════════════ -->
+  <!-- CONTACT FORM -->
   <section id="contact-form" class="py-24 relative overflow-hidden">
     <div class="absolute inset-0" style="background:linear-gradient(150deg,#0f2137 0%,#162032 25%,#0f1f2e 55%,#0d2318 100%)"></div>
     <div class="absolute inset-0" style="background-image:radial-gradient(ellipse at 10% 40%,rgba(56,189,248,0.10) 0%,transparent 50%),radial-gradient(ellipse at 90% 60%,rgba(16,185,129,0.09) 0%,transparent 50%),radial-gradient(ellipse at 50% 10%,rgba(99,102,241,0.07) 0%,transparent 45%)"></div>
     <div class="relative max-w-2xl mx-auto px-4 sm:px-6">
-
       <div class="text-center mb-12 space-y-4">
-        <p class="text-sky-400 text-sm font-semibold uppercase tracking-widest">Бесплатный расчёт</p>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-100">Оставить запрос</h2>
-        <p class="text-slate-400">Отправьте запрос — в течение 24 часов пришлём полный расчёт стоимости с учётом всех расходов.</p>
+        <p class="text-sky-400 text-sm font-semibold uppercase tracking-widest">免费报价</p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-100">询价申请</h2>
+        <p class="text-slate-400">填写表单——我们将在一小时内与您联系。</p>
       </div>
-
       <div class="rounded-2xl p-8 space-y-5 glow-blue" style="background:linear-gradient(135deg,#2d3748 0%,#374151 100%);border:1px solid rgba(148,163,184,0.15);box-shadow:0 4px 32px rgba(0,0,0,0.4)">
-
-        <!-- Сообщение об успехе -->
         <div id="form-success" class="hidden text-center py-8 space-y-3">
           <div class="flex justify-center">
             <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.3)">
               <i data-lucide="check-circle" class="w-8 h-8 text-emerald-400"></i>
             </div>
           </div>
-          <p class="text-slate-100 font-bold text-lg">Запрос отправлен!</p>
-          <p class="text-slate-400 text-sm">Мы свяжемся с вами в течение 24 часов.</p>
+          <p class="text-slate-100 font-bold text-lg">询盘已发送！</p>
+          <p class="text-slate-400 text-sm">我们将在24小时内与您联系。</p>
         </div>
-
         <form id="request-form" class="space-y-5">
           <input type="hidden" name="access_key" value="51ed07f9-3365-4854-b9b6-42560a28ce5d">
-          <input type="hidden" name="subject" value="Новый запрос на расчёт — denchik.online">
+          <input type="hidden" name="subject" value="新询盘 — denchik.online (ZH)">
           <input type="hidden" name="from_name" value="denchik.online">
-
           <div class="grid sm:grid-cols-2 gap-5">
             <div class="space-y-1.5">
-              <label class="text-slate-400 text-sm font-medium">Ваше имя</label>
-              <input type="text" name="name" placeholder="Иван Иванов" required
+              <label class="text-slate-400 text-sm font-medium">姓名</label>
+              <input type="text" name="name" placeholder="张三" required
                      class="w-full bg-slate-800/70 border border-slate-700 hover:border-sky-500/40 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500/40 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 transition-all duration-300" />
             </div>
             <div class="space-y-1.5">
-              <label class="text-slate-400 text-sm font-medium">Email</label>
-              <input type="email" name="email" placeholder="ivan@mail.ru"
+              <label class="text-slate-400 text-sm font-medium">电子邮件</label>
+              <input type="email" name="email" placeholder="zhang@example.com"
                      class="w-full bg-slate-800/70 border border-slate-700 hover:border-sky-500/40 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500/40 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 transition-all duration-300" />
             </div>
           </div>
-
           <div class="space-y-1.5">
-            <label class="text-slate-400 text-sm font-medium">Telegram / телефон</label>
-            <input type="text" name="contact" placeholder="@username или +7..." required
+            <label class="text-slate-400 text-sm font-medium">Telegram或电话</label>
+            <input type="text" name="contact" placeholder="@username 或 +7..." required
                    class="w-full bg-slate-800/70 border border-slate-700 hover:border-sky-500/40 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500/40 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 transition-all duration-300" />
           </div>
-
           <div class="space-y-1.5">
-            <label class="text-slate-400 text-sm font-medium">Какой товар нужен?</label>
-            <input type="text" name="product" placeholder="Например: автозапчасти BMW, электроника, текстиль..." required
+            <label class="text-slate-400 text-sm font-medium">您需要什么商品？</label>
+            <input type="text" name="product" placeholder="例如：汽车配件、电子产品、纺织品..." required
                    class="w-full bg-slate-800/70 border border-slate-700 hover:border-sky-500/40 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500/40 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 transition-all duration-300" />
           </div>
-
           <div class="grid sm:grid-cols-2 gap-5">
             <div class="space-y-1.5">
-              <label class="text-slate-400 text-sm font-medium">Примерный объём / вес</label>
-              <input type="text" name="volume" placeholder="100 кг или 0.5 м³"
+              <label class="text-slate-400 text-sm font-medium">体积和重量（可选）</label>
+              <input type="text" name="volume" placeholder="100 公斤 或 0.5 m³"
                      class="w-full bg-slate-800/70 border border-slate-700 hover:border-sky-500/40 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500/40 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 transition-all duration-300" />
             </div>
             <div class="space-y-1.5">
-              <label class="text-slate-400 text-sm font-medium">Город доставки</label>
-              <input type="text" name="city" placeholder="Екатеринбург"
+              <label class="text-slate-400 text-sm font-medium">目的城市（可选）</label>
+              <input type="text" name="city" placeholder="叶卡捷琳堡"
                      class="w-full bg-slate-800/70 border border-slate-700 hover:border-sky-500/40 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500/40 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 transition-all duration-300" />
             </div>
           </div>
-
           <div class="space-y-1.5">
-            <label class="text-slate-400 text-sm font-medium">Ссылка на товар или дополнительная информация</label>
-            <textarea rows="3" name="details" placeholder="Ссылка с 1688, Alibaba, Taobao, описание, фото..."
+            <label class="text-slate-400 text-sm font-medium">商品链接或描述</label>
+            <textarea rows="3" name="details" placeholder="1688、Alibaba、Taobao链接，描述，图片..."
                       class="w-full bg-slate-800/70 border border-slate-700 hover:border-sky-500/40 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500/40 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 transition-all duration-300 resize-none"></textarea>
           </div>
-
           <div id="ts-widget" class="cf-turnstile" data-sitekey="0x4AAAAAADYeTCS94GhlqUCi" data-size="invisible" data-execution="execute"></div>
-
           <button type="submit" id="submit-btn"
                   class="w-full flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-bold text-base transition-all duration-300 glow-btn">
             <i data-lucide="send" class="w-5 h-5"></i>
-            <span id="submit-text">Отправить запрос на расчёт</span>
+            <span id="submit-text">获取报价</span>
           </button>
-
           <p class="text-center text-slate-500 text-xs">
-            Нажимая кнопку, вы соглашаетесь на обработку персональных данных. Не спамим.
+            点击按钮即表示您同意个人数据处理。我们不发送垃圾邮件。
           </p>
         </form>
       </div>
-
       <script>
         document.getElementById('request-form').addEventListener('submit', function(e) {
           e.preventDefault();
@@ -1178,10 +975,9 @@
           var btn = document.getElementById('submit-btn');
           var txt = document.getElementById('submit-text');
           btn.disabled = true;
-          txt.textContent = 'Проверка...';
-
+          txt.textContent = '验证中...';
           function doSubmit(token) {
-            txt.textContent = 'Отправляем...';
+            txt.textContent = '发送中...';
             var object = {};
             new FormData(form).forEach(function(v, k) { object[k] = v; });
             if (token) object['cf-turnstile-response'] = token;
@@ -1196,83 +992,63 @@
                 form.style.display = 'none';
                 document.getElementById('form-success').classList.remove('hidden');
               } else {
-                txt.textContent = j.message || 'Ошибка. Попробуйте ещё раз.';
+                txt.textContent = j.message || '错误，请重试。';
                 btn.disabled = false;
                 if (window.turnstile) turnstile.reset('#ts-widget');
               }
             })
             .catch(function() {
-              txt.textContent = 'Ошибка сети. Попробуйте ещё раз.';
+              txt.textContent = '网络错误，请重试。';
               btn.disabled = false;
               if (window.turnstile) turnstile.reset('#ts-widget');
             });
           }
-
           if (window.turnstile) {
             turnstile.execute('#ts-widget', {
               callback: function(token) { doSubmit(token); },
-              'error-callback': function() {
-                txt.textContent = 'Ошибка проверки. Попробуйте ещё раз.';
-                btn.disabled = false;
-              }
+              'error-callback': function() { txt.textContent = '验证错误，请重试。'; btn.disabled = false; }
             });
-          } else {
-            doSubmit(null);
-          }
+          } else { doSubmit(null); }
         });
       </script>
-
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════
-       BLOCK 5 — FOOTER
-  ═══════════════════════════════════════════════════ -->
+  <!-- FOOTER -->
   <footer class="border-t border-slate-800 bg-slate-950">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
-
-        <!-- Brand -->
         <div class="lg:col-span-2 space-y-4">
           <a href="#" class="inline-block">
             <span class="text-sky-400 font-bold text-2xl tracking-tight">denchik<span class="text-slate-500">.online</span></span>
           </a>
           <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
-            Платформа совместного импорта из Китая для малого и среднего бизнеса. Цены крупного опта без собственного контейнера.
+            面向中小企业的中国联合进口平台，无需自备集装箱即可享受批发价。
           </p>
+          <p class="text-slate-500 text-xs">正式合同，合法清关，外贸经验自2007年。</p>
           <div class="flex items-center gap-3 pt-2">
-            <!-- Telegram -->
             <a href="https://t.me/Denny_ekb" target="_blank" rel="noopener noreferrer"
                class="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 hover:border-sky-500/40 hover:bg-sky-500/10 flex items-center justify-center text-slate-400 hover:text-sky-400 transition-all duration-300">
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/>
-              </svg>
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
             </a>
-            <!-- WhatsApp -->
             <a href="https://wa.me/79122421781" target="_blank" rel="noopener noreferrer"
                class="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 hover:border-emerald-500/40 hover:bg-emerald-500/10 flex items-center justify-center text-slate-400 hover:text-emerald-400 transition-all duration-300">
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-              </svg>
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             </a>
           </div>
         </div>
-
-        <!-- Navigation -->
         <div class="space-y-4">
-          <h4 class="text-slate-200 font-semibold text-sm uppercase tracking-wider">Навигация</h4>
+          <h4 class="text-slate-200 font-semibold text-sm uppercase tracking-wider">导航</h4>
           <ul class="space-y-3 text-sm">
-            <li><a href="#how-it-works"  class="text-slate-400 hover:text-sky-400 transition-colors">Как работаем</a></li>
-            <li><a href="#advantages"    class="text-slate-400 hover:text-sky-400 transition-colors">Преимущества</a></li>
-            <li><a href="#pools-section" class="text-slate-400 hover:text-sky-400 transition-colors">Активные пулы</a></li>
-            <li><a href="categories.html" class="text-slate-400 hover:text-sky-400 transition-colors">Товары</a></li>
-            <li><a href="#contact-form"  class="text-slate-400 hover:text-sky-400 transition-colors">Запрос на расчёт</a></li>
+            <li><a href="#how-it-works" class="text-slate-400 hover:text-sky-400 transition-colors">工作流程</a></li>
+            <li><a href="#advantages" class="text-slate-400 hover:text-sky-400 transition-colors">核心优势</a></li>
+            <li><a href="#pools-section" class="text-slate-400 hover:text-sky-400 transition-colors">活跃拼团</a></li>
+            <li><a href="categories.html" class="text-slate-400 hover:text-sky-400 transition-colors">商品目录</a></li>
+            <li><a href="#contact-form" class="text-slate-400 hover:text-sky-400 transition-colors">询价申请</a></li>
           </ul>
         </div>
-
-        <!-- Contacts -->
         <div class="space-y-4">
-          <h4 class="text-slate-200 font-semibold text-sm uppercase tracking-wider">Контакты</h4>
+          <h4 class="text-slate-200 font-semibold text-sm uppercase tracking-wider">联系方式</h4>
           <ul class="space-y-3 text-sm">
             <li class="flex items-center gap-2 text-slate-400">
               <i data-lucide="mail" class="w-4 h-4 text-slate-500 shrink-0"></i>
@@ -1284,48 +1060,30 @@
             </li>
             <li class="flex items-center gap-2 text-slate-400">
               <i data-lucide="send" class="w-4 h-4 text-sky-400 shrink-0"></i>
-              <a href="https://t.me/Denny_ekb" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition-colors">Telegram-канал</a>
+              <a href="https://t.me/Denny_ekb" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition-colors">Telegram频道</a>
             </li>
             <li class="flex items-start gap-2 text-slate-400">
               <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
-              <span class="text-xs leading-relaxed">Официальный договор. Белая таможня. ВЭД с 2007 года.</span>
+              <span class="text-xs leading-relaxed">正式合同，合法清关，外贸经验自2007年。</span>
             </li>
           </ul>
         </div>
-
       </div>
-
-      <!-- Bottom bar -->
       <div class="mt-12 pt-8 border-t border-slate-800/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-600">
-        <p>© 2025–2026 denchik.online — B2B Платформа совместного импорта. Все права защищены.</p>
-        <p>Сайт не является публичной офертой.</p>
+        <p>© 2025–2026 denchik.online — B2B 联合进口平台。版权所有。</p>
+        <p>本网站不构成公开要约。</p>
       </div>
-
     </div>
   </footer>
 
-  <!-- ═══════════════════════════════════════════════════
-       JS
-  ═══════════════════════════════════════════════════ -->
-  <!-- Lucide Icons — в конце, чтобы не блокировать рендер -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <script>
     lucide.createIcons();
-
-    // Mobile menu toggle
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-    function closeMobileMenu() {
-      mobileMenu.classList.add('hidden');
-    }
+    menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+    function closeMobileMenu() { mobileMenu.classList.add('hidden'); }
 
-    // Live countdown timers (simulated) — updates every second
-    function padZero(n) { return n < 10 ? '0' + n : n; }
-
-    // Animate progress bars on scroll (IntersectionObserver)
     const bars = document.querySelectorAll('[style*="width:"]');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -1337,60 +1095,57 @@
     }, { threshold: 0.3 });
     bars.forEach(bar => observer.observe(bar));
   </script>
-
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer>
-    // ── Nav search ─────────────────────────────────────────
     var _SD=[
-      {t:'Главная',s:'Страница',u:'index.html'},
-      {t:'Как работаем',s:'Раздел',u:'index.html#how-it-works'},
-      {t:'Преимущества',s:'Раздел',u:'index.html#advantages'},
-      {t:'Текущие поставки',s:'Раздел',u:'index.html#pools-section'},
-      {t:'Запрос на расчёт',s:'Раздел',u:'index.html#contact-form'},
-      {t:'Все категории',s:'Страница',u:'categories.html'},
-      {t:'Одежда и обувь',s:'Категория',u:'cat-odezhda-obuv.html'},
-      {t:'Аксессуары',s:'Категория',u:'cat-aksessuary.html'},
-      {t:'Игрушки',s:'Категория',u:'cat-igrushki.html'},
-      {t:'Товары для дома',s:'Категория',u:'cat-tovary-doma.html'},
-      {t:'Электроника',s:'Категория',u:'cat-elektronika.html'},
-      {t:'Запчасти (авто)',s:'Категория',u:'cat-zapchasti.html'},
-      {t:'Одежда',s:'Категория',u:'cat-odezhda.html'},
-      {t:'Инструменты',s:'Категория',u:'cat-instrumenty.html'},
-      {t:'Текстиль',s:'Категория',u:'cat-tekstil.html'},
-      {t:'Керамика',s:'Категория',u:'cat-keramika.html'},
-      {t:'Стройматериалы',s:'Категория',u:'cat-stroymaterialy.html'},
-      {t:'Посуда',s:'Категория',u:'cat-posuda.html'},
-      {t:'Орехи',s:'Категория',u:'cat-orehi.html'},
-      {t:'Сухофрукты',s:'Категория',u:'cat-sukhofrukty.html'},
-      {t:'Арахис',s:'Орехи',u:'nut-arakhis.html'},
-      {t:'Грецкий орех',s:'Орехи',u:'nut-greckiy.html'},
-      {t:'Грецкий орех ядро',s:'Орехи · ТН ВЭД 0802320000',u:'nut-greckiy-yadro.html'},
-      {t:'Грецкий орех в скорлупе',s:'Орехи · ТН ВЭД 0802310000',u:'nut-greckiy-skorlupa.html'},
-      {t:'Кедровый орех',s:'Орехи',u:'nut-kedrovyy.html'},
-      {t:'Кешью',s:'Орехи',u:'nut-keshu.html'},
-      {t:'Макадамия',s:'Орехи',u:'nut-makadamia.html'},
-      {t:'Миндаль',s:'Орехи',u:'nut-mindal.html'},
-      {t:'Пекан',s:'Орехи',u:'nut-pekan.html'},
-      {t:'Смесь орехов',s:'Орехи',u:'nut-smes.html'},
-      {t:'Фисташки',s:'Орехи',u:'nut-fistashki.html'},
-      {t:'Фундук',s:'Орехи',u:'nut-funduk.html'}
+      {t:'首页',s:'页面',u:'../index.html'},
+      {t:'工作流程',s:'板块',u:'../index.html#how-it-works'},
+      {t:'核心优势',s:'板块',u:'../index.html#advantages'},
+      {t:'当前货运',s:'板块',u:'../index.html#pools-section'},
+      {t:'询价申请',s:'板块',u:'../index.html#contact-form'},
+      {t:'全部类别',s:'页面',u:'categories.html'},
+      {t:'服装与鞋类',s:'类别',u:'cat-odezhda-obuv.html'},
+      {t:'配饰',s:'类别',u:'cat-aksessuary.html'},
+      {t:'玩具',s:'类别',u:'cat-igrushki.html'},
+      {t:'家居用品',s:'类别',u:'cat-tovary-doma.html'},
+      {t:'电子产品',s:'类别',u:'cat-elektronika.html'},
+      {t:'汽车配件',s:'类别',u:'cat-zapchasti.html'},
+      {t:'服装',s:'类别',u:'cat-odezhda.html'},
+      {t:'工具',s:'类别',u:'cat-instrumenty.html'},
+      {t:'纺织品',s:'类别',u:'cat-tekstil.html'},
+      {t:'陶瓷',s:'类别',u:'cat-keramika.html'},
+      {t:'建筑材料',s:'类别',u:'cat-stroymaterialy.html'},
+      {t:'餐具厨具',s:'类别',u:'cat-posuda.html'},
+      {t:'坚果',s:'类别',u:'cat-orehi.html'},
+      {t:'干果',s:'类别',u:'cat-sukhofrukty.html'},
+      {t:'花生',s:'坚果',u:'nut-arakhis.html'},
+      {t:'核桃',s:'坚果',u:'nut-greckiy.html'},
+      {t:'核桃仁',s:'坚果 · HS编码 0802320000',u:'nut-greckiy-yadro.html'},
+      {t:'带壳核桃',s:'坚果 · HS编码 0802310000',u:'nut-greckiy-skorlupa.html'},
+      {t:'松子',s:'坚果',u:'nut-kedrovyy.html'},
+      {t:'腰果',s:'坚果',u:'nut-keshu.html'},
+      {t:'夏威夷果',s:'坚果',u:'nut-makadamia.html'},
+      {t:'杏仁',s:'坚果',u:'nut-mindal.html'},
+      {t:'碧根果',s:'坚果',u:'nut-pekan.html'},
+      {t:'什锦坚果',s:'坚果',u:'nut-smes.html'},
+      {t:'开心果',s:'坚果',u:'nut-fistashki.html'},
+      {t:'榛子',s:'坚果',u:'nut-funduk.html'}
     ];
     function navSearchDo(q){
       var drop=document.getElementById('nav-search-drop');
       if(!q||!q.trim()){drop.style.display='none';return;}
       var ql=q.toLowerCase();
       var res=_SD.filter(function(i){return i.t.toLowerCase().indexOf(ql)>=0||i.s.toLowerCase().indexOf(ql)>=0;}).slice(0,9);
-      if(!res.length){drop.innerHTML='<p style="padding:0.875rem 1rem;color:#64748b;font-size:0.78rem;">Ничего не найдено</p>';drop.style.display='block';return;}
-      drop.innerHTML=res.map(function(i){return '<a href="'+i.u+'" style="display:flex;flex-direction:column;padding:0.55rem 1rem;text-decoration:none;border-bottom:1px solid rgba(148,163,184,0.06);" onmouseover="this.style.background='rgba(56,189,248,0.07)'" onmouseout="this.style.background='none'"><span style="color:#e2e8f0;font-size:0.82rem;font-weight:600;">'+i.t+'</span><span style="color:#64748b;font-size:0.7rem;margin-top:0.1rem;">'+i.s+'</span></a>';}).join('');
+      if(!res.length){drop.innerHTML='<p style="padding:0.875rem 1rem;color:#64748b;font-size:0.78rem;">未找到结果</p>';drop.style.display='block';return;}
+      drop.innerHTML=res.map(function(i){return '<a href="'+i.u+'" style="display:flex;flex-direction:column;padding:0.55rem 1rem;text-decoration:none;border-bottom:1px solid rgba(148,163,184,0.06);" onmouseover="this.style.background=\'rgba(56,189,248,0.07)\'" onmouseout="this.style.background=\'none\'"><span style="color:#e2e8f0;font-size:0.82rem;font-weight:600;">'+i.t+'</span><span style="color:#64748b;font-size:0.7rem;margin-top:0.1rem;">'+i.s+'</span></a>';}).join('');
       drop.style.display='block';
     }
     function navSearchShow(){var v=document.getElementById('nav-search-input').value;if(v)navSearchDo(v);}
     function navSearchHide(){document.getElementById('nav-search-drop').style.display='none';}
-    // ───────────────────────────────────────────────────────
 </script>
   <!-- Lightbox -->
-  <div id="img-lightbox" role="dialog" aria-modal="true" aria-label="Инфографика">
-    <button id="lb-close" aria-label="Закрыть">✕</button>
-    <img id="lb-img" src="" alt="Совместный импорт из Китая — схема работы" />
+  <div id="img-lightbox" role="dialog" aria-modal="true" aria-label="流程图">
+    <button id="lb-close" aria-label="关闭">✕</button>
+    <img id="lb-img" src="" alt="联合进口流程图" />
   </div>
   <script>
     (function(){
@@ -1398,7 +1153,7 @@
       var lbImg = document.getElementById('lb-img');
       var trigger = document.querySelector('.how-img-col img');
       if (!trigger || !lb) return;
-      trigger.setAttribute('title', 'Нажмите для увеличения');
+      trigger.setAttribute('title', '点击放大');
       trigger.addEventListener('click', function(){
         lbImg.src = this.currentSrc || this.src;
         lb.classList.add('open');
@@ -1407,10 +1162,7 @@
       document.getElementById('lb-close').addEventListener('click', closeLb);
       lb.addEventListener('click', function(e){ if (e.target === lb) closeLb(); });
       document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeLb(); });
-      function closeLb(){
-        lb.classList.remove('open');
-        document.body.style.overflow = '';
-      }
+      function closeLb(){ lb.classList.remove('open'); document.body.style.overflow = ''; }
     })();
   </script>
 </body>
