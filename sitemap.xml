@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Главные страницы -->
+  <url>
+    <loc>https://denchik.online/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Категории RU -->
+  <url>
+    <loc>https://denchik.online/categories.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/categories.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/categories.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/cat-elektronika.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/cat-elektronika.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/cat-elektronika.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/cat-odezhda.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/cat-odezhda.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/cat-odezhda.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/cat-odezhda-obuv.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/cat-odezhda-obuv.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/cat-odezhda-obuv.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/cat-tekstil.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/cat-tekstil.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/cat-tekstil.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/cat-instrumenty.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/cat-instrumenty.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/cat-instrumenty.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/cat-stroymaterialy.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/cat-stroymaterialy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/cat-stroymaterialy.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/cat-tovary-doma.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/cat-tovary-doma.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/cat-tovary-doma.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/cat-posuda.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/cat-posuda.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/cat-posuda.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/cat-keramika.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/cat-keramika.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/cat-keramika.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/cat-aksessuary.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/cat-aksessuary.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/cat-aksessuary.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/cat-igrushki.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/cat-igrushki.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/cat-igrushki.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/cat-zapchasti.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/cat-zapchasti.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/cat-zapchasti.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/cat-orehi.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/cat-orehi.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/cat-orehi.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/cat-sukhofrukty.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/cat-sukhofrukty.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/cat-sukhofrukty.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Орехи RU -->
+  <url>
+    <loc>https://denchik.online/nut-arakhis.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/nut-arakhis.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/nut-arakhis.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/nut-fistashki.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/nut-fistashki.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/nut-fistashki.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/nut-funduk.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/nut-funduk.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/nut-funduk.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/nut-greckiy.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/nut-greckiy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/nut-greckiy.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/nut-greckiy-skorlupa.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/nut-greckiy-skorlupa.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/nut-greckiy-skorlupa.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/nut-greckiy-yadro.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/nut-greckiy-yadro.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/nut-greckiy-yadro.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/nut-kedrovyy.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/nut-kedrovyy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/nut-kedrovyy.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/nut-keshu.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/nut-keshu.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/nut-keshu.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/nut-makadamia.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/nut-makadamia.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/nut-makadamia.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/nut-mindal.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/nut-mindal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/nut-mindal.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/nut-pekan.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/nut-pekan.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/nut-pekan.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/nut-smes.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://denchik.online/nut-smes.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://denchik.online/zh/nut-smes.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Китайская версия (zh/) -->
+  <url>
+    <loc>https://denchik.online/zh/categories.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/zh/cat-elektronika.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/zh/cat-odezhda.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/zh/cat-odezhda-obuv.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/zh/cat-tekstil.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/zh/cat-instrumenty.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/zh/cat-stroymaterialy.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/zh/cat-tovary-doma.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/zh/cat-posuda.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/zh/cat-keramika.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/zh/cat-aksessuary.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/zh/cat-igrushki.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/zh/cat-zapchasti.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/zh/cat-orehi.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/zh/cat-sukhofrukty.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/zh/nut-arakhis.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/zh/nut-fistashki.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/zh/nut-funduk.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/zh/nut-greckiy.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/zh/nut-greckiy-skorlupa.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/zh/nut-greckiy-yadro.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/zh/nut-kedrovyy.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/zh/nut-keshu.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/zh/nut-makadamia.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/zh/nut-mindal.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/zh/nut-pekan.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://denchik.online/zh/nut-smes.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
