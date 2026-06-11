@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE yml_catalog SYSTEM "shops.dtd">
+<yml_catalog date="2026-06-11 12:00">
+  <shop>
+    <name>Denchik.online</name>
+    <company>Денис Пьянков — Совместный импорт из Китая</company>
+    <url>https://denchik.online</url>
+    <phone>+7 (912) 242-17-81</phone>
+    <email>denis@denchik.online</email>
+
+    <currencies>
+      <currency id="RUR" rate="1"/>
+    </currencies>
+
+    <categories>
+      <category id="1">Совместный импорт из Китая</category>
+      <category id="2" parentId="1">Электроника</category>
+      <category id="3" parentId="1">Одежда и текстиль</category>
+      <category id="4" parentId="1">Инструменты</category>
+      <category id="5" parentId="1">Стройматериалы</category>
+      <category id="6" parentId="1">Товары для дома</category>
+      <category id="7" parentId="1">Посуда и керамика</category>
+      <category id="8" parentId="1">Орехи и сухофрукты</category>
+      <category id="9" parentId="1">Игрушки</category>
+      <category id="10" parentId="1">Аксессуары</category>
+      <category id="11" parentId="1">Автозапчасти</category>
+    </categories>
+
+    <offers>
+
+      <offer id="1" available="true">
+        <name>Совместный импорт из Китая под ключ</name>
+        <url>https://denchik.online/</url>
+        <categoryId>1</categoryId>
+        <description>Организуем совместные закупки товаров из Китая для МСП и селлеров. Консолидация грузов, белая таможня, доставка ж/д в Екатеринбург и Москву. Экономия 20–40% за счёт объединения заказов.</description>
+        <param name="Маршрут">Китай → Россия</param>
+        <param name="Тип контейнера">40HC LCL сборный</param>
+        <param name="Таможня">Белая, официальная</param>
+        <param name="Доставка">Екатеринбург, Москва</param>
+        <param name="Опыт ВЭД">с 2007 года</param>
+      </offer>
+
+      <offer id="2" available="true">
+        <name>Импорт электроники из Китая</name>
+        <url>https://denchik.online/cat-elektronika.html</url>
+        <categoryId>2</categoryId>
+        <description>Совместный импорт электроники из Китая. Смартфоны, наушники, умные часы, power bank, роботы-пылесосы. Фабричные цены, белая таможня, сертификация EAC.</description>
+        <param name="Товары">Смартфоны, наушники, умные часы, power bank</param>
+        <param name="Сертификация">EAC, TR CU</param>
+        <param name="Таможня">Белая, официальная</param>
+      </offer>
+
+      <offer id="3" available="true">
+        <name>Импорт одежды из Китая оптом</name>
+        <url>https://denchik.online/cat-odezhda.html</url>
+        <categoryId>3</categoryId>
+        <description>Совместный импорт одежды из Китая оптом. Спецодежда, корпоративная форма, базовый трикотаж, медицинская одежда. Маркировка Честный ЗНАК, белая таможня.</description>
+        <param name="Товары">Спецодежда, корпоративная форма, трикотаж</param>
+        <param name="Маркировка">Честный ЗНАК</param>
+        <param name="Таможня">Белая, официальная</param>
+      </offer>
+
+      <offer id="4" available="true">
+        <name>Импорт одежды и обуви из Китая</name>
+        <url>https://denchik.online/cat-odezhda-obuv.html</url>
+        <categoryId>3</categoryId>
+        <description>Совместный импорт одежды и обуви из Китая. Верхняя одежда, спортивная одежда, кроссовки, ботинки. Фабричные цены, белая таможня.</description>
+        <param name="Товары">Верхняя одежда, спортивная одежда, обувь</param>
+        <param name="Таможня">Белая, официальная</param>
+      </offer>
+
+      <offer id="5" available="true">
+        <name>Импорт текстиля из Китая</name>
+        <url>https://denchik.online/cat-tekstil.html</url>
+        <categoryId>3</categoryId>
+        <description>Совместный импорт текстиля из Китая рулонами. Шёлк, хлопок, полиэстер, флис, спанбонд. Белая таможня, ВЭД с 2007 г.</description>
+        <param name="Товары">Ткани рулонами, шёлк, хлопок, полиэстер</param>
+        <param name="Таможня">Белая, официальная</param>
+      </offer>
+
+      <offer id="6" available="true">
+        <name>Импорт инструментов из Китая</name>
+        <url>https://denchik.online/cat-instrumenty.html</url>
+        <categoryId>4</categoryId>
+        <description>Совместный импорт инструментов из Китая. Дрели, болгарки, перфораторы, лазерные нивелиры, сварочные аппараты. Белая таможня.</description>
+        <param name="Товары">Дрели, болгарки, перфораторы, нивелиры</param>
+        <param name="Таможня">Белая, официальная</param>
+      </offer>
+
+      <offer id="7" available="true">
+        <name>Импорт стройматериалов из Китая</name>
+        <url>https://denchik.online/cat-stroymaterialy.html</url>
+        <categoryId>5</categoryId>
+        <description>Совместный импорт стройматериалов из Китая. Ламинат, крепёж, герметики, краски, сантехника. Белая таможня, ВЭД с 2007 г.</description>
+        <param name="Товары">Ламинат, крепёж, герметики, сантехника</param>
+        <param name="Таможня">Белая, официальная</param>
+      </offer>
+
+      <offer id="8" available="true">
+        <name>Импорт товаров для дома из Китая</name>
+        <url>https://denchik.online/cat-tovary-doma.html</url>
+        <categoryId>6</categoryId>
+        <description>Совместный импорт товаров для дома из Китая. Декор, текстиль, органайзеры, светильники. Фабричные цены, белая таможня.</description>
+        <param name="Товары">Декор, органайзеры, светильники</param>
+        <param name="Таможня">Белая, официальная</param>
+      </offer>
+
+      <offer id="9" available="true">
+        <name>Импорт посуды из Китая</name>
+        <url>https://denchik.online/cat-posuda.html</url>
+        <categoryId>7</categoryId>
+        <description>Совместный импорт посуды из Китая. Столовые сервизы, кастрюли, сковороды, термосы, кухонные ножи. Белая таможня.</description>
+        <param name="Товары">Столовые сервизы, кастрюли, сковороды</param>
+        <param name="Таможня">Белая, официальная</param>
+      </offer>
+
+      <offer id="10" available="true">
+        <name>Импорт керамики из Китая</name>
+        <url>https://denchik.online/cat-keramika.html</url>
+        <categoryId>7</categoryId>
+        <description>Совместный импорт керамики из Китая. Напольная и настенная плитка, вазы, горшки, фарфоровые статуэтки. Белая таможня.</description>
+        <param name="Товары">Плитка, вазы, горшки, фарфор</param>
+        <param name="Таможня">Белая, официальная</param>
+      </offer>
+
+      <offer id="11" available="true">
+        <name>Импорт орехов из Китая оптом</name>
+        <url>https://denchik.online/cat-orehi.html</url>
+        <categoryId>8</categoryId>
+        <description>Совместный импорт орехов из Китая оптом. Кешью, миндаль, грецкий орех, фундук, фисташки, арахис. Сертификаты качества, фитосанитарный контроль.</description>
+        <param name="Товары">Кешью, миндаль, грецкий орех, фундук</param>
+        <param name="Сертификаты">Фитосанитарный контроль, качество</param>
+      </offer>
+
+      <offer id="12" available="true">
+        <name>Импорт сухофруктов из Китая оптом</name>
+        <url>https://denchik.online/cat-sukhofrukty.html</url>
+        <categoryId>8</categoryId>
+        <description>Совместный импорт сухофруктов из Китая оптом. Изюм, курага, чернослив, финики, инжир, манго. Сертификаты качества, фитосанитарный контроль.</description>
+        <param name="Товары">Изюм, курага, финики, манго</param>
+        <param name="Сертификаты">Фитосанитарный контроль, качество</param>
+      </offer>
+
+      <offer id="13" available="true">
+        <name>Импорт игрушек из Китая</name>
+        <url>https://denchik.online/cat-igrushki.html</url>
+        <categoryId>9</categoryId>
+        <description>Совместный импорт игрушек из Китая. Конструкторы, мягкие игрушки, RC-машинки, настольные игры. Сертификаты TR CU, белая таможня.</description>
+        <param name="Товары">Конструкторы, мягкие игрушки, RC-машинки</param>
+        <param name="Сертификация">TR CU 008</param>
+      </offer>
+
+      <offer id="14" available="true">
+        <name>Импорт аксессуаров из Китая</name>
+        <url>https://denchik.online/cat-aksessuary.html</url>
+        <categoryId>10</categoryId>
+        <description>Совместный импорт аксессуаров из Китая. Сумки, рюкзаки, ремни, бижутерия, часы. Фабричные цены, белая таможня.</description>
+        <param name="Товары">Сумки, рюкзаки, бижутерия, часы</param>
+        <param name="Таможня">Белая, официальная</param>
+      </offer>
+
+      <offer id="15" available="true">
+        <name>Импорт автозапчастей из Китая</name>
+        <url>https://denchik.online/cat-zapchasti.html</url>
+        <categoryId>11</categoryId>
+        <description>Совместный импорт автозапчастей из Китая. Фильтры, тормозные колодки, аккумуляторы, фары. Белая таможня, ВЭД с 2007 г.</description>
+        <param name="Товары">Фильтры, тормозные колодки, фары</param>
+        <param name="Таможня">Белая, официальная</param>
+      </offer>
+
+    </offers>
+  </shop>
+</yml_catalog>
